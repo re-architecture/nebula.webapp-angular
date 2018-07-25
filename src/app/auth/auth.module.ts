@@ -19,6 +19,7 @@ import { AuthServerProvider } from './services/auth-jwt.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TestService } from './services/test.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   imports: [
@@ -39,6 +40,7 @@ import { TestService } from './services/test.service';
     SidenavComponent
   ],
   providers:[
+    AuthService,
     LoginService,
     Principal,
     AccountService,
