@@ -1,0 +1,37 @@
+//https://www.mdui.org/design/style/color.html#color-color-tool
+//https://github.com/angular/material2/blob/master/src/lib/core/theming/_all-theme.scss
+//https://github.com/angular/material2/blob/master/src/lib/core/theming/_theming.scss
+//https://github.com/angular/material2/blob/master/src/lib/core/typography/_typography.scss
+
+// Material Available pre-built themes:
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+//@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+//@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+//@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+// $default: 500, $lighter: 100, $darker: 700)
+$default-theme-primary: mat-palette($mat-grey);
+$default-theme-accent:  mat-palette($mat-deep-orange, 900);
+
+
+// The warn palette is optional (defaults to red).
+$default-theme-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$default-theme: mat-light-theme($default-theme-primary, $default-theme-accent, $default-theme-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+//@include angular-material-theme($default-theme);

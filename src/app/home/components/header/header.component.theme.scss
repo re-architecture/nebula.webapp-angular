@@ -1,0 +1,25 @@
+@import '~@angular/material/theming';
+
+@mixin header-component-theme($theme) {
+  
+  /*   
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, accent);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);  
+    $is-dark-theme: map-get($theme, is-dark);
+  */
+ 
+    .desktop-header,
+    .isSmallScreen-header
+    {
+      color: white;
+      //background:#2c2c2c;
+      //background: linear-gradient(90deg,#0c2646 0,#204065 60%,#2a5788);
+
+      background: linear-gradient(160deg,#2c2c2c,#1f1f1f);
+    }
+
+    
+}

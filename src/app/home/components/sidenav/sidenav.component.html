@@ -1,0 +1,56 @@
+<!-- [ngStyle]="sidenavIsExpanded ? {'width': '270px'}:{'width': '90px'}" -->
+<div class="sidenav-container">
+
+    <div class="sidenav-header">
+        <a class="logo-link" 
+            routerLink="/" 
+            [ngStyle]="{'justify-content':sidenavIsExpanded ? 'flex-start' : 'center'}">
+            <!-- 
+            <img class="logo-image" src="../../../../assets/img/logo/logo-angular.svg">
+            <span class="logo-title mat-headline" *ngIf="sidenavIsExpanded">Company</span> 
+            -->
+            <img style="height:24px;" *ngIf="!sidenavIsExpanded" src="../../../../assets/img/logo/logo_MTK_S.png">
+            <img style="height:24px;padding-left:16px;" *ngIf="sidenavIsExpanded" src="../../../../assets/img/logo/logo_MTK.png">
+
+        </a> 
+       
+       <!-- 白色分隔线     
+        <div style="display: flex;justify-content: center;align-items: center;">
+            <mat-divider style="width: calc(100% - 40px);background-color:#ffffff;"></mat-divider>
+        </div> 
+        -->
+    </div>
+     <!--     
+    <div class="sidenav-header">
+        <a mat-button class="logo-mat-button" routerLink="/" [ngStyle]="{'justify-content':sidenavIsExpanded ? 'flex-start' : 'center'}">
+            <mat-icon class="logo-mat-icon">dashboard</mat-icon> 
+            <span class="logo-title mat-headline" *ngIf="sidenavIsExpanded">Company</span>
+        </a> 
+    </div> 
+    -->
+    <div class="sidenav-menu">
+        <nav *ngFor="let menu of menuService.getMenu('sidenav_menu'); let last = last;">
+            <a class="menu" [ngStyle]="{'justify-content':sidenavIsExpanded ? 'flex-start' : 'center'}" (click)="toggleExpand(menu.id)"
+                [attr.aria-label]="menu.name + ', section toggle'" [attr.aria-controls]="'panel-' + menu.id" [attr.aria-expanded]="getExpanded(menu.id)">
+                <mat-icon class="menu-mat-icon">{{menu.icon}}</mat-icon>
+                <span class="menu-text mat-body-1" *ngIf="sidenavIsExpanded">{{menu.name}}</span>
+                <ng-container *ngIf="sidenavIsExpanded">
+                    <mat-icon class="menu-mat-icon-arrow" *ngIf="!getExpanded(menu.id)">keyboard_arrow_down</mat-icon>
+                    <mat-icon class="menu-mat-icon-arrow" *ngIf="getExpanded(menu.id)">keyboard_arrow_up</mat-icon>
+                </ng-container>
+            </a>
+
+            <ul [@bodyExpansion]="_getExpandedState(menu.id)" id="panel-{{menu.id}}">
+                <li *ngFor="let menuItem of menu.items">
+                    <!--   <a [routerLink]="'/' + (params | async)?.section+ '/' + component.id" -->
+                    <a class="menu-item" [routerLink]="menuItem.routerLink" routerLinkActive="menu-item-selected" [ngStyle]="{'justify-content':sidenavIsExpanded ? 'flex-start' : 'center'}">
+                        <mat-icon class="menu-item-mat-icon">{{menuItem.icon}}</mat-icon>
+                        <span *ngIf="sidenavIsExpanded">{{menuItem.name}}</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </div>
+</div>

@@ -1,0 +1,13 @@
+//@import '../../style/variables';
+
+//若需固定顶部 Header，需设置，否则小屏幕下位置不正确。。
+/* .desktop-header{
+    height:$layout-home-desktop-header-height;
+} */
+
+//若需固定顶部 Header，需设置。
+/* .isSmallScreen-header{
+    
+    position: fixed;
+    z-index : 2;
+} */

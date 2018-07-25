@@ -1,0 +1,33 @@
+<mat-toolbar style="width: 85vw;display:flex;flex-flow:row nowrap;justify-content: space-between;background:transparent;color:white">
+  <!-- <div style="display: inline-flex;align-items :center;">
+    <img style="height: 32px;margin:0 8px 0 0;" src="../../../../assets/img/logo/logo-angular.svg">
+    <span>Company</span>
+  </div> -->
+  <div>
+    <img style="height:28px;padding-top:20px;" src="../../../../assets/img/logo/logo_MTK.png">
+  </div>
+  <div *ngIf="!isSmallScreen()">
+
+    <button mat-button routerLink="/home">
+      <mat-icon>dashboard</mat-icon>
+      <span>DASHBOARD</span>
+    </button>
+    <button mat-button routerLink=".">
+      <mat-icon>person_add</mat-icon>
+      <span>REGISTER</span>
+    </button>
+    <button mat-button routerLink="signin">
+      <mat-icon>fingerprint</mat-icon>
+      <span>LOGIN</span>
+    </button>
+    <button mat-button routerLink=".">
+      <mat-icon>lock</mat-icon>
+      <span>LOCK</span>
+    </button>
+  </div>
+  <div *ngIf="isSmallScreen()">
+    <button mat-icon-button (click)="sidenavToggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

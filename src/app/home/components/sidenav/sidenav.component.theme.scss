@@ -1,0 +1,105 @@
+@import '~@angular/material/theming';
+
+@mixin sidenav-component-theme($theme) {
+    
+  $primary: map-get($theme, primary);
+  //$accent: map-get($theme, accent);
+  //$warn: map-get($theme, accent);
+  //$foreground: map-get($theme, foreground);
+  //$background: map-get($theme, background);
+  //$is-dark-theme: map-get($theme, is-dark);  
+ 
+  .sidenav-container{
+   
+    background: url(./assets/img/sidenav/sidenav_bg_2.jpg) no-repeat center center;
+    background-size: cover;
+    //background-color:#e53935;
+  }
+
+  .sidenav-container:before {
+
+    background: #212121;
+    opacity: .8;
+  
+    //background: rgba(229, 57, 53, 0.8);
+    //background:rgba(0, 0, 0, .7);
+ 
+  }
+
+  .sidenav-header{
+      
+      background: mat-color($primary,darker,.8);
+
+      //opacity: .5;
+      //background-color:#311B92;
+      //background-color:#000000;
+      //background:#3E239B;
+      //background: rgba(229, 57, 53, 0.8);
+
+      //background-color: rgba(27,27,27,.87);
+      //opacity: .85;
+
+      .logo-link {
+
+        color:mat-color($primary,darker-contrast);
+    
+      }
+
+      .logo-link:hover {
+        
+        background-color: mat-color($primary, 0.3);
+      }
+      
+      .logo-mat-button{
+
+        color:mat-color($primary,darker-contrast);
+
+      }
+
+     /*  hr {
+        padding: 0;
+        margin: 0;
+        border: none;
+        //border-top: solid 1px rgba(mat-color($foreground, secondary-text), .1)
+        border-top:solid 1px red;
+      } */
+    
+  }
+
+  .sidenav-menu {
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, .3);
+            
+    }
+  
+    .menu {
+    
+      color:white;
+      //color:mat-color($primary,lighter-contrast);
+
+      &:hover {
+        //background-color: mat-color($primary, 0.1);
+        background-color: rgba(255,255,255,.2);
+      }
+
+    }
+
+    .menu-item {
+      color:white;
+      //color:mat-color($primary,lighter-contrast);
+
+      //color: mat-color($foreground, secondary-text);
+
+      &.menu-item-selected,
+      &:hover {
+            //background-color: mat-color($primary, 0.1);
+
+            background-color: rgba(255,255,255,.2);
+      }
+
+    }
+  
+  }
+
+}

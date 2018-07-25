@@ -1,0 +1,39 @@
+<div class="signin-container">
+  <div class="signin-form-content">
+
+    <form style="width: 290px" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+      <div style="display: flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;">
+        <h1>Sign in</h1>
+        
+        <div style="color:#d32f2f;padding-bottom: 10px;" *ngIf="errorMessage">{{errorMessage}}</div>
+        
+      </div>
+
+      <mat-form-field style="width: 100%;">
+        <input matInput placeholder="Name 用户名" required formControlName="loginName" autofocus>
+        <mat-error *ngIf="form.controls['loginName'].hasError('required')">
+          Enter your account name. 请填写用户名
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field style="width: 100%;">
+        <input matInput placeholder="Password 密码" type="password" required formControlName="password">
+        <mat-error *ngIf="form.controls['password'].hasError('required')">
+          Enter your password. 请填写密码
+        </mat-error>
+      </mat-form-field>
+      <div style="margin-top:15px;">
+        <button type="submit" color="primary" [disabled]="!form.valid" mat-raised-button>Sign in 登录</button>
+      </div>
+    </form>
+    <div style="align-self:flex-end">
+      <a routerLink="." style="color: #3f51b5" mat-button>Create an account 注册</a>
+    </div>
+
+  </div>
+  <div class="signin-logo-content">
+    <div class="mat-title" style="padding:0 5px 0 5px;">{{appName}}</div>
+  </div>
+</div>
+
+
+<!--  [disabled]="!form.valid" -->

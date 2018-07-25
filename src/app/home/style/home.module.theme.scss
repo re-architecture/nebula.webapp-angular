@@ -1,0 +1,12 @@
+//@import '../components/my-custom/my-custom.component.theme';
+@import '../components/sidenav/sidenav.component.theme';
+@import '../components/header/header.component.theme';
+
+
+@mixin home-module-theme($theme) {
+
+    @include sidenav-component-theme($theme);
+    @include header-component-theme($theme);
+
+
+}

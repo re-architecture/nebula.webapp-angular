@@ -1,0 +1,17 @@
+<mat-sidenav-container class="layout_auth_container" autosize="true" fullscreen>
+
+  <mat-sidenav position="end" [(opened)]="sidenavOpened" [mode]="sidenavMode" class="layout-auth-sidenav">
+      <app-auth-sidenav></app-auth-sidenav>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+      <div style="height:100vh;display:flex;flex-flow:column nowrap;justify-content: space-between;align-items:center">
+          <app-auth-header (onSidenavToggle)="onSidenavToggle()"></app-auth-header>
+          <div>
+            <router-outlet></router-outlet>
+          </div>
+          <app-auth-footer></app-auth-footer>
+      </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

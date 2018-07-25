@@ -1,0 +1,19 @@
+<mat-sidenav-container fullscreen>
+
+  <mat-sidenav [ngClass]="sidenavIsExpanded ? 'layout-home-sidenav-expanded':'layout-home-sidenav-dock'"
+    (mouseenter)="sidenavMouseEnter()" (mouseleave)="sidenavMouseLeave()">
+    <app-home-sidenav [sidenavIsExpanded]="sidenavIsExpanded"></app-home-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div style="height:100vh;display:flex;flex-flow:column nowrap;justify-content: space-between;align-items:stretch;">
+      <app-home-header (onSidenavToggle)="onSidenavToggle()"></app-home-header>
+      <div style="flex:auto;" [ngClass]="isSmallScreen() ? 'layout-home-isSmallScreen-content': 'layout-home-desktop-content'">
+        <router-outlet></router-outlet>
+      </div>
+      <app-home-footer></app-home-footer>
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

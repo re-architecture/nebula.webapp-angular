@@ -1,0 +1,7 @@
+@import 'src/app/home/style/home.module.theme';
+
+@mixin app-theme($theme) {
+ 
+  @include home-module-theme($theme);
+  
+}

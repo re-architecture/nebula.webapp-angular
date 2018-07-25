@@ -1,0 +1,36 @@
+@import '../../style/variables';
+
+//小屏幕时固定Header工具条，需设置该属性，
+//同时要设置HeaderComponent组件样式的.isSmallScreen-header样式。
+/*
+.layout-home-desktop-content
+{
+    
+    //overflow: auto;
+}
+*/
+
+//小屏幕时不固定 Header 时不用设置该样式
+/*
+.layout-home-isSmallScreen-content
+{
+    
+    margin-top: $layout-home-isSmallScreen-header-height;
+}
+*/
+
+
+
+.layout-home-sidenav-expanded
+{
+    //width:260px;
+    width: $layout-home-sidenav-expanded-width;
+   
+}
+
+
+.layout-home-sidenav-dock
+{
+    //width:80px;
+    width: $layout-home-sidenav-dock-width;
+}
