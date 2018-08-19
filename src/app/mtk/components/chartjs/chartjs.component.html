@@ -1,0 +1,6 @@
+<div style="width:378px;">
+    <canvas #myCanvas baseChart [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"
+        [colors]="chartColors" [legend]="chartLegend" [chartType]="chartType" (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+    </canvas>
+</div>

@@ -1,0 +1,36 @@
+<div class="chart-card">
+  <div class="chart-card-header">
+
+    <div style="padding-left: 15px;">
+      <div style="font-weight:400;color:#9E9E9E;">DAILY PRODUCTION SCRAP (First Scrap)</div>
+      <div style="padding-top:20px;font-weight:400;font-size:2.5em;color: #212121;">
+        ￥165,814 <mat-icon>arrow_upward</mat-icon>
+        </div>
+    </div>
+    
+    <div style="padding-right: 15px;">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon style="font-size:2em;color:#9E9E9E;">filter_tilt_shift</mat-icon>
+      </button>
+    </div>
+
+  </div>
+  <div>
+      <app-mtk-chartjs [chartData]= "this.chartData1"></app-mtk-chartjs>
+  </div>
+  
+  <app-mtk-chart-card-item-table3></app-mtk-chart-card-item-table3>
+  
+  <div class="chart-card-footer">
+    <button mat-button disabled>
+      <mat-icon>cached</mat-icon>
+      Just Updated
+    </button>
+  </div>
+</div>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>autorenew</mat-icon>
+    <span>Refresh</span>
+  </button>
+</mat-menu>

@@ -1,0 +1,56 @@
+<table mat-table class="my-table" [dataSource]="data">
+
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef>Type
+      <br>类型</th>
+    <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.type}}</td>
+    <td mat-footer-cell *matFooterCellDef> Total </td>
+  </ng-container>
+
+  <ng-container matColumnDef="code">
+    <th mat-header-cell *matHeaderCellDef>Material Number
+      <br>材料好/版本</th>
+    <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.code}}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Material Description
+      <br>材料描述（英）</th>
+    <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.description}}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+  <ng-container matColumnDef="descriptionCN">
+    <th mat-header-cell *matHeaderCellDef>Material Description
+      <br>材料描述（中）</th>
+    <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.descriptionCN}}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+  <ng-container matColumnDef="qty">
+    <th mat-header-cell *matHeaderCellDef>Quantity
+      <br>数量</th>
+    <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.qty}}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef>Unit Price(RMB)
+      <br>单价</th>
+    <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.price}}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+  <ng-container matColumnDef="totalValue">
+    <th mat-header-cell *matHeaderCellDef>Value(RMB)
+      <br>金额</th>
+    <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.totalValue}}</td>
+    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency:'RMB'}} </td>
+  </ng-container>
+  <ng-container matColumnDef="note">
+    <th mat-header-cell *matHeaderCellDef>Note 备注</th>
+    <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.note}}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="highlightedRows = row" [style.background]="highlightedRows == row ? '#FFFFA2' : ''"></tr>
+  <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+</table>

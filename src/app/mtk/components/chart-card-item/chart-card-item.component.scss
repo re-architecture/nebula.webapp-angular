@@ -1,0 +1,33 @@
+.chart-card {
+    //min-width: 300px;
+   
+    display:flex; 
+    flex-flow:column nowrap;
+    justify-content:space-between;
+    box-shadow: 0 1px 15px 1px rgba(39,39,39,.1);
+    border-radius:.1875rem;
+    background-color:#FFFFFF;
+   
+  }
+  
+  .chart-card-header {
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    padding-top:10px;
+  }
+  
+  .chart-card-footer {
+  
+  }
+  
+  
+  
+  .example-card {
+      max-width: 200px;
+    }
+    
+    .example-header-image {
+      background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+      background-size: cover;
+    }

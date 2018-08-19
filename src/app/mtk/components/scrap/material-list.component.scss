@@ -1,0 +1,30 @@
+.my-table{
+
+    margin: 4px auto;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+    border-bottom: 2px solid #CCCCCC;
+
+    th {
+      
+        background: #E6E6E6;// #78909c;
+        color: #5A5A5A;
+        text-align: center !important; //只能居中不可排序表头
+        border-bottom: 2px solid #CCCCCC;
+    }
+      
+    .mat-row:nth-child(even){
+        background-color:#F7F7F7;
+    }
+
+    .mat-row:hover{
+        background-color:#FFFFA2;
+    }
+    
+    tr.mat-footer-row {
+        font-weight: bold;
+      }
+    //.mat-row:nth-child(odd){
+    //background-color:f0f3f5;
+    //}
+}

@@ -1,0 +1,256 @@
+<!-- <app-mtk-scrap-edit></app-mtk-scrap-edit> -->
+<div style="padding: 15px 15px 15px 15px;min-height:600px;">
+  <div class="mat-subheading-2">
+    Scrap Form 报废单
+    <button mat-button (click)="openDialog()">Open dialog</button>
+  </div>
+  <div>
+    <mat-form-field>
+
+      <mat-select placeholder="Status 状态" [(value)]="formStatus" disableOptionCentering panelClass="selectPanel">
+        <mat-option value="All">All</mat-option>
+        <mat-option value="审批中">审批中</mat-option>
+        <mat-option value="已完成">已完成</mat-option>
+        <mat-option value="被拒绝">被拒绝</mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field>
+      <mat-select placeholder="Product 产品" [(value)]="product" disableOptionCentering panelClass="selectPanel">
+        <mat-option value="All">All</mat-option>
+        <mat-option value="M51w">M51w</mat-option>
+        <mat-option value="MK16">MK16</mat-option>
+        <mat-option value="MT11i">MT11i</mat-option>
+        <mat-option value="MT15">MT15</mat-option>
+        <mat-option value="MT27">MT27</mat-option>
+        <mat-option value="R800AT">R800AT</mat-option>
+        <mat-option value="S51SE">S51SE</mat-option>
+        <mat-option value="SGP311">SGP311</mat-option>
+        <mat-option value="SGP311 B4">SGP311 B4</mat-option>
+        <mat-option value="SGP312">SGP312</mat-option>
+        <mat-option value="SGP312 B4">SGP312 B4</mat-option>
+        <mat-option value="SGP321">SGP321</mat-option>
+        <mat-option value="SGP321 B4">SGP321 B4</mat-option>
+        <mat-option value="SGP341">SGP341</mat-option>
+        <mat-option value="SGP351">SGP351</mat-option>
+        <mat-option value="SGP351 B4">SGP351 B4</mat-option>
+        <mat-option value="SGP412">SGP412</mat-option>
+        <mat-option value="SGP412-Windy">SGP412-Windy</mat-option>
+        <mat-option value="SGP511">SGP511</mat-option>
+        <mat-option value="SGP511-Windy">SGP511-Windy</mat-option>
+        <mat-option value="SGP512">SGP512</mat-option>
+        <mat-option value="SGP512-Windy">SGP512-Windy</mat-option>
+        <mat-option value="SGP521">SGP521</mat-option>
+        <mat-option value="SGP521-Windy">SGP521-Windy</mat-option>
+        <mat-option value="SGP541">SGP541</mat-option>
+        <mat-option value="SGP551">SGP551</mat-option>
+        <mat-option value="SGP561">SGP561</mat-option>
+        <mat-option value="SMA">SMA</mat-option>
+        <mat-option value="SO-01C">SO-01C</mat-option>
+        <mat-option value="SO-01D">SO-01D</mat-option>
+        <mat-option value="SO-01E">SO-01E</mat-option>
+        <mat-option value="SO-01F">SO-01F</mat-option>
+        <mat-option value="SO-01F B4">SO-01F B4</mat-option>
+        <mat-option value="SO-02C">SO-02C</mat-option>
+        <mat-option value="SO-02D">SO-02D</mat-option>
+        <mat-option value="SO-02E">SO-02E</mat-option>
+        <mat-option value="SO-02E B4">SO-02E B4</mat-option>
+        <mat-option value="SO-02F">SO-02F</mat-option>
+        <mat-option value="SO-03C">SO-03C</mat-option>
+        <mat-option value="SO-03D">SO-03D</mat-option>
+        <mat-option value="SO-03E">SO-03E</mat-option>
+        <mat-option value="SO-03E B4">SO-03E B4</mat-option>
+        <mat-option value="SO-03F">SO-03F</mat-option>
+        <mat-option value="SO-04D">SO-04D</mat-option>
+        <mat-option value="SO-04E">SO-04E</mat-option>
+        <mat-option value="SO-04E B4">SO-04E B4</mat-option>
+        <mat-option value="SO-05D">SO-05D</mat-option>
+        <mat-option value="SO-05F">SO-05F</mat-option>
+        <mat-option value="SO-05F-Windy">SO-05F-Windy</mat-option>
+        <mat-option value="SOL21">SOL21</mat-option>
+        <mat-option value="SOL22">SOL22</mat-option>
+        <mat-option value="SOL22 B4">SOL22 B4</mat-option>
+        <mat-option value="SOL23">SOL23</mat-option>
+        <mat-option value="SOL23 B4">SOL23 B4</mat-option>
+        <mat-option value="SOL24">SOL24</mat-option>
+        <mat-option value="SOL24-Windy">SOL24-Windy</mat-option>
+        <mat-option value="SOL25">SOL25</mat-option>
+        <mat-option value="SOT21">SOT21</mat-option>
+        <mat-option value="ST15i">ST15i</mat-option>
+        <mat-option value="ST17i">ST17i</mat-option>
+        <mat-option value="ST18i">ST18i</mat-option>
+        <mat-option value="ST27">ST27</mat-option>
+        <mat-option value="U20i">U20i</mat-option>
+        <mat-option value="XL39H">XL39H</mat-option>
+        <mat-option value="平板">平板</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field>
+      <mat-select placeholder="Shift 班次" [(value)]="shift" disableOptionCentering panelClass="selectPanel">
+        <mat-option value="All">All</mat-option>
+        <mat-option value="A">A</mat-option>
+        <mat-option value="B">B</mat-option>
+        <mat-option value="C">C</mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field>
+      <mat-select placeholder="CostCenter 成本中心" [(value)]="costCenter" disableOptionCentering panelClass="selectPanel">
+        <mat-option value="All">All</mat-option>
+        <mat-option value="3060">3060</mat-option>
+        <mat-option value="4300">4300</mat-option>
+        <mat-option value="4997">4997</mat-option>
+        <mat-option value="5021">5021</mat-option>
+        <mat-option value="5029">5029</mat-option>
+        <mat-option value="5031">5031</mat-option>
+        <mat-option value="5070">5070</mat-option>
+        <mat-option value="5075">5075</mat-option>
+        <mat-option value="5090">5090</mat-option>
+        <mat-option value="5992">5992</mat-option>
+        <mat-option value="7040">7040</mat-option>
+        <mat-option value="9040">9040</mat-option>
+        <mat-option value="9060">9060</mat-option>
+        <mat-option value="9130">9130</mat-option>
+      </mat-select>
+    </mat-form-field>
+ <!--    &nbsp;
+    <button color="primary"  mat-flat-button>
+      <mat-icon>search</mat-icon>Search 查询
+    </button> -->
+    &nbsp;
+    <button mat-stroked-button #btnSearch color="warn" style="background-color:#FAE6E6;">
+      <mat-icon>search</mat-icon>Search 查询
+    </button>
+  </div>
+
+  <div>
+    <!-- mat-flat-button -->
+    <button mat-stroked-button color="primary" style="background-color:#EDE7F6;">
+      <mat-icon>gavel</mat-icon>Approve 审批</button>
+    &nbsp;
+    <button mat-stroked-button color="primary" style="background-color:#EDE7F6;">
+      <mat-icon>timer_off</mat-icon>Reject 拒绝</button>
+
+  </div>
+
+  <!-- 
+  <input matInput placeholder="Search" #input> -->
+
+  <div class="spinner-container" *ngIf="dataSource.loading$ | async">
+    <mat-spinner [diameter]="60"></mat-spinner>
+  </div>
+  <table class="my-table" style="width:100%;" mat-table #table [dataSource]="dataSource" matSort aria-label="Elements">
+
+
+
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>Select
+        <br>选择</th>
+      <td style="text-align: center;" mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container>
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="formID">
+      <th style="display:none;" mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td style="display:none;text-align: center;" mat-cell *matCellDef="let row">{{row.formID}}</td>
+    </ng-container>
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="formStatus">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        Status
+        <br>状态
+      </th>
+      <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.formStatus}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nextApproverName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Approver
+        <br>审批人</th>
+      <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.nextApproverName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="formNo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        No. 单号
+      </th>
+      <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.formNo}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="creatorName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Creator
+        <br>创建人</th>
+      <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.creatorName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="costCenter">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cost Center
+        <br>成本中心</th>
+      <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.costCenter}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="family">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Family</th>
+      <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.family}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="product">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Product
+        <br>产品</th>
+      <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.product}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="line">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Line 线</th>
+      <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.line}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="shift">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Shift
+        <br>班次</th>
+      <td style="text-align: center;" mat-cell *matCellDef="let row">{{row.shift}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="accountAlias">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        Account Alias 别名</th>
+      <td mat-cell *matCellDef="let row">{{row.accountAlias}}</td>
+    </ng-container>
+
+    <!-- actions -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions
+        <br>操作</th>
+
+      <td style="text-align: center;" mat-cell *matCellDef="let row; let i=index;">
+        <button mat-icon-button color="accent" (click)="onEdit(row.formID)">
+          <mat-icon>launch</mat-icon>
+        </button>
+
+
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" 
+        (click)="highlightedRows = row"
+        [style.background]="highlightedRows == row ? '#FFFFA2' : ''">
+      </tr>
+    <!-- (click)="selection.toggle(row)" -->
+
+    <!--  <tr mat-row *matRowDef="let row; columns: displayedColumns;" >
+    </tr> -->
+  </table>
+  <!--  [length]="dataSource.data.length" -->
+  <mat-paginator [length]="dataSource.totalCount" [pageIndex]="0" [pageSize]="8" [pageSizeOptions]="[8,25, 50, 100, 500]" hidePageSize="false"
+    [showFirstLastButtons]="true">
+  </mat-paginator>
+</div>

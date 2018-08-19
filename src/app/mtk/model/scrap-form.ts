@@ -1,0 +1,32 @@
+export interface ScrapForm {
+    formID: number;
+    formNo: string;
+    formStatus: string;
+    nextApproverName: string;
+    creatorName: string;
+    costCenter: string;
+    family: string;
+    product: string;
+    line: string;
+    shift: string;
+    accountAlias: string;
+    flowType: string;
+    theDate: Date;
+    accountAliasDescription: string;
+    account: String;
+    accountDescription: String;
+    costCenterDescription: String;
+    theWeek: String;
+    organization: String;
+    dn: String;
+    area: String;
+    poNo: String;
+    workOrderNo: String;
+    usedWorkOrderNo: String;
+    reworkNo: String;
+    beforeReworkNo: String;
+    afterReworkNo: String;
+    reworkOutput: String;
+    reworkDescription: String;
+    workFlowNote : String;
+}

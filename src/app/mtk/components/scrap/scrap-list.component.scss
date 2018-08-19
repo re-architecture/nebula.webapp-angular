@@ -1,0 +1,64 @@
+.spinner-container {
+ /*    height: 360px;
+    width: 390px;
+    position: fixed; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0px;
+    right: 0;
+    //background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.selectPanel {
+    margin-top: 24px; 
+}
+
+
+.my-table{
+
+
+    margin: 5px auto;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+    border-bottom: 2px solid #CCCCCC;
+
+        //https://stackoverflow.com/questions/46154838/angular-material-2-table-header-center-alignment
+//居中可排序表头文字
+  ::ng-deep .mat-sort-header-container {
+    display:flex;
+    justify-content:center;
+  }
+
+    th {
+       
+        background: #E6E6E6;// #78909c;
+        color: #5A5A5A;
+        text-align: center !important; //只能居中不可排序表头
+        border-bottom: 2px solid #CCCCCC;
+      }
+
+   /*  tbody tr:hover {
+        background: yellow; 
+      }
+
+      tbody tr:nth-child(2n) {
+        background:#f0f3f5;
+      } */
+      
+      .mat-row:nth-child(even){
+        background-color:#F7F7F7;
+        }
+
+        .mat-row:hover{
+            background-color:#FFFFA2;
+            }
+    
+    .mat-row:nth-child(odd){
+        //background-color:f0f3f5;
+        }
+
+}

@@ -1,0 +1,159 @@
+<mat-dialog-content>
+  <mat-tab-group>
+    <!-- dynamicHeight -->
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <!--  <mat-icon class="example-tab-icon">description</mat-icon> -->
+        <mat-icon class="example-tab-icon">assignment</mat-icon>
+        Scrap Form
+      </ng-template>
+
+      <div style="margin: 10px 0 0 0;display: flex;flex-flow:column nowrap;justify-content:flex-start;align-items:stretch">
+        <div style="display: flex;flex-flow:row nowrap;justify-content:flex-start">
+          <mat-form-field appearance="fill">
+            <mat-label>Prepared by 申请提交人</mat-label>
+            <input matInput placeholder="Prepared by 申请提交人" [value]="scrapForm?.creatorName">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>No. 文件号</mat-label>
+            <input matInput placeholder="No. 文件号" [value]="scrapForm?.formNo">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Type</mat-label>
+            <input matInput placeholder="Type" [value]="scrapForm?.flowType">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Date 日期</mat-label>
+            <input matInput placeholder="Date 日期" [value]="scrapForm?.theDate | date:'yyyy-MM-dd'">
+          </mat-form-field>
+        </div>
+
+        <div style="display: flex;flex-flow:row nowrap;justify-content:flex-start">
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Account Alias 别名" [value]="scrapForm?.accountAlias">
+          </mat-form-field>
+          <mat-form-field style="flex:4 1 auto;">
+            <input matInput [value]="scrapForm?.accountAliasDescription">
+          </mat-form-field>
+        </div>
+
+        <div style="display: flex;flex-flow:row nowrap;justify-content:flex-start">
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Account 科目" [value]="scrapForm?.account">
+          </mat-form-field>
+          <mat-form-field style="flex:4 1 auto;">
+            <input matInput [value]="scrapForm?.accountDescription">
+          </mat-form-field>
+        </div>
+
+        <div style="display: flex;flex-flow:row nowrap;justify-content:flex-start">
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Cost Center 成本中心" [value]="scrapForm?.costCenter">
+          </mat-form-field>
+          <mat-form-field style="flex:4 1 auto;">
+            <input matInput [value]="scrapForm?.costCenterDescription">
+          </mat-form-field>
+        </div>
+
+        <div style="display: flex;flex-flow:row nowrap;justify-content:flex-start">
+          <mat-form-field appearance="fill">
+            <mat-label>Family</mat-label>
+            <input matInput placeholder="Family" [value]="scrapForm?.family">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Product 产品</mat-label>
+            <input matInput placeholder="Product 产品" [value]="scrapForm?.product">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Shift 班次</mat-label>
+            <input matInput placeholder="Shift 班次" [value]="scrapForm?.shift">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Week 周</mat-label>
+            <input matInput placeholder="Week 周" [value]="scrapForm?.theWeek">
+          </mat-form-field>
+        </div>
+
+        <div style="display: flex;flex-flow:row nowrap;justify-content:flex-start">
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Line 线" [value]="scrapForm?.line">
+          </mat-form-field>
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Organization 组织" [value]="scrapForm?.organization">
+          </mat-form-field>
+
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Day/Night 白班/夜班" [value]="scrapForm?.dn">
+          </mat-form-field>
+
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Area 区域" [value]="scrapForm?.area">
+          </mat-form-field>
+        </div>
+
+        <div style="display: flex;flex-flow:row nowrap;justify-content:flex-start">
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="PO No" [value]="scrapForm?.poNo">
+          </mat-form-field>
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Order Number 原工单号" [value]="scrapForm?.workOrderNo">
+          </mat-form-field>
+
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="WIP Consumption 所消耗工单号" [value]="scrapForm?.usedWorkOrderNo">
+          </mat-form-field>
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Rework Qty 产量" [value]="scrapForm?.reworkOutput">
+          </mat-form-field>
+        </div>
+
+        <div style="display: flex;flex-flow:row nowrap;justify-content:flex-start">
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Rework FileNo 文件号" [value]="scrapForm?.reworkNo">
+          </mat-form-field>
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Rework(Before) 前" [value]="scrapForm?.beforeReworkNo">
+          </mat-form-field>
+
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Rework(After) 后" [value]="scrapForm?.afterReworkNo">
+          </mat-form-field>
+
+          <mat-form-field style="flex:1 1 auto;">
+            <input matInput placeholder="Rework Decription 描述" [value]="scrapForm?.reworkDescription">
+          </mat-form-field>
+        </div>
+        <div style="display: flex;flex-flow:row nowrap;justify-content:flex-start">
+          <mat-form-field style="flex:1 1 auto;">
+            <mat-label>Approver 批准人</mat-label>
+            <textarea cdkTextareaAutosize="true" matInput placeholder="Approver 批准人" [value]="scrapForm?.workFlowNote"></textarea>
+          </mat-form-field>
+        </div>
+
+      </div>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <!--  <mat-icon class="example-tab-icon">build</mat-icon> -->
+        <mat-icon class="example-tab-icon">settings</mat-icon>
+        <!--  <mat-icon class="example-tab-icon">bug_report</mat-icon> -->
+        Material List
+      </ng-template>
+      <!--  <mat-dialog-content> -->
+      <app-mtk-material-list [formID]="scrapForm?.formID"></app-mtk-material-list>
+
+      <!-- </mat-dialog-content> -->
+
+    </mat-tab>
+  </mat-tab-group>
+</mat-dialog-content>
+<!-- <h2 mat-dialog-title>Install Angular{{ data.id }}</h2> -->
+
+<mat-dialog-actions align="end">
+  <button mat-stroked-button color="primary" style="background-color:#EDE7F6;" [mat-dialog-close]="true" cdkFocusInitial>Close 关闭</button>
+</mat-dialog-actions>
