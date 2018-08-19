@@ -31,27 +31,36 @@ const MENUS: { [key: string]: Menu[] } = {
   [SIDENAV_MENU]: [
     {
       id: 'menu1',
+      name: 'Analysis 数据分析',
+      icon: 'lock',
+      items: [
+        { id: 'menu1-item1', name: 'Home', icon: 'account_box', routerLink: 'mtk/home' }
+      ]
+    },
+    {
+      id: 'menu2',
+      name: 'Scrap 生产报废',
+      icon: 'lock',
+      items: [
+        { id: 'menu2-item1', name: 'Scrap Form 报废单', icon: 'account_box', routerLink: 'mtk/scrap' }
+      ]
+    },
+    {
+      id: 'menu21',
       name: 'Demo-Feature',
       icon: 'dashboard',
       items: [
-        { id: 'menu1-item1', name: 'Dashboard', icon: 'widgets', routerLink: 'default' },
-        { id: 'menu1-item2', name: 'Regular Table', icon: 'widgets', routerLink: 'demo-feature/regularTable' },
-        { id: 'menu1-item3', name: '客户管理', icon: 'view_list', routerLink: 'customer' },
-        { id: 'menu1-item4', name: '数据表', icon: 'view_list', routerLink: 'product' },
-        { id: 'menu1-item5', name: '大数据分页', icon: 'reorder', routerLink: 'largedatatable' },
-        { id: 'menu1-item6', name: 'Item 4', icon: 'drafts', routerLink: 'test' }
+        { id: 'menu21-item1', name: 'Dashboard', icon: 'widgets', routerLink: 'default' },
+        { id: 'menu21-item2', name: 'Regular Table', icon: 'widgets', routerLink: 'demo-feature/regularTable' },
+        { id: 'menu21-item3', name: '客户管理', icon: 'view_list', routerLink: 'customer' },
+        { id: 'menu21-item4', name: '数据表', icon: 'view_list', routerLink: 'product' },
+        { id: 'menu21-item5', name: '大数据分页', icon: 'reorder', routerLink: 'largedatatable' },
+        { id: 'menu21-item6', name: 'Item 4', icon: 'drafts', routerLink: 'test' }
 
       ]
     },
 
-    {
-      id: 'menu2',
-      name: 'Analysis 生产数据分析',
-      icon: 'lock',
-      items: [
-        { id: 'menu2-item1', name: 'Home', icon: 'account_box', routerLink: 'analysis/home' }
-      ]
-    },
+  
     {
       id: 'menu3',
       name: 'Management 系统管理',

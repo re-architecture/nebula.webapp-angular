@@ -7,7 +7,7 @@ import { LoginService } from '../../services/login.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 //import { AuthService } from '../../../core/auth/auth.service';
 
-import { appConfig } from 'src/app/config/app.config';
+import { appConfig } from '../../../config/app.config';
 import { TestService } from '../../services/test.service';
 import { AuthService } from '../../services/auth.service';
 
@@ -82,7 +82,6 @@ export class SigninPageComponent implements OnInit {
     }).subscribe(() => {
 
       if (this.authService.isLoggedIn) {
-
 
         // Set our navigation extras object
         // that passes on our global query params and fragment

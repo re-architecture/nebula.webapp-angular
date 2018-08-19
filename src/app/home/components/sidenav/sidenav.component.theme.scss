@@ -11,14 +11,16 @@
  
   .sidenav-container{
    
-    background: url(./assets/img/sidenav/sidenav_bg_2.jpg) no-repeat center center;
+    background: url(./assets/img/sidenav/sidenav_bg_3.jpg) no-repeat center center;
     background-size: cover;
     //background-color:#e53935;
   }
 
   .sidenav-container:before {
 
-    background: #212121;
+    //background: #212121;
+    //background:#e53935;
+    background:#C62828;
     opacity: .8;
   
     //background: rgba(229, 57, 53, 0.8);

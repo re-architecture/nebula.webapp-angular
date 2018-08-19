@@ -9,10 +9,15 @@ const routes: Routes = [
     path: '',
     component: HomeLayoutComponent,
     children:[
-      { path: '', redirectTo: 'default', pathMatch: 'full' },
+      //{ path: '', redirectTo: 'default', pathMatch: 'full' },
+      { path: '', redirectTo: 'mtk', pathMatch: 'full' },
       {
         path: 'default',
         component: DefaultPageComponent
+      },
+      {
+        path: 'mtk',
+        loadChildren: '../mtk/mtk.module#MTKModule',
       }
     ]
   }

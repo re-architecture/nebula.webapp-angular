@@ -102,7 +102,7 @@ export class HomeLayoutComponent implements OnInit {
 
       }
 
-      // 仅应用在 analysis 模块中的图形显示，当切换左侧sidenav时图形无法自适应窗口大小
+      // 仅应用在 mtk 模块中的图形显示，当切换左侧sidenav时图形无法自适应窗口大小
       // 仅 https://github.com/swimlane/ngx-charts 图形组件有这个问题。
       // 而 https://github.com/valor-software/ng2-charts 没有这个问题
       //initialize window resizer event on sidebar toggle click event
