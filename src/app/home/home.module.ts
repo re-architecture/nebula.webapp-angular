@@ -8,9 +8,12 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { DefaultPageComponent } from './pages/default-page/default-page.component';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   imports: [
+    CommonModule,
     HomeRoutingModule,
     SharedModule,
     MaterialModule

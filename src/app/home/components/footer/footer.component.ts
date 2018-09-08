@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { appConfig } from 'src/app/config/app.config';
+import { ConfigService } from 'src/app/core';
+
 
 @Component({
   selector: 'app-home-footer',
@@ -8,13 +10,13 @@ import { appConfig } from 'src/app/config/app.config';
 })
 export class FooterComponent implements OnInit {
 
-  companyName : string;
+  copyright : string;
   year : string;
 
-  constructor() { }
+  constructor(private configService : ConfigService) { }
 
   ngOnInit() {
-    this.companyName = appConfig.companyName;
+    this.copyright = this.configService.appConfig.copyright;
     this.year = (new Date()).getFullYear().toString();
   }
 

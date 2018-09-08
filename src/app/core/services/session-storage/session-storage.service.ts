@@ -23,7 +23,7 @@ export class SessionStorageService {
   }
 
   removeItem(key: string) {
-    sessionStorage.removeItem(key);
+    sessionStorage.removeItem(`${APP_PREFIX}${key}`);
   }
 
   clear() {

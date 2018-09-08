@@ -39,7 +39,6 @@ import { ChartCardItem3Component } from './components/chart-card-item3/chart-car
 @NgModule({
   imports: [
     MTKRoutingModule,
-    SharedModule,
     //NgxChartsModule,
     ChartsModule,
     MaterialModule,

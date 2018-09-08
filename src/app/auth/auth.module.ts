@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
-import { SharedModule } from 'src/app/shared/shared.module';
+
 import { MaterialModule } from 'src/app/material/material.module';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { SigninPageComponent } from './pages/signin-page/signin-page.component';
@@ -12,19 +11,17 @@ import { LockScreenPageComponent } from './pages/lock-screen-page/lock-screen-pa
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { LoginService } from './services/login.service';
-import { Principal } from './services/principal.service';
-import { AccountService } from './services/account.service';
-import { AuthServerProvider } from './services/auth-jwt.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TestService } from './services/test.service';
 import { AuthService } from './services/auth.service';
+import { CommonModule } from '@angular/common';
+import { SigninComponent } from './components/signin/signin.component';
 
 @NgModule({
   imports: [
+    CommonModule,
     AuthRoutingModule,
-    SharedModule,
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule
@@ -37,17 +34,11 @@ import { AuthService } from './services/auth.service';
     LockScreenPageComponent, 
     HeaderComponent, 
     FooterComponent, 
-    SidenavComponent
+    SidenavComponent, SigninComponent
   ],
   providers:[
     AuthService,
-    LoginService,
-    Principal,
-    AccountService,
-    AuthServerProvider,
     TestService
-    //LocalStorageService,
-    //SessionStorageService
   ]
 })
 export class AuthModule { }

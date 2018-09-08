@@ -23,7 +23,7 @@ export class LocalStorageService {
   }
 
   removeItem(key: string) {
-    localStorage.removeItem(key);
+    localStorage.removeItem(`${APP_PREFIX}${key}`);
   }
 
   clear(){

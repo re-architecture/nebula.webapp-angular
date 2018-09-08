@@ -30,20 +30,39 @@
 //   }
 // }
 
-//下面代码是空代码
 import { Injectable } from '@angular/core';
 import {
-  HttpEvent, HttpInterceptor, HttpHandler, HttpRequest
+    HttpEvent, HttpInterceptor, HttpHandler, HttpRequest
 } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
+import { LocalStorageService } from '../services/local-storage/local-storage.service';
+import { SessionStorageService } from '../services/session-storage/session-storage.service';
+import { SERVER_API_URL } from '../services/auth/app.constants';
 
-/** Pass untouched request through to the next request handler. */
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-  intercept(req: HttpRequest<any>, next: HttpHandler):
-    Observable<HttpEvent<any>> {
-    return next.handle(req);
-  }
+    constructor(private localStorage: LocalStorageService, private sessionStorage: SessionStorageService) { }
+    intercept(req: HttpRequest<any>, next: HttpHandler):
+        Observable<HttpEvent<any>> {
+
+        if (!req || !req.url || (/^http/.test(req.url) && !(SERVER_API_URL && req.url.startsWith(SERVER_API_URL)))) {
+            return next.handle(req);
+        }
+
+        //const token = this.localStorage.retrieve('authenticationToken') || this.sessionStorage.retrieve('authenticationToken');
+        const token = this.localStorage.getItem('authenticationToken') || this.sessionStorage.getItem('authenticationToken');
+        if (!!token) {
+            req = req.clone({
+                setHeaders: {
+                    Authorization: 'Bearer ' + token
+                }
+            });
+        }
+
+        return next.handle(req);
+    }
+
+
 }

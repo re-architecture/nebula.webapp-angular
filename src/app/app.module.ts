@@ -4,7 +4,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { httpInterceptorProviders } from './http-interceptors';
+
+import { CoreModule, httpInterceptorProviders } from './core';
+import { appConfig } from './config/app.config';
+import { SharedModule } from './shared';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,10 @@ import { httpInterceptorProviders } from './http-interceptors';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    //CoreModule,
+    CoreModule.forRoot(appConfig),
+    AppRoutingModule,
+    SharedModule
   ],
   bootstrap: [AppComponent],
   providers: [httpInterceptorProviders] 

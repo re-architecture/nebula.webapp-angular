@@ -4,6 +4,7 @@ export const appConfig = {
     appName: 'Sony Management Tool Kit',
     
     //copyright
-    companyName : 'Sony'
+    copyright : 'Sony',
+
     
 };

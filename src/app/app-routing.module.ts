@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { ErrorComponent } from './shared';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,6 +14,12 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomeModule',
   },
   //{ path: '**', component: PageNotFoundComponent }
+  {
+    path: '**', component: ErrorComponent, data: {
+      title: 'Error page!',
+      errorMessage: 'Page Not Found'
+    }
+  }
 ];
 
 @NgModule({

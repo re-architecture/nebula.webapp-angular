@@ -5,8 +5,8 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 import { Subscription } from 'rxjs';
 
 import { Title } from '@angular/platform-browser';
-import { appConfig } from './config/app.config';
-import { ThemeService } from './services';
+
+import { ConfigService, ThemeService } from 'src/app/core';
 
 @Component({
   selector: 'app-root',
@@ -21,12 +21,13 @@ export class AppComponent implements OnInit,OnDestroy {
   constructor(
     private titleService: Title,
     private themeService: ThemeService,
-    private overlay: OverlayContainer
+    private overlay: OverlayContainer,
+    private configService : ConfigService
   ) { }
 
   ngOnInit() {
 
-    this.titleService.setTitle(appConfig.appName);
+    this.titleService.setTitle(this.configService.appConfig.appName);
 
     this.themeSubscription = this.themeService.theme$.subscribe(
       theme => {

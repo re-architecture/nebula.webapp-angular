@@ -13,13 +13,17 @@
       <mat-icon>fingerprint</mat-icon>
       <span>Sing in 登录</span>
     </button>
-    <button routerLink="/labs" mat-menu-item disabled>
+    <button (click)="logout()" mat-menu-item [disabled]='!isAuthenticated()'>
       <mat-icon>lock</mat-icon>
       <span>Sign out 注销</span>
     </button>
     <button mat-menu-item [matMenuTriggerFor]="themes">
       <mat-icon>format_color_fill</mat-icon>
       <span>Theme 主题</span>
+    </button>
+    <button (click)="openLoginModal()" mat-menu-item [disabled]='isAuthenticated()'>
+      <mat-icon>fingerprint</mat-icon>
+      <span>Sing in 登录(modal)</span>
     </button>
   </mat-menu>
 

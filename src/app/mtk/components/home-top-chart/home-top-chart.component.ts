@@ -10,7 +10,9 @@ import { MTKService } from '../../services/mtk.service';
 })
 export class HomeTopChartComponent implements OnInit {
 
-  constructor(private mtkService:MTKService){}
+  constructor(private mtkService:MTKService){
+
+  }
 
   @ViewChild("myCanvas")
   canvas: ElementRef;
