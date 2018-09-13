@@ -20,6 +20,9 @@
         <mat-error *ngIf="form.controls['password'].hasError('required')">
           Enter your password. 请填写密码
         </mat-error>
+         <mat-error *ngIf="form.controls['password'].hasError('minlength') && !form.controls['password'].hasError('required')">
+          Must be at least 4 characters long. 密码不能少于4个字符
+        </mat-error> 
       </mat-form-field>
       <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
       <div style="margin-top:15px;">

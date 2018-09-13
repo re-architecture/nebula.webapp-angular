@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { DefaultPageComponent } from './pages/default-page/default-page.component';
-import { ErrorComponent } from 'src/app/shared';
+import { errorRoutes } from 'src/app/shared';
+import { UserRouteAccessService } from '../core/services/auth/user-route-access-service';
+
 
 
 const routes: Routes = [
@@ -14,30 +16,24 @@ const routes: Routes = [
       { path: '', redirectTo: 'mtk', pathMatch: 'full' },
       {
         path: 'default',
-        component: DefaultPageComponent
+        component: DefaultPageComponent,
+        data: {
+          authorities: ['ROLE_ADMIN']
+        },
+       //canActivate: [UserRouteAccessService]
+        
+      },
+      {
+        path: 'admin',
+        loadChildren: '../admin/admin.module#AdminModule',
+       
       },
       {
         path: 'mtk',
         loadChildren: '../mtk/mtk.module#MTKModule',
+       
       },
-      {
-        path: 'accessdenied', component: ErrorComponent, data: {
-          title: 'xxxxxx page!',
-          errorMessage: 'accessdenied'
-        }
-      },
-      {
-        path: 'error', component: ErrorComponent, data: {
-          title: 'xxxxxx page!',
-          errorMessage: 'error'
-        }
-      },
-      {
-        path: '**', component: ErrorComponent, data: {
-          title: 'xxxxxx page!',
-          errorMessage: 'xxxxxxxx Page Not Found'
-        }
-      }
+      ...errorRoutes
     ]
   }
 ];

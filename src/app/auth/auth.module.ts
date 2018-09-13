@@ -13,7 +13,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { TestService } from './services/test.service';
 import { AuthService } from './services/auth.service';
 import { CommonModule } from '@angular/common';
 import { SigninComponent } from './components/signin/signin.component';
@@ -37,8 +36,7 @@ import { SigninComponent } from './components/signin/signin.component';
     SidenavComponent, SigninComponent
   ],
   providers:[
-    AuthService,
-    TestService
+    AuthService
   ]
 })
 export class AuthModule { }

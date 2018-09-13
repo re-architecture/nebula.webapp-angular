@@ -20,7 +20,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { ScrapPageComponent } from './pages/scrap-page/scrap-page.component';
 import { ScrapListComponent } from './components/scrap/scrap-list.component';
-import { CourseComponent } from './components/course/course.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MTKService } from './services/mtk.service';
 import { ScrapEditComponent } from './components/scrap/scrap-edit.component';
@@ -57,7 +56,6 @@ import { ChartCardItem3Component } from './components/chart-card-item3/chart-car
     ScrapPageComponent,
     ScrapListComponent,
     ScrapEditComponent,
-    CourseComponent,
     MaterialListComponent,
     ChartComponent,
     ChartCardItemTable2Component,

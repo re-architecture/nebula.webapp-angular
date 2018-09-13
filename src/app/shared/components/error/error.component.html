@@ -16,6 +16,12 @@
   </div>
 </div>
  -->
- <ng-container *ngIf="title">{{title}}</ng-container>
- <ng-container *ngIf="errorMessage">{{errorMessage}}</ng-container>
- 
+
+
+<div style=" margin:30px 0 0 0;display:flex;flex-flow:column;justify-content:center;align-items: center;">
+
+    <img style="width: 300px;" src="../../../../assets/img/error.png">
+    <!--  <ng-container *ngIf="title">{{title}}</ng-container> -->
+    <div *ngIf="errorMessage" style="font-size: 24px;margin-bottom: 8px;font-weight: 700;">{{errorMessage}}</div>
+
+</div>

@@ -1,14 +1,17 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
-import { Config } from './services/config/Config';
+import { Config } from './services/config/config';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastNotifierComponent } from './services/toast-notification/toast-notifier.component';
+import { DialogComponent } from './services/toast-notification/dialog.component';
 
 @NgModule({
   imports: [
     HttpClientModule
   ],
-  declarations: [],
+  declarations: [ToastNotifierComponent,DialogComponent],
   exports: [],
-  providers: []
+  providers: [],
+  entryComponents:[ToastNotifierComponent,DialogComponent]
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

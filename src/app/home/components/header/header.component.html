@@ -9,7 +9,7 @@
     <mat-icon>settings</mat-icon>
   </button>
   <mat-menu #headerSettingsMenu="matMenu" [overlapTrigger]="false">
-    <button routerLink="/auth/signin" mat-menu-item>
+    <button routerLink="/auth/signin" mat-menu-item [disabled]='isAuthenticated()'>
       <mat-icon>fingerprint</mat-icon>
       <span>Sing in 登录</span>
     </button>
@@ -23,7 +23,7 @@
     </button>
     <button (click)="openLoginModal()" mat-menu-item [disabled]='isAuthenticated()'>
       <mat-icon>fingerprint</mat-icon>
-      <span>Sing in 登录(modal)</span>
+      <span>Sing in 登录(Modal)</span>
     </button>
   </mat-menu>
 

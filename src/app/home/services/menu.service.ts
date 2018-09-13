@@ -67,7 +67,7 @@ const MENUS: { [key: string]: Menu[] } = {
       icon: 'lock',
       items: [
         { id: 'menu3-item1', name: 'User 用户管理', icon: 'account_box', routerLink: 'admin/users' },
-        { id: 'menu3-item2', name: 'Group 组管理', icon: 'account_box', routerLink: 'admin/users' },
+        { id: 'menu3-item2', name: 'Group 组管理', icon: 'account_box', routerLink: 'admin/group' },
         { id: 'menu3-item3', name: 'Role 角色管理', icon: 'account_box', routerLink: 'admin/users' },
         { id: 'menu3-item4', name: 'Permission 授权管理', icon: 'account_box', routerLink: 'admin/users' }
       ]

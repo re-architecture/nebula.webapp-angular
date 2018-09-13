@@ -11,7 +11,9 @@ import { ErrorComponent } from './components/error/error.component';
     ReactiveFormsModule,
     MaterialModule
   ],
-  declarations: [LoginModalComponent, ErrorComponent],
+  declarations: [LoginModalComponent, 
+    ErrorComponent
+  ],
   exports:[
     
   ],

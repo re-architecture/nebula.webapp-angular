@@ -4,11 +4,13 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { catchError } from 'rxjs/operators';
-import { HandleError, HttpErrorHandlerService } from 'src/app/core';
+import { HandleError, HttpErrorHandlerService } from '../http-error-handler/http-error-handler.service';
 
 
-@Injectable()
 
+@Injectable({
+    providedIn: 'root'
+})
 export class TestService {
 
     private handleError: HandleError;
@@ -20,10 +22,10 @@ export class TestService {
         this.handleError = this.httpErrorHandler.createHandleError('TestService');
     }
 
-    getAccount(): Observable<HttpResponse<Account>> {
-        return this.http.get<Account>('apix/account')
+    doTest(): Observable<HttpResponse<any>> {
+        return this.http.get<any>('api/groups')
             .pipe(
-                catchError(this.handleError('getAccount', null))
+                catchError(this.handleError('doTest', null))
             );
     }
 

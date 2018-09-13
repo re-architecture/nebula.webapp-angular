@@ -6,7 +6,8 @@ import { Subscription } from 'rxjs';
 
 import { Title } from '@angular/platform-browser';
 
-import { ConfigService, ThemeService } from 'src/app/core';
+import { ConfigService, ThemeService, Principal, Account, EventManagerService } from 'src/app/core';
+
 
 @Component({
   selector: 'app-root',
@@ -14,15 +15,19 @@ import { ConfigService, ThemeService } from 'src/app/core';
   styleUrls: ['./app.component.scss'],
   providers: [OverlayContainer]
 })
-export class AppComponent implements OnInit,OnDestroy {
+export class AppComponent implements OnInit, OnDestroy {
 
   themeSubscription: Subscription;
+
+  account: Account;
 
   constructor(
     private titleService: Title,
     private themeService: ThemeService,
     private overlay: OverlayContainer,
-    private configService : ConfigService
+    private configService: ConfigService,
+    private principal: Principal,
+    private eventManager: EventManagerService
   ) { }
 
   ngOnInit() {
@@ -43,11 +48,25 @@ export class AppComponent implements OnInit,OnDestroy {
       this.themeService.setTheme("default-theme");
     }
 
+    this.principal.identity().then(account => {
+      this.account = account;
+    });
+
+    this.registerAuthenticationSuccess();
+
+  }
+
+  registerAuthenticationSuccess() {
+    this.eventManager.subscribe('authenticationSuccess', message => {
+      this.principal.identity().then(account => {
+        this.account = account;
+      });
+    });
   }
 
   //ref: https://material.angular.io/guide/theming
   installTheme(theme: string) {
-    
+
     document.body.className = "";
     this.overlay.getContainerElement().className = "";
 

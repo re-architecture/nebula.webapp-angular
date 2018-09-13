@@ -1,12 +1,12 @@
-<form style="width: 290px" [formGroup]="form" (ngSubmit)="login()" novalidate>
+<form style="width: 320px" [formGroup]="form" (ngSubmit)="login()" novalidate>
   <div style="display: flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;">
     <h1>Sign in</h1>
-    
+
     <div style="color:#d32f2f;padding-bottom: 10px;" *ngIf="authenticationError">
       Incorrect UserID or password.
       <!-- <strong>Failed to sign in!</strong> Please check your credentials and try again. -->
     </div>
-    
+
   </div>
 
   <mat-form-field style="width: 100%;">
@@ -20,11 +20,17 @@
     <mat-error *ngIf="form.controls['password'].hasError('required')">
       Enter your password. 请填写密码
     </mat-error>
+    <mat-error *ngIf="form.controls['password'].hasError('minlength') && !form.controls['password'].hasError('required')">
+      Must be at least 4 characters long. 密码不能少于4个字符
+    </mat-error>
   </mat-form-field>
   <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+
+  <div style="margin-top:15px;display: flex;flex-flow:row nowrap;justify-content:flex-end;">
   
-  <div style="margin-top:15px;">
-    <button type="submit" [disabled]="!form.valid"  mat-flat-button color="primary">Sign in 登录</button>
-    <button mat-button [mat-dialog-close]="true">Cancel 取消</button>
+      <button type="submit" [disabled]="!form.valid" mat-flat-button color="primary">Sign in 登录</button>
+      &nbsp;
+      <button mat-button [mat-dialog-close]="true">Cancel 取消</button>
+   
   </div>
 </form>

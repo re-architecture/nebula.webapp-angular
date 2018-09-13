@@ -8,7 +8,7 @@ import { ChartCardData1Service } from '../../services/chart-card-data1.service';
 })
 export class ChartCardItemComponent implements OnInit {
 
-  constructor(private chartData1: ChartCardData1Service) { }
+  constructor(public chartData1: ChartCardData1Service) { }
 
   ngOnInit() {
    

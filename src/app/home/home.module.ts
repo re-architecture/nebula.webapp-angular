@@ -23,7 +23,8 @@ import { CommonModule } from '@angular/common';
     HeaderComponent,
     FooterComponent,
     SidenavComponent,
-    DefaultPageComponent]
-  
+    DefaultPageComponent
+  ]
+
 })
 export class HomeModule { }
