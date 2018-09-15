@@ -14,6 +14,7 @@ export class ConfigService {
     private _config: Config = {
         appName: 'Nebula Web Application',
         copyright: 're-architecture',
+        serverApiUrl : ''
     };
 
     constructor(@Optional() config: Config) {

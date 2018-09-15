@@ -1,3 +1,51 @@
-<p>
-  group-list works!
-</p>
+<div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Name" [(ngModel)]='groupName'>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field>
+      <mat-select placeholder='组类型' [(ngModel)]='groupType' disableOptionCentering>
+        <mat-option value=''>All</mat-option>
+        <mat-option value='true'>系统组</mat-option>
+        <mat-option value='false'>用户组</mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;
+    <button #btnSearch mat-stroked-button color="warn" style="background-color:#FAE6E6;">
+      <mat-icon>search</mat-icon>Search 查询
+    </button>
+    &nbsp;
+    <button #btnSearch mat-stroked-button (click)='onCreate();'>
+      <mat-icon>search</mat-icon>Create
+    </button>
+  </div>
+  <div>
+    <table mat-table matSort [dataSource]="dataSource" style="width:100%">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let row"> {{row.description}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="isSystem">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> System </th>
+        <td mat-cell *matCellDef="let row"> {{row.isSystem}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [length]="dataSource.totalCount" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>

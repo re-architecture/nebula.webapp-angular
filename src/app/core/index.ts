@@ -34,8 +34,8 @@ export * from './services/auth/account.model';
 export * from './services/auth/principal.service';
 
 export * from './services/login/login.service';
-export * from './services/config/config';
 export * from './services/config/config.service';
+export * from './services/config/config';
 export * from './services/config/json-config.service';
 
 export * from './services/theme/theme.service';

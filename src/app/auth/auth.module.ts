@@ -17,6 +17,7 @@ import { AuthService } from './services/auth.service';
 import { CommonModule } from '@angular/common';
 import { SigninComponent } from './components/signin/signin.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -24,6 +25,7 @@ import { SigninComponent } from './components/signin/signin.component';
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule
+  
   ],
   declarations: [
     AuthLayoutComponent, 

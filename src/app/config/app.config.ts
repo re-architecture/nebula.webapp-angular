@@ -1,4 +1,6 @@
-export const appConfig = {
+import { Config } from "src/app/core";
+
+export const appConfig : Config = {
     
     //page title
     appName: 'Sony Management Tool Kit',
@@ -6,5 +8,5 @@ export const appConfig = {
     //copyright
     copyright : 'Sony',
 
-    
+    serverApiUrl : ''
 };
