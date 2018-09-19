@@ -1,0 +1,165 @@
+.notification-container-Info {
+
+  background-color:transparent !important;
+
+  .notification {
+    padding: 0.5rem 0 0.5rem 0;
+    margin:2.143rem 0 0 0;  //30px
+    border-radius: 0.125rem;
+     
+    background-color: #d1ecf1;
+    border: 1px solid #49afd9;
+ 
+    display: flex;
+    flex-flow : row nowrap;
+    justify-content : space-between;
+
+    .notification-icon-wrapper {
+      padding:0 0.5rem 0 0.5rem; 
+
+      .notification-icon{
+        color: #0079b8; 
+      }
+    }
+
+    .notification-text {
+      color: #0c5460;
+      flex:1 1 auto;
+      padding:0 0.5rem 0 0; 
+    }
+
+  }
+
+}
+
+.notification-container-Success {
+
+  background-color:transparent !important;
+
+  .notification {
+    padding: 0.5rem 0 0.5rem 0;
+    margin:2.143rem 0 0 0;  
+    border-radius: 0.125rem;
+     
+    background-color: #d4edda;
+    border: 1px solid #60b515;
+ 
+    display: flex;
+    flex-flow : row nowrap;
+    justify-content : space-between;
+
+    .notification-icon-wrapper {
+      padding:0 0.5rem 0 0.5rem; //6px 14px 
+
+      .notification-icon{
+        color: #318700; 
+      }
+    }
+
+    .notification-text {
+      color: #155724;
+      flex:1 1 auto;
+      padding:0 0.5rem 0 0; 
+    }
+
+  }
+
+}
+
+
+.notification-container-Warning {
+
+  background-color:transparent !important;
+
+  .notification {
+    padding: 0.5rem 0 0.5rem 0;
+    margin:2.143rem 0 0 0;  //30px
+    border-radius: 0.125rem;
+     
+    background-color:#fff3cd;
+    border: 1px solid #ffdc0b; 
+
+ 
+    display: flex;
+    flex-flow : row nowrap;
+    justify-content : space-between;
+
+    .notification-icon-wrapper {
+      padding:0 0.5rem 0 0.5rem; //6px 14px 
+
+      .notification-icon{
+        color: #856404; 
+      }
+    }
+
+    .notification-text {
+      
+      color: #856404;
+      flex:1 1 auto;
+      padding:0 0.5rem 0 0; 
+    }
+
+  }
+
+}
+
+.notification-container-Error {
+
+  background-color:transparent !important;
+
+  .notification {
+    padding: 0.5rem 0 0.5rem 0;
+    margin:2.143rem 0 0 0;  //30px
+    border-radius: 0.125rem;
+     
+   
+    background-color: #f8d7da;
+    border: 1px solid #ebafa6;
+ 
+    display: flex;
+    flex-flow : row nowrap;
+    justify-content : space-between;
+
+    .notification-icon-wrapper {
+      padding:0 0.5rem 0 0.5rem; //6px 14px 
+
+      .notification-icon{
+        color: #c92100; 
+      }
+    }
+
+    .notification-text {
+      
+      color: #721c24;
+      flex:1 1 auto;
+      padding:0 0.5rem 0 0; 
+    }
+
+  }
+
+}
+
+
+
+
+
+//屏幕居中
+// .cdk-global-overlay-wrapper {
+//   justify-content: center !important;
+//   align-items: center !important;
+// }
+
+
+// @keyframes demo-party {
+//   0% { background: #00f; }
+//   10% { background: #8e44ad; }
+//   20% { background: #1abc9c; }
+//   30% { background: #d35400; }
+//   40% { background: #00f; }
+//   50% { background: #34495e; }
+//   60% { background: #00f; }
+//   70% { background: #2980b9; }
+//   80% { background: #f1c40f; }
+//   90% { background: #2980b9; }
+//   100% { background: #0ff; }
+// }

@@ -4,12 +4,15 @@ import { tap } from 'rxjs/operators';
 import { EventManagerService } from '../services/event-manager/event-manager.service';
 import { Injectable } from '@angular/core';
 import { ToastNotificationService, MessageType } from '../services/toast-notification/toast-notification.service';
+import { MessageService, Message } from 'src/app/nebula-core';
+
 
 @Injectable()
 export class ErrorHandlerInterceptor implements HttpInterceptor {
     constructor(
         private eventManager: EventManagerService,
-        private toastNotification: ToastNotificationService
+        private toastNotification: ToastNotificationService,
+        private msg : MessageService
     ) { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
@@ -45,7 +48,8 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                             && !(err.status === 401 && err.url.includes('/authenticate'))
                         ) {
 
-                            this.toastNotification.openDialog(JSON.stringify(errObject), errorTitle, MessageType.Error);
+                            // this.toastNotification.openDialog(JSON.stringify(errObject), errorTitle, MessageType.Error);
+                            this.msg.toast(new Message(errorTitle,JSON.stringify(errObject),'Error'));
                             //if (this.eventManager !== undefined) {
                             //    this.eventManager.broadcast({ name: 'Application.httpError', content: err });
                             //}

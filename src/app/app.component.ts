@@ -8,7 +8,6 @@ import { Title } from '@angular/platform-browser';
 
 import { ConfigService, ThemeService, Principal, Account, EventManagerService } from 'src/app/core';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

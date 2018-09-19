@@ -1,0 +1,15 @@
+<div class='toast'>
+  <div class="toast-icon-wrapper">
+    <fa-icon class='fa-lg' class="toast-icon" [icon]='iconType'></fa-icon>
+  </div>
+  <div class='toast-text'>
+    <div>{{msg.message}} </div>
+    <div>{{msg.description}}</div>
+  </div>
+  
+    <button type="button" class="toast-icon-close" (click)="onClose()">
+      <span>&times;</span>
+    </button>
+
+  
+</div>

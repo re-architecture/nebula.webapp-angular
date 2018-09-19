@@ -25,7 +25,6 @@ import { SigninComponent } from './components/signin/signin.component';
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule
-  
   ],
   declarations: [
     AuthLayoutComponent, 

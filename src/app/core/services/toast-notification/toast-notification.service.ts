@@ -12,13 +12,13 @@ import { ToastNotifierComponent } from './toast-notifier.component';
 import { DialogComponent } from './dialog.component';
 
 
-export enum MessageType {
+ export enum MessageType {
   Info = 'Info',
   Success = 'Success',
   Warning = 'Warning',
   Error = 'Error'
   
-}
+} 
 
 @Injectable(
   { providedIn: 'root' }
@@ -37,23 +37,25 @@ export class ToastNotificationService {
    }
 
   info(message: string) {
-    this.openSnackBar(message, MessageType.Info);
+    //this.openSnackBar(message, MessageType.Info);
   }
 
   success(message: string) {
-    this.openSnackBar(message, MessageType.Success);
+    //this.openSnackBar(message, MessageType.Success);
   }
 
   
   warning(message: string) {
-    this.openSnackBar(message, MessageType.Warning);
+    //this.openSnackBar(message, MessageType.Warning);
   }
 
   error(message: string) {
-    this.openSnackBar(message, MessageType.Error);
+    //this.openSnackBar(message, MessageType.Error);
   }
 
-  openDialog(message : string,title?: string,messageType?: MessageType): void {
+  openDialog(message : string,title?: string
+    ,messageType?: MessageType
+    ): void {
     let dialogTitle : string;
     let dialogMessageType : string;
 

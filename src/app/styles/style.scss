@@ -7,12 +7,16 @@
 @import './themes/light-theme.scss';
 @import './themes/black-theme.scss';
 
+@import 'src/app/nebula-core/styles/nebula.scss';
+
+//默认字体14px 行高20px 字重400
 $custom-typography: mat-typography-config(
   
     $font-family:'"Segoe UI", SegoeUI, Roboto,
     "Microsoft YaHei", 微软雅黑,
     "PingFang SC", "Hiragino Sans GB", 
     "Helvetica Neue", Helvetica, Arial, sans-serif'
+
 );
 
 //https://github.com/angular/material2/blob/master/src/lib/core/typography/_typography.scss
@@ -43,6 +47,5 @@ $custom-typography: mat-typography-config(
 }
 
 body {
-
     margin: 0; 
 }

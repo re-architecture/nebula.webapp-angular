@@ -1,0 +1,91 @@
+.dialog{
+
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+
+    .dialog-header{
+        display:flex;
+        flex-flow:row nowrap;
+        justify-content: space-between;
+      
+        .dialog-title {
+            font-size:20px;
+            line-height:32px;
+            font-weight:500;
+        }
+
+        .dialog-icon-close {
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000000;
+            opacity: .5;
+            background-color: transparent;
+            border: 0;
+        }
+
+        .dialog-icon-close:focus {
+            outline: none;
+        }
+
+        .dialog-icon-close:hover {
+           color:#000000;
+           opacity: .7;
+        }
+ 
+    }
+
+    .dialog-body{
+
+        flex: 1 1 auto;
+
+        font-size:14px;
+        line-height:20px;
+        font-weight:400;
+
+        margin: 6px 0 6px 0;
+
+        //width: 360px;
+        //height: 80px;
+        
+        overflow: auto;
+
+    }
+
+    .dialog-footer{
+
+        display: flex;
+        flex-flow:row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        .dialog-button {
+            font-size:14px;
+            line-height:14px;
+            font-weight:500;
+
+            background-color:#6c757d;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+            border-radius:3px;
+            border:1px solid #545b62;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+          
+            padding:8px 16px;
+            text-decoration:none;
+        }
+        .dialog-button:hover {
+            background-color:#5a6268;
+        }
+
+        .dialog-button:focus{
+            outline: none;
+        }
+       
+    }
+}

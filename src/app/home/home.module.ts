@@ -9,6 +9,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { DefaultPageComponent } from './pages/default-page/default-page.component';
 import { CommonModule } from '@angular/common';
+import { NebulaCoreModule } from 'src/app/nebula-core';
+import { MessageComponent } from './components/demo/message/message.component';
+
 
 
 @NgModule({
@@ -16,14 +19,16 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    NebulaCoreModule
   ],
   declarations: [
     HomeLayoutComponent,
     HeaderComponent,
     FooterComponent,
     SidenavComponent,
-    DefaultPageComponent
+    DefaultPageComponent,
+    MessageComponent
   ]
 
 })
