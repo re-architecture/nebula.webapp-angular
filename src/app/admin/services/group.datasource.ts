@@ -15,7 +15,7 @@ export class GroupDataSource implements DataSource<Group> {
 
     private loadingSubject = new BehaviorSubject<boolean>(false);
 
-    public loading$ = this.loadingSubject.asObservable();
+    public isLoading$ = this.loadingSubject.asObservable();
 
     constructor(private groupService: GroupService) {
 
@@ -38,12 +38,12 @@ export class GroupDataSource implements DataSource<Group> {
     }
 
     connect(collectionViewer: CollectionViewer): Observable<Group[]> {
-        console.log("Connecting data source");
+        //console.log("Connecting data source");
         return this.dataSubject.asObservable();
     }
 
     disconnect(collectionViewer: CollectionViewer): void {
-        console.log("disconnect data source");
+        //console.log("disconnect data source");
         this.dataSubject.complete();
         this.loadingSubject.complete();
     }
