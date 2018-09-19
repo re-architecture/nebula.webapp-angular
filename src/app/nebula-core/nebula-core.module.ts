@@ -15,6 +15,8 @@ import { DialogComponent } from './components/message/dialog.component';
 import { NotificationComponent } from './components/message/notification.component';
 import { ToastComponent } from './components/message/toast.component';
 import { AlertComponent } from './components/message/alert.component';
+import { PageLoadingProgressBarComponent } from './components/page-loading-progress-bar/page-loading-progress-bar.component';
+import { MaterialModule } from '../material/material.module';
 
 //Using the Icon Library
 library.add(fas, far);
@@ -23,17 +25,20 @@ library.add(fas, far);
 @NgModule({
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MaterialModule
   ],
   declarations: [
     DialogComponent,
     NotificationComponent,
     ToastComponent,
-    AlertComponent
+    AlertComponent,
+    PageLoadingProgressBarComponent
     
   ],
   exports: [
-    AlertComponent
+    AlertComponent,
+    PageLoadingProgressBarComponent
   ],
   entryComponents: [
     DialogComponent,

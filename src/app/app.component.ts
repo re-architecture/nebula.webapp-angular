@@ -8,6 +8,7 @@ import { Title } from '@angular/platform-browser';
 
 import { ConfigService, ThemeService, Principal, Account, EventManagerService } from 'src/app/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,6 +21,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   account: Account;
 
+  loading = false;
+
   constructor(
     private titleService: Title,
     private themeService: ThemeService,
@@ -27,7 +30,11 @@ export class AppComponent implements OnInit, OnDestroy {
     private configService: ConfigService,
     private principal: Principal,
     private eventManager: EventManagerService
-  ) { }
+  ) { 
+
+    
+    
+  }
 
   ngOnInit() {
 

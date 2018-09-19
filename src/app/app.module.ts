@@ -9,6 +9,7 @@ import { CoreModule, httpInterceptorProviders } from './core';
 import { appConfig } from './config/app.config';
 import { SharedModule } from './shared';
 import { NebulaCoreModule } from 'src/app/nebula-core';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NebulaCoreModule } from 'src/app/nebula-core';
     CoreModule.forRoot(appConfig),
     AppRoutingModule,
     SharedModule,
-    NebulaCoreModule
+    NebulaCoreModule,
+    MaterialModule
   ],
   bootstrap: [AppComponent],
   providers: [httpInterceptorProviders] 
