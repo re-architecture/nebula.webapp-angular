@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { CommonModule } from '@angular/common';
 import { SigninComponent } from './components/signin/signin.component';
-
+import { NebulaCoreModule } from 'src/app/nebula-core';
 
 @NgModule({
   imports: [
@@ -24,7 +24,8 @@ import { SigninComponent } from './components/signin/signin.component';
     AuthRoutingModule,
     MaterialModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NebulaCoreModule
   ],
   declarations: [
     AuthLayoutComponent, 

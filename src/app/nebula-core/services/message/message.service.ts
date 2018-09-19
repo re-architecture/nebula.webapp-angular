@@ -60,7 +60,7 @@ export class MessageService {
     } else {
       sizeType = dialogSize;
     }
-    
+
     const dialogRef = this.matDialog.open(DialogComponent, {
       width: sizeType,
       data: { message }
@@ -119,6 +119,10 @@ export class MessageService {
 
   alert(message: Message, isSizeSmall: boolean = false) {
     this.change.next(new Alert(message, isSizeSmall));
+  }
+
+  clearAlert(){
+    this.change.next(null);
   }
 
 }

@@ -4,12 +4,15 @@ import { LoginModalComponent } from './components/login-modal/login-modal.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ErrorComponent } from './components/error/error.component';
+import { NebulaCoreModule } from 'src/app/nebula-core';
+
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    NebulaCoreModule
   ],
   declarations: [LoginModalComponent, 
     ErrorComponent

@@ -10,6 +10,7 @@ import {
   faBell,
   faCommentAlt
 } from '@fortawesome/free-regular-svg-icons';
+import { Alert } from '../../services/message/alert';
 
 @Component({
   selector: 'nebula-alert',
@@ -19,35 +20,39 @@ import {
 export class AlertComponent implements OnInit, OnDestroy {
 
   messageSubscription: Subscription;
-  msg: Message
   iconType: IconDefinition
   isSizeSmall: boolean;
+  alert : Alert;
 
   constructor(private messageService: MessageService) { }
 
   ngOnInit() {
     this.messageSubscription = this.messageService.changes.subscribe(
       alert => {
-        this.msg = alert.message;
-        this.isSizeSmall = alert.isSizeSmall;
+        if (alert) {
+         this.alert = alert;
+         this.isSizeSmall = alert.isSizeSmall;
 
-        switch (this.msg.messageType) {
-          case 'Info': {
-            this.iconType = faCommentAlt;
-            break;
+          switch (this.alert.message.messageType) {
+            case 'Info': {
+              this.iconType = faCommentAlt;
+              break;
+            }
+            case 'Warning': {
+              this.iconType = faBell;
+              break;
+            }
+            case 'Success': {
+              this.iconType = faCheckCircle;
+              break;
+            }
+            case 'Error': {
+              this.iconType = faTimesCircle;
+              break;
+            }
           }
-          case 'Warning': {
-            this.iconType = faBell;
-            break;
-          }
-          case 'Success': {
-            this.iconType = faCheckCircle;
-            break;
-          }
-          case 'Error': {
-            this.iconType = faTimesCircle;
-            break;
-          }
+        } else {
+          this.alert = null;
         }
       });
   }

@@ -1,13 +1,13 @@
-<ng-container *ngIf="msg">
-    <div [ngClass]="'alert ' + getClassForSizeSmall() + ' alert-' + msg.messageType">
+<ng-container *ngIf="alert">
+    <div [ngClass]="'alert ' + getClassForSizeSmall() + ' alert-' + alert?.message.messageType">
 
         <div class="alert-item">
             <div class="alert-icon-wrapper">
                 <fa-icon class='fa-lg' class="alert-icon" [icon]='iconType'></fa-icon>
             </div>
             <span class="alert-text">
-                <div>{{msg.message}} </div>
-                <div>{{msg.description}}</div>
+                <div>{{alert?.message.message}} </div>
+                <div>{{alert?.message.description}}</div>
             </span>
         </div>
     </div>
