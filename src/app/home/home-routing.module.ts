@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { DefaultPageComponent } from './pages/default-page/default-page.component';
 import { errorRoutes } from 'src/app/shared';
-import { UserRouteAccessService } from '../core/services/auth/user-route-access-service';
+
 
 
 

@@ -36,9 +36,9 @@ import {
 } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-import { LocalStorageService } from '../services/local-storage/local-storage.service';
-import { SessionStorageService } from '../services/session-storage/session-storage.service';
-import { SERVER_API_URL } from '../services/auth/app.constants';
+import { LocalStorageService } from '../local-storage/local-storage.service';
+import { SessionStorageService } from '../session-storage/session-storage.service';
+import { SERVER_API_URL } from '../auth/app.constants';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {

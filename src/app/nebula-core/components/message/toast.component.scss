@@ -3,57 +3,68 @@
   background-color:transparent !important;
 
   .toast {
-
-    padding: 0.5rem 0 0.5rem 0;
-    //margin:2.143rem 0 0 0;  
-    border-radius: 0.125rem;
-     
+    
     background-color: #0079b8;
-    //background-color: #d1ecf1;
-    //border: 1px solid #49afd9;
- 
+    padding: 0.5rem 0 0.5rem 0;
+    border-radius: 0.125rem;
     display: flex;
     flex-flow : row nowrap;
     justify-content : space-between;
+    align-items:flex-start;
     
-
     .toast-icon-wrapper {
       padding:0 0.5rem 0 0.5rem; 
-      align-self:flex-start;
+     
       .toast-icon{
-        //color: #0079b8; 
-        color: #ffffff;
+         color: #ffffff;
       }
+
+      .toast-icon-close {
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 1.25rem;
+        font-weight: 400;
+        opacity: .7;
+        background-color: transparent;
+        border: 0;
+      }
+  
+      .toast-icon-close:focus {
+          outline: none;
+      }
+  
+      .toast-icon-close:hover {
+        color:#ffffff;
+        opacity: 1;
+      }
+
     }
 
     .toast-text {
-      //color: #0c5460;
       color:#ffffff;
       flex:1 1 auto;
-     
-      align-self:flex-start;
+
+      // ref:
+      // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+
+      /* These are technically the same, but use both */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+
+      -ms-word-break: break-all;
+      /* This is the dangerous one in WebKit, as it breaks things wherever */
+      word-break: break-all;
+      /* Instead use this non-standard one: */
+      word-break: break-word;
+
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
     }
 
-    .toast-icon-close {
-      cursor: pointer;
-      font-size: 1.25rem;
-      font-weight: 400;
-      color: #ffffff;
-      opacity: .7;
-      background-color: transparent;
-      border: 0;
-      padding:0 0.5rem 0 0.5rem; 
-      align-self:flex-start;
-    }
-
-    .toast-icon-close:focus {
-        outline: none;
-    }
-
-    .toast-icon-close:hover {
-      color:#ffffff;
-      opacity: 1;
-    }
+    
 
   }
 
@@ -64,55 +75,70 @@
   background-color:transparent !important;
 
   .toast {
-    padding: 0.5rem 0 0.5rem 0;
-    //margin:2.143rem 0 0 0;  
-    border-radius: 0.125rem;
-     
+      
     background-color: #318700;
-    //background-color: #d1ecf1;
-    //border: 1px solid #49afd9;
- 
+    padding: 0.5rem 0 0.5rem 0;
+    border-radius: 0.125rem;
     display: flex;
     flex-flow : row nowrap;
     justify-content : space-between;
+    align-items:flex-start;
 
     .toast-icon-wrapper {
       padding:0 0.5rem 0 0.5rem; 
-      align-self:flex-start;
+     
       .toast-icon{
-        //color: #0079b8; 
+        
         color: #ffffff;
       }
+
+      .toast-icon-close {
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 1.25rem;
+        font-weight: 400;
+        opacity: .7;
+        background-color: transparent;
+        border: 0;
+      }
+  
+      .toast-icon-close:focus {
+          outline: none;
+      }
+  
+      .toast-icon-close:hover {
+        color:#ffffff;
+        opacity: 1;
+      }
+      
     }
 
     .toast-text {
-      //color: #0c5460;
+
       color:#ffffff;
       flex:1 1 auto;
-     
-      align-self:flex-start;
+
+      // ref:
+      // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+
+      /* These are technically the same, but use both */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+
+      -ms-word-break: break-all;
+      /* This is the dangerous one in WebKit, as it breaks things wherever */
+      word-break: break-all;
+      /* Instead use this non-standard one: */
+      word-break: break-word;
+
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
     }
 
-    .toast-icon-close {
-      cursor: pointer;
-      font-size: 1.25rem;
-      font-weight: 400;
-      color: #ffffff;
-      opacity: .7;
-      background-color: transparent;
-      border: 0;
-      padding:0 0.5rem 0 0.5rem; 
-      align-self:flex-start;
-    }
-
-    .toast-icon-close:focus {
-        outline: none;
-    }
-
-    .toast-icon-close:hover {
-      color:#ffffff;
-      opacity: 1;
-    }
+    
 
   }
 
@@ -124,54 +150,64 @@
   background-color:transparent !important;
 
   .toast {
-    padding: 0.5rem 0 0.5rem 0;
-    //margin:2.143rem 0 0 0;  
-    border-radius: 0.125rem;
-     
+   
     background-color: #c25400;
-    //background-color: #d1ecf1;
-    //border: 1px solid #49afd9;
- 
+    padding: 0.5rem 0 0.5rem 0;
+    border-radius: 0.125rem;
     display: flex;
     flex-flow : row nowrap;
     justify-content : space-between;
+    align-items:flex-start;
 
     .toast-icon-wrapper {
       padding:0 0.5rem 0 0.5rem; 
-      align-self:flex-start;
+      
       .toast-icon{
-        //color: #0079b8; 
         color: #ffffff;
+      }
+
+      .toast-icon-close {
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 1.25rem;
+        font-weight: 400;
+        opacity: .7;
+        background-color: transparent;
+        border: 0;
+      }
+  
+      .toast-icon-close:focus {
+          outline: none;
+      }
+  
+      .toast-icon-close:hover {
+        color:#ffffff;
+        opacity: 1;
       }
     }
 
     .toast-text {
-      //color: #0c5460;
       color:#ffffff;
       flex:1 1 auto;
-      
-      align-self:flex-start;
-    }
 
-    .toast-icon-close {
-      cursor: pointer;
-      font-size: 1.25rem;
-      font-weight: 400;
-      color: #ffffff;
-      opacity: .7;
-      background-color: transparent;
-      border: 0;
-      padding:0 0.5rem 0 0.5rem; 
-      align-self:flex-start;
-    }
+      // ref:
+      // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
 
-    .toast-icon-close:focus {
-        outline: none;
-    }
+      /* These are technically the same, but use both */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
 
-    .toast-icon-close:hover {
-      color:#ffffff;
-      opacity: 1;
+      -ms-word-break: break-all;
+      /* This is the dangerous one in WebKit, as it breaks things wherever */
+      word-break: break-all;
+      /* Instead use this non-standard one: */
+      word-break: break-word;
+
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
     }
 
   }
@@ -185,58 +221,71 @@
   background-color:transparent !important;
 
   .toast {
-    padding: 0.5rem 0 0.5rem 0;
-    //margin:2.143rem 0 0 0;  
-    border-radius: 0.125rem;
-     
+  
     background-color: #c92100;
-    //background-color: #d1ecf1;
-    //border: 1px solid #49afd9;
- 
+
+    padding: 0.5rem 0 0.5rem 0;
+    border-radius: 0.125rem;
     display: flex;
     flex-flow : row nowrap;
     justify-content : space-between;
-  
+    align-items:flex-start;
+
     .toast-icon-wrapper {
+
       padding:0 0.5rem 0 0.5rem; 
-      align-self:flex-start;
+   
       .toast-icon{
-        //color: #0079b8; 
-        color: #ffffff;
+          color: #ffffff;
       }
+
+      .toast-icon-close {
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 1.25rem;
+        font-weight: 400;
+        opacity: .7;
+        background-color: transparent;
+        border: 0;
+      }
+
+      .toast-icon-close:focus {
+          outline: none;
+      }
+
+      .toast-icon-close:hover {
+        color:#ffffff;
+        opacity: 1;
+      }
+
     }
 
     .toast-text {
-      //color: #0c5460;
+
       color:#ffffff;
       flex:1 1 auto;
-     
-      align-self:flex-start;
-    }
 
-    .toast-icon-close {
-      cursor: pointer;
-      font-size: 1.25rem;
-      font-weight: 400;
-      color: #ffffff;
-      opacity: .7;
-      background-color: transparent;
-      border: 0;
-      padding:0 0.5rem 0 0.5rem; 
-      align-self:flex-start;
-    }
+      // ref:
+      // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
 
-    .toast-icon-close:focus {
-        outline: none;
-    }
+      /* These are technically the same, but use both */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
 
-    .toast-icon-close:hover {
-      color:#ffffff;
-      opacity: 1;
-    }
+      -ms-word-break: break-all;
+      /* This is the dangerous one in WebKit, as it breaks things wherever */
+      word-break: break-all;
+      /* Instead use this non-standard one: */
+      word-break: break-word;
 
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+        
+    }
   }
-
 }
 
 

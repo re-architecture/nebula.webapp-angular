@@ -25,7 +25,7 @@ export class GroupDataSource implements DataSource<Group> {
 
         this.loadingSubject.next(true);
 
-        this.groupService.getGroups(requestParams).pipe(
+        this.groupService.query(requestParams).pipe(
             catchError(() => of([])),
             finalize(() => this.loadingSubject.next(false))
         )

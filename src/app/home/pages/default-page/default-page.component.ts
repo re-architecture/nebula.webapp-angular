@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastNotificationService, EventManagerService, TestService, MessageType, JsonConfigService, Config } from 'src/app/core';
+import {  EventManagerService, TestService } from 'src/app/nebula-core';
 import { Subscription } from 'rxjs';
+import { JsonConfigService } from 'src/app/core';
 
 
 
@@ -15,7 +16,7 @@ export class DefaultPageComponent implements OnInit {
   httpErrorListener: Subscription;
 
   constructor(
-    private toastNotificationService: ToastNotificationService,
+    //private toastNotificationService: ToastNotificationService,
     private eventManager: EventManagerService,
     private testService : TestService,
     private jsonConfig : JsonConfigService
@@ -29,7 +30,7 @@ export class DefaultPageComponent implements OnInit {
         // connection refused, server not reachable
         case 0:
           //this.addErrorAlert('Server not reachable', 'error.server.not.reachable');
-          this.toastNotificationService.error("Server not reachable");
+         // this.toastNotificationService.error("Server not reachable");
           break;
 
         case 400:
@@ -46,7 +47,7 @@ export class DefaultPageComponent implements OnInit {
           if (errorHeader) {
             //const entityName = translateService.instant('global.menu.entities.' + entityKey);
             //this.addErrorAlert(errorHeader, errorHeader, { entityName });
-            this.toastNotificationService.error("xxxxxxxxxxx");
+            //this.toastNotificationService.error("xxxxxxxxxxx");
 
           } else if (httpErrorResponse.error !== '' && httpErrorResponse.error.fieldErrors) {
             const fieldErrors = httpErrorResponse.error.fieldErrors;
@@ -61,7 +62,7 @@ export class DefaultPageComponent implements OnInit {
                // 'jhipsterSampleApplicationApp.' + fieldError.objectName + '.' + convertedField
               //);
               //this.addErrorAlert('Error on field "' + fieldName + '"', 'error.' + fieldError.message, { fieldName });
-              this.toastNotificationService.error("yyyyyyyyyy");
+             // this.toastNotificationService.error("yyyyyyyyyy");
             }
           } else if (httpErrorResponse.error !== '' && httpErrorResponse.error.message) {
            /*  this.addErrorAlert(
@@ -69,38 +70,38 @@ export class DefaultPageComponent implements OnInit {
               httpErrorResponse.error.message,
               httpErrorResponse.error.params
             ); */
-            this.toastNotificationService.error("zzzzzzzzzzz");
+            //this.toastNotificationService.error("zzzzzzzzzzz");
           } else {
             //this.addErrorAlert(httpErrorResponse.error);
-            this.toastNotificationService.error(httpErrorResponse.error);
+           // this.toastNotificationService.error(httpErrorResponse.error);
           }
           break;
 
         case 404:
          //this.addErrorAlert('Not found', 'error.url.not.found');
-         this.toastNotificationService.error('Not found');
+         //this.toastNotificationService.error('Not found');
           break;
 
         default:
           if (httpErrorResponse.error !== '' && httpErrorResponse.error.message) {
             //this.addErrorAlert(httpErrorResponse.error.message);
-            this.toastNotificationService.error(httpErrorResponse.error.message);
+            //this.toastNotificationService.error(httpErrorResponse.error.message);
           } else {
             //this.addErrorAlert(httpErrorResponse.error);
-            this.toastNotificationService.error(httpErrorResponse.error);
+            //this.toastNotificationService.error(httpErrorResponse.error);
           }
       }
     });
   }
 
   ngOnInit() {
-    this.jsonConfig.getConfig()
+  /*   this.jsonConfig.getConfig()
     .subscribe(
       (data: Config) => this.config = { ...data }, // success path
       error => this.error = error // error path
-    );
+    ); */
 
-    this.jsonConfig.makeIntentionalError().subscribe();
+    //this.jsonConfig.makeIntentionalError().subscribe();
   }
 
   ngOnDestroy() {
@@ -111,7 +112,7 @@ export class DefaultPageComponent implements OnInit {
     }
 }
 
-  config : Config;
+  //config : Config;
   error: any;
 
   xxx() {
@@ -126,18 +127,8 @@ export class DefaultPageComponent implements OnInit {
   
   
   
-    this.toastNotificationService.info(this.config.appName);
+   // this.toastNotificationService.info(this.config.appName);
   }
 
-  yyy() {
-    this.toastNotificationService.info("xxxxxxxxxxx1111111111");
-  }
 
-  aaa() {
-    this.toastNotificationService.warning("xxxxxxxxxxx1111111111");
-  }
-
-  bbb() {
-    this.toastNotificationService.success("xxxxxxxxxxx1111111111");
-  }
 }

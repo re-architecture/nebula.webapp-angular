@@ -5,8 +5,9 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Subscription } from 'rxjs';
 import { MatDialog } from '@angular/material';
 import { LoginModalComponent } from 'src/app/shared';
-import { ThemeService, LoginService } from 'src/app/core';
-import { Principal } from 'src/app/core/services/auth/principal.service';
+import { ThemeService, LoginService, Principal } from 'src/app/nebula-core';
+//import { ThemeService, LoginService } from 'src/app/core';
+//import { Principal } from 'src/app/core/services/auth/principal.service';
 
 
 @Component({

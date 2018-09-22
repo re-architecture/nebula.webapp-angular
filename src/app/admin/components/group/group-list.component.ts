@@ -1,13 +1,13 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { GroupService } from '../../services/group.service';
-import { ToastNotificationService } from '../../../core';
 import { GroupDataSource } from '../../services/group.datasource';
-import { RequestParams, Pageable, Sort, Order, Direction } from 'src/app/nebula-core';
-import { HttpParams } from '@angular/common/http';
+import { RequestParams, Pageable, Sort, Order,  MessageService, Message } from 'src/app/nebula-core';
+import { HttpParams, HttpResponse } from '@angular/common/http';
 import { MatSort, MatPaginator, MatDialog } from '@angular/material';
 import { fromEvent, merge } from 'rxjs';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { GroupUpdateComponent } from './group-update.component';
+import { Group } from 'src/app/model';
 
 @Component({
   selector: 'app-admin-group-list',
@@ -25,7 +25,8 @@ export class GroupListComponent implements OnInit {
     'id',
     'name',
     'description',
-    'isSystem'
+    'isSystem',
+    'actions'
   ];
 
   @ViewChild('btnSearch', { read: ElementRef }) btnSearch: ElementRef;
@@ -33,10 +34,9 @@ export class GroupListComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(
-    private toast: ToastNotificationService,
     private groupService: GroupService,
-    private dialog: MatDialog
-
+    private dialog: MatDialog,
+    private msg: MessageService
 
   ) { }
 
@@ -80,9 +80,11 @@ export class GroupListComponent implements OnInit {
       )
       .subscribe();
 
+
   }
 
   loadData() {
+
     //this.selection.clear();
 
     let params: HttpParams = new HttpParams();
@@ -108,27 +110,58 @@ export class GroupListComponent implements OnInit {
 
 
   onCreate() {
-    //this.id = id;
-    // index row is used just for debugging proposes and can be removed
-    //this.index = i;
-    // console.log(id);
+
     const dialogRef = this.dialog.open(GroupUpdateComponent, {
-      //height: '500px',
-      //width: '700px',
-      //data: { id: id }
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      //if (result == 'doUpdate') {
-      // When using an edit things are little different, firstly we find record inside DataService by id
-      //const foundIndex = this.exampleDatabase.dataChange.value.findIndex(x => x.id === this.id);
-      // Then you update that record using data from dialogData (values you enetered)
-      //this.exampleDatabase.dataChange.value[foundIndex] = this.dataService.getDialogData();
-      // And lastly refresh table
-      //this.refreshTable();
-      //this.refreshTable.emit(null);
-      // }
+      if (result == 'success') {
+        this.loadData();
+        this.msg.notification(new Message('创建组成功'));
+
+      }
     });
+  }
+
+
+  onEdit(id: number) {
+
+    let group: Group;
+
+    this.groupService.find(id).subscribe(
+      (httpResponse: HttpResponse<Group>) => {
+        group = httpResponse.body;
+
+        const dialogRef = this.dialog.open(GroupUpdateComponent, {
+
+          data: { group }
+
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+
+          //if (result == 'doUpdate') {
+          // When using an edit things are little different, firstly we find record inside DataService by id
+          //const foundIndex = this.exampleDatabase.dataChange.value.findIndex(x => x.id === this.id);
+          // Then you update that record using data from dialogData (values you enetered)
+          //this.exampleDatabase.dataChange.value[foundIndex] = this.dataService.getDialogData();
+          // And lastly refresh table
+          //this.refreshTable();
+          //this.refreshTable.emit(null);
+          // }
+          if (result == 'success') {
+            this.loadData();
+
+            this.msg.notification(new Message('修改成功'));
+          }
+
+        });
+
+
+      }
+    );
+
+
   }
 
 }

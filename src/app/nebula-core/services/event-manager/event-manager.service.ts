@@ -2,6 +2,13 @@ import { Injectable } from '@angular/core';
 import { Observable ,  Observer ,  Subscription } from 'rxjs';
 import { filter, share } from 'rxjs/operators';
 
+export class Event {
+
+    constructor(
+        public name : string,
+        public content : any){}
+}
+
 /**
  * An utility class to manage RX events
  */

@@ -5,10 +5,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { CoreModule, httpInterceptorProviders } from './core';
+import { CoreModule } from './core';
 import { appConfig } from './config/app.config';
 import { SharedModule } from './shared';
-import { NebulaCoreModule } from 'src/app/nebula-core';
+import { NebulaCoreModule, httpInterceptorProviders } from 'src/app/nebula-core';
 import { MaterialModule } from './material/material.module';
 
 @NgModule({

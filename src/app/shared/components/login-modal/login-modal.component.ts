@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { LoginService, StateStorageService, EventManagerService } from 'src/app/core';
+import { LoginService, StateStorageService, EventManagerService } from 'src/app/nebula-core';
 import { Router } from '@angular/router';
 
 import { MatDialogRef } from '@angular/material';

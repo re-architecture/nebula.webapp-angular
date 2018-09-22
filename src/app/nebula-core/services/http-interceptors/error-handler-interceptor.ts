@@ -1,18 +1,21 @@
+//https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
 import { HttpInterceptor, HttpRequest, HttpErrorResponse, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { EventManagerService } from '../services/event-manager/event-manager.service';
+import { EventManagerService, Event } from '../event-manager/event-manager.service';
 import { Injectable } from '@angular/core';
-import { ToastNotificationService, MessageType } from '../services/toast-notification/toast-notification.service';
-import { MessageService, Message } from 'src/app/nebula-core';
+import { MessageService } from '../message/message.service';
+import { Message } from '../message/message';
+
 
 
 @Injectable()
 export class ErrorHandlerInterceptor implements HttpInterceptor {
     constructor(
         private eventManager: EventManagerService,
-        private toastNotification: ToastNotificationService,
-        private msg : MessageService
+
+        private msg: MessageService
     ) { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
@@ -20,6 +23,15 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
             tap(
                 (event: HttpEvent<any>) => { },
                 (err: any) => {
+                    //5xx Server errors
+                    if (err.status.toString().startsWith('5')) {
+
+                        this.eventManager.broadcast(new Event('Application.ServerError', err));
+
+                    } else {
+                        this.msg.toast(new Message(`Application.ServerError - ${err.status} ${err.statusText}` , err, 'Success'));
+                    }
+
 
                     const errObject = {
                         name: err.name,
@@ -49,7 +61,7 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                         ) {
 
                             // this.toastNotification.openDialog(JSON.stringify(errObject), errorTitle, MessageType.Error);
-                            this.msg.toast(new Message(errorTitle,JSON.stringify(errObject),'Error'));
+                            //this.msg.toast(new Message(errorTitle,JSON.stringify(errObject),'Error'));
                             //if (this.eventManager !== undefined) {
                             //    this.eventManager.broadcast({ name: 'Application.httpError', content: err });
                             //}

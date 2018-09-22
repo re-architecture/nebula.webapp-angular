@@ -47,11 +47,11 @@ export class JsonConfigService {
       'Something bad happened; please try again later.');
   };
 
-  makeIntentionalError() {
+  /* makeIntentionalError() {
     return this.http.get('not/a/real/url')
       .pipe(
         catchError(this.handleError)
       );
-  }
+  } */
 
 }

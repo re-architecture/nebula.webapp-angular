@@ -5,7 +5,9 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from
 //import { LoginModalService } from '../login/login-modal.service';
 import { StateStorageService } from './state-storage.service';
 import { Principal } from './principal.service';
-import { ToastNotificationService } from '../toast-notification/toast-notification.service';
+import { MessageService } from '../message/message.service';
+import { Message } from '../message/message';
+
 
 @Injectable({ providedIn: 'root' })
 export class UserRouteAccessService implements CanActivate {
@@ -14,7 +16,7 @@ export class UserRouteAccessService implements CanActivate {
         //private loginModalService: LoginModalService,
         private principal: Principal,
         private stateStorageService: StateStorageService,
-        private toastNotification : ToastNotificationService
+        private msg : MessageService
     ) {}
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Promise<boolean> {
@@ -51,7 +53,8 @@ export class UserRouteAccessService implements CanActivate {
                     // only show the login dialog, if the user hasn't logged in yet
                     if (!account) {
                         //this.loginModalService.open();
-                        this.toastNotification.openDialog('User has not any of required authorities');
+                     
+                        this.msg.dialog(new Message('User has not any of required authorities'));
                     }
                 //});
                 return false;

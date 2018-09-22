@@ -10,7 +10,7 @@
       </div>
 
       <mat-form-field style="width: 100%;">
-        <input matInput placeholder="Name 用户名" required formControlName="loginName" autofocus>
+        <input matInput placeholder="Name 用户名" required formControlName="loginName" nebulaFocus>
         <mat-error *ngIf="form.controls['loginName'].hasError('required')">
           Enter your account name. 请填写用户名
         </mat-error>

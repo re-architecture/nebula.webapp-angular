@@ -17,6 +17,7 @@ import { ToastComponent } from './components/message/toast.component';
 import { AlertComponent } from './components/message/alert.component';
 import { PageLoadingProgressBarComponent } from './components/page-loading-progress-bar/page-loading-progress-bar.component';
 import { MaterialModule } from '../material/material.module';
+import { FocusDirective } from './directives/focus.directive';
 
 //Using the Icon Library
 library.add(fas, far);
@@ -26,19 +27,21 @@ library.add(fas, far);
   imports: [
     CommonModule,
     FontAwesomeModule,
-    MaterialModule
+    MaterialModule,
   ],
   declarations: [
     DialogComponent,
     NotificationComponent,
     ToastComponent,
     AlertComponent,
-    PageLoadingProgressBarComponent
+    PageLoadingProgressBarComponent,
+    FocusDirective
     
   ],
   exports: [
     AlertComponent,
-    PageLoadingProgressBarComponent
+    PageLoadingProgressBarComponent,
+    FocusDirective
   ],
   entryComponents: [
     DialogComponent,

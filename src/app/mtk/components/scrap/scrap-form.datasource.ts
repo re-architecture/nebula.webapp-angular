@@ -45,7 +45,7 @@ export class ScrapFormDataSource implements DataSource<ScrapForm> {
     }
 
     connect(collectionViewer: CollectionViewer): Observable<ScrapForm[]> {
-        console.log("Connecting data source");
+        //console.log("Connecting data source");
         return this.dataSubject.asObservable();
     }
 

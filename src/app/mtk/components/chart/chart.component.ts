@@ -49,7 +49,7 @@ export class ChartComponent implements OnInit {
  
 
   onSelect(event) {
-    console.log(event);
+    //console.log(event);
   }
 
 }
