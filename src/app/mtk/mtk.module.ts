@@ -20,7 +20,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { ScrapPageComponent } from './pages/scrap-page/scrap-page.component';
 import { ScrapListComponent } from './components/scrap/scrap-list.component';
-import { HttpClientModule } from '@angular/common/http';
 import { MTKService } from './services/mtk.service';
 import { ScrapEditComponent } from './components/scrap/scrap-edit.component';
 import { MaterialListComponent } from './components/scrap/material-list.component';
@@ -41,7 +40,6 @@ import { ChartCardItem3Component } from './components/chart-card-item3/chart-car
     //NgxChartsModule,
     ChartsModule,
     MaterialModule,
-    HttpClientModule,
     NgxChartsModule,
   ],
   declarations: [

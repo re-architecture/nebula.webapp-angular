@@ -44,16 +44,20 @@ import { SERVER_API_URL } from '../auth/app.constants';
 export class AuthInterceptor implements HttpInterceptor {
 
     constructor(private localStorage: LocalStorageService, private sessionStorage: SessionStorageService) { }
+    
     intercept(req: HttpRequest<any>, next: HttpHandler):
         Observable<HttpEvent<any>> {
 
         if (!req || !req.url || (/^http/.test(req.url) && !(SERVER_API_URL && req.url.startsWith(SERVER_API_URL)))) {
+            
             return next.handle(req);
         }
 
         //const token = this.localStorage.retrieve('authenticationToken') || this.sessionStorage.retrieve('authenticationToken');
         const token = this.localStorage.getItem('authenticationToken') || this.sessionStorage.getItem('authenticationToken');
+       
         if (!!token) {
+          
             req = req.clone({
                 setHeaders: {
                     Authorization: 'Bearer ' + token

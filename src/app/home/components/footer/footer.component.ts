@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { appConfig } from 'src/app/config/app.config';
-import { ConfigService } from 'src/app/core';
-
+import { ConfigService } from 'src/app/nebula-core';
 
 @Component({
   selector: 'app-home-footer',

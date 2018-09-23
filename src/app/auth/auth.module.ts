@@ -12,7 +12,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { CommonModule } from '@angular/common';
 import { SigninComponent } from './components/signin/signin.component';
@@ -23,7 +22,6 @@ import { NebulaCoreModule } from 'src/app/nebula-core';
     CommonModule,
     AuthRoutingModule,
     MaterialModule,
-    HttpClientModule,
     ReactiveFormsModule,
     NebulaCoreModule
   ],

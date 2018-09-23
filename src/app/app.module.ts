@@ -5,11 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { CoreModule } from './core';
-import { appConfig } from './config/app.config';
+//import { CoreModule } from './core';
+//import { appConfig } from './config/app.config';
 import { SharedModule } from './shared';
 import { NebulaCoreModule, httpInterceptorProviders } from 'src/app/nebula-core';
 import { MaterialModule } from './material/material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,11 +20,12 @@ import { MaterialModule } from './material/material.module';
     BrowserModule,
     BrowserAnimationsModule,
     //CoreModule,
-    CoreModule.forRoot(appConfig),
+    //CoreModule.forRoot(appConfig),
     AppRoutingModule,
     SharedModule,
     NebulaCoreModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent],
   providers: [httpInterceptorProviders] 

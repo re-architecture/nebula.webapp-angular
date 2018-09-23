@@ -4,9 +4,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
-import { LoginService, StateStorageService, EventManagerService } from 'src/app/nebula-core';
+import { LoginService, StateStorageService, EventManagerService, ConfigService } from 'src/app/nebula-core';
 import { AuthService } from '../../services/auth.service';
-import { ConfigService } from 'src/app/core';
+
 
 @Component({
   selector: 'app-auth-signin',

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Group } from 'src/app/model';
-import { ConfigService } from 'src/app/core';
-import {  RequestParams } from 'src/app/nebula-core';
+
+import {  RequestParams, ConfigService } from 'src/app/nebula-core';
 
 type EntityResponseType = HttpResponse<Group>;
 type EntityArrayResponseType = HttpResponse<Group[]>;
@@ -19,6 +19,8 @@ export class GroupService {
     ) { }
 
     query(requestParams : RequestParams): Observable<EntityArrayResponseType> {
+
+        //console.log(this.resourceUrl);
 
         const options = requestParams.getHttpParams();
        

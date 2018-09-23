@@ -45,6 +45,9 @@ export * from './services/login/login.service';
 export * from './components/message/alert.component';
 export * from './util/request-params';
 
+export * from './services/config/config';
+export * from './services/config/config.service';
+
 export * from './services/message/dialog';
 export * from './services/message/message';
 export * from './services/message/message.service';

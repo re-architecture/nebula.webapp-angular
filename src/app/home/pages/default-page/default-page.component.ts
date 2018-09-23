@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  EventManagerService, TestService } from 'src/app/nebula-core';
 import { Subscription } from 'rxjs';
-import { JsonConfigService } from 'src/app/core';
-
-
-
 
 @Component({
   selector: 'app-home-default-page',
@@ -18,8 +14,7 @@ export class DefaultPageComponent implements OnInit {
   constructor(
     //private toastNotificationService: ToastNotificationService,
     private eventManager: EventManagerService,
-    private testService : TestService,
-    private jsonConfig : JsonConfigService
+    private testService : TestService
   ) {
 
 

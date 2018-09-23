@@ -22,7 +22,6 @@ import { FocusDirective } from './directives/focus.directive';
 //Using the Icon Library
 library.add(fas, far);
 
-
 @NgModule({
   imports: [
     CommonModule,

@@ -23,12 +23,17 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
             tap(
                 (event: HttpEvent<any>) => { },
                 (err: any) => {
-                    //5xx Server errors
-                    if (err.status.toString().startsWith('5')) {
+                    //5xx Server errors or 4xx Client errors
+                    if (err.status.toString().startsWith('5') || err.status.toString().startsWith('4')) {
 
-                        this.eventManager.broadcast(new Event('Application.ServerError', err));
+                        //验证账号是否已登录得到的401错误，不在此处处理
+                        if(!(err.status === 401 && err.url.includes('/account')))
+                        {
+                            this.eventManager.broadcast(new Event('Application.HttpError', err));
+                        }
 
-                    } else {
+                    }                
+                    else {
                         this.msg.toast(new Message(`Application.ServerError - ${err.status} ${err.statusText}` , err, 'Success'));
                     }
 

@@ -6,8 +6,7 @@ import { Subscription } from 'rxjs';
 
 import { Title } from '@angular/platform-browser';
 
-import { ThemeService, Principal, Account, EventManagerService, MessageService, Message } from 'src/app/nebula-core';
-import { ConfigService } from 'src/app/core';
+import { ThemeService, Principal, Account, EventManagerService, MessageService, Message, ConfigService, Config } from 'src/app/nebula-core';
 
 
 @Component({
@@ -25,6 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
   loading = false;
 
   httpErrorListener: Subscription;
+  appConfig: Config
 
   constructor(
     private titleService: Title,
@@ -36,13 +36,13 @@ export class AppComponent implements OnInit, OnDestroy {
     private msg: MessageService
   ) {
 
-    this.httpErrorListener = eventManager.subscribe('Application.ServerError', response => {
+    this.httpErrorListener = eventManager.subscribe('Application.HttpError', response => {
 
       //let i;
       const error = response.content;
       //switch (httpErrorResponse.status) {
       // case '504'
-      this.msg.toast(new Message(`Application.ServerError - ${error.status} ${error.statusText}` , error, 'Error'));
+      this.msg.toast(new Message(`Application.HttpError - ${error.status} ${error.statusText}`, error, 'Error'));
 
       // connection refused, server not reachable
       /*  case 0:
@@ -102,14 +102,24 @@ export class AppComponent implements OnInit, OnDestroy {
 
     })
     //});
-      
+
   }
 
 
 
   ngOnInit() {
 
-    this.titleService.setTitle(this.configService.appConfig.appName);
+    this.configService.initConfig('assets/app.config.json').subscribe(
+      (data: Config) => {
+        this.appConfig = { ...data }
+
+        this.titleService.setTitle(this.appConfig.appName);
+
+      }
+    );
+
+
+    //console.log(JSON.stringify(this.configService.appConfig));
 
     this.themeSubscription = this.themeService.theme$.subscribe(
       theme => {
