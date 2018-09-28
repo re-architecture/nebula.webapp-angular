@@ -45,6 +45,7 @@ export * from './services/login/login.service';
 export * from './components/message/alert.component';
 export * from './util/request-params';
 
+export * from './services/app-ready-event/app-ready-event.service';
 export * from './services/config/config';
 export * from './services/config/config.service';
 
@@ -54,3 +55,4 @@ export * from './services/message/message.service';
 
 export * from './services/event-manager/event-manager.service';
 export * from './nebula-core.module';
+

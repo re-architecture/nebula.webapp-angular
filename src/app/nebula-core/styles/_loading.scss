@@ -1,0 +1,237 @@
+
+//ref:
+//https://www.bennadel.com/blog/3482-creating-a-pre-bootstrap-loading-screen-with-window-postmessage-in-angular-6-1-2.htm
+//https://stackoverflow.com/questions/35243443/pre-bootstrap-loading-screen-for-angular2
+//https://codepen.io/Beaugust/pen/DByiE
+
+// 1  .loading-gear  
+// 2  .loading-clock 
+// 3  .loading-clock2
+// 4  .loading-circle
+// 5  .loading-circleloader
+//==============================================================
+// loading-gear
+//==============================================================
+.loading-gear {
+    position:relative;
+    width: 80px; 
+    height: 80px; 
+    margin:20px auto; 
+    border:5px solid #757575; 
+    border-radius:10%; 
+    box-shadow:  0 10px 0 0 rgba(0, 0, 0, .1);
+}
+  
+.loading-gear:after {
+    content:"";
+    position:absolute; 
+    width: 100px; 
+    height: 100px;
+    border-radius:100%; 
+    top:-24px; 
+    left: -24px; 
+    display:block; 
+    border:5px dashed #757575 ;
+    box-shadow: inset 0px 0 0 20px #757575; 
+    transform:scale(.5) rotate(0deg);
+    animation:loading-gear-animation1 6s linear infinite;
+}
+
+.loading-gear:before {
+    content:"";
+    position:absolute;
+    width: 58px; 
+    height: 58px;
+    border-radius:100%; 
+    top:26px; 
+    right: -14px; 
+    display:block; 
+    border:5px dashed #757575 ; 
+    box-shadow: inset 0px 0 0 10px #757575; 
+    transform:scale(.5) rotate(0deg);
+    animation:loading-gear-animation2 4s linear infinite;
+}
+
+@keyframes loading-gear-animation1 {
+    0% {transform:scale(.5) rotate(0deg);}
+    100%{transform:scale(.5) rotate(360deg);}
+}
+
+@keyframes loading-gear-animation2 {
+    0%{transform:scale(.5) rotate(0deg);}
+    100%{transform:scale(.5)  rotate(-360deg);}
+}
+
+//==============================================================
+// loading-clock2
+//==============================================================
+.loading-clock2{ 
+    width: 80px; 
+    height: 80px; 
+    border-radius:100%; 
+    background:#333 ; 
+    margin:10px; 
+    border:5px solid  #fff ; 
+    position:relative; 
+    //box-shadow:0 5px 0 0 rgba(0, 0, 0, .3),inset 0 5px 0 0 rgba(0, 0, 0, .3), inset 0 0 0 34px #c33;
+    box-shadow:0 5px 0 0 rgba(0, 0, 0, .3),inset 0 5px 0 0 rgba(0, 0, 0, .3), inset 0 0 0 34px #9E9E9E;
+   
+    
+  }
+  
+  
+  .loading-clock2:after {
+      content:"";
+      width: 5px; 
+      height: 60px;
+   display:block; 
+   position:absolute; 
+   top:0; 
+   bottom: 0; 
+   left: 0; 
+   right: 0; 
+   margin: auto; 
+   box-shadow: inset 0px 2px 0 0 #fff, inset 0px 30px 0 0 #333;
+   animation:loading-clock2-animation .5s linear infinite;
+}
+  
+.loading-clock2:before{
+    content:"";
+    width: 5px; 
+    height: 50px; 
+    display:block; 
+    position:absolute; 
+    top:0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+    box-shadow: inset 0px 2px 0 0 #fff, inset 0px 25px 0 0 #333;
+    animation:loading-clockb-animation 6s linear infinite;
+    }
+  
+  
+  @keyframes loading-clock2-animation {
+    100%{transform: rotate(360deg);}
+  }
+  
+  @keyframes loading-clock2b-animation {
+    100%{transform: rotate(360deg);}
+  }
+  
+//==============================================================
+// loading-clock
+//==============================================================
+
+.loading-clock {
+    width: 80px; 
+    height: 80px; 
+    border-radius:100%; 
+    background:#757575 ;
+    margin:10px;
+    border:5px solid  transparent ; 
+    position:relative;
+   /*  box-shadow:30px -30px 0 -25px #222,-30px -30px 0 -25px #222,20px 35px 0 -35px #222,25px 45px 0 -40px #222,-20px 35px 0 -35px #222,-25px 45px 0 -40px #222,inset 0 0 0 3px #fff,
+    inset 0 6px 0 0 rgba(21, 255, 0, 0.3),
+    inset 0 0 0 35px #09c,
+    inset 0 0 0 40px #222; */
+
+    box-shadow:inset 0 0 0 3px #fff,
+    inset 0 6px 0 0 rgba(0, 0, 0, 0.3),
+    inset 0 0 0 35px #9E9E9E,
+    inset 0 0 0 40px #222;
+}
+
+.loading-clock:after {
+    content:"";
+    width: 5px; 
+    height: 60px;
+    display:block; 
+    position:absolute; 
+    top:0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    margin: auto; 
+    box-shadow: inset 0px 2px 0 0 #fff, inset 0px 30px 0 0 #222;
+    animation:loading-clock-animation .5s linear infinite;
+}
+
+
+
+.loading-clock:before {
+    content:"";
+    width: 5px; 
+    height: 50px; 
+    display:block; 
+    position:absolute; 
+    top:0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+    box-shadow: inset 0px 2px 0 0 #fff, inset 0px 25px 0 0 #222;
+    animation:loading-clockb-animation 6s linear infinite;
+}
+
+
+@keyframes loading-clock-animation {
+  100%{transform: rotate(360deg);}
+}
+
+@keyframes loading-clockb-animation {
+  100%{transform: rotate(360deg);}
+}
+
+
+//==============================================================
+// loading-circle
+//==============================================================
+
+.loading-circle {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #757575;
+    animation: spin 1s infinite linear;
+  }
+
+  @keyframes spin { 
+    100% { 
+      transform: rotate(360deg); 
+    } 
+  } 
+
+//==============================================================
+// loading-circleloader
+//==============================================================
+  .loading-circleloader {
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    margin-top: -10px;
+    border-radius: 16px;
+    width: 80px;
+    height: 20px;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.4);
+    
+    &:before {
+      content: '';
+      position: absolute;
+      border-radius: 16px;
+      width: 20px;
+      height: 12px;
+      left: 0;
+      background: #FFF;
+      animation: push 1s infinite linear;    
+    }
+  }
+
+  @keyframes push {
+    50% {
+      left: 56px;
+    }
+  }

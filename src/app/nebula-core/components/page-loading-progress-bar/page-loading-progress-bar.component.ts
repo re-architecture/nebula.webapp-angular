@@ -9,14 +9,21 @@ import { Router,Event, NavigationStart, NavigationEnd, NavigationCancel, Navigat
 export class PageLoadingProgressBarComponent implements OnInit {
 
   loading = false;
+  value : number = 10;
   constructor(private router: Router) { }
 
-  ngOnInit() {
 
-    this.router.events.subscribe((event: Event) => {
+  ngOnInit() {
+   
+   
+
+      this.router.events.subscribe((event: Event) => {
       switch (true) {
         case event instanceof NavigationStart: {
           this.loading = true;
+          //setInterval(()=> this.xxx(), 1000);
+          this.value = this.value + 30;
+        
           break;
         }
 
@@ -24,6 +31,7 @@ export class PageLoadingProgressBarComponent implements OnInit {
         case event instanceof NavigationCancel:
         case event instanceof NavigationError: {
           this.loading = false;
+          this.value = 100;
           break;
         }
         default: {

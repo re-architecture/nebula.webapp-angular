@@ -25,7 +25,7 @@ const routes: Routes = [
         //true value debugging purposes only
         enableTracing: false,
         //为所有惰性加载模块启用预加载功能
-        preloadingStrategy: PreloadAllModules
+        //preloadingStrategy: PreloadAllModules
       }
 
     )

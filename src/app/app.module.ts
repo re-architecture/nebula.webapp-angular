@@ -11,6 +11,9 @@ import { SharedModule } from './shared';
 import { NebulaCoreModule, httpInterceptorProviders } from 'src/app/nebula-core';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NgProgressModule } from './nebula-core/components/ng-progress/ng-progress.module';
+import { NgProgressHttpModule } from './nebula-core/components/ng-progress/http/ng-progress-http.module';
+import { NgProgressRouterModule } from './nebula-core/components/ng-progress/router/ng-progress-router.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     NebulaCoreModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpModule.forRoot(),
+    NgProgressRouterModule.forRoot()
   ],
   bootstrap: [AppComponent],
   providers: [httpInterceptorProviders] 

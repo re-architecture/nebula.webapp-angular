@@ -45,20 +45,6 @@ const MENUS: { [key: string]: Menu[] } = {
         { id: 'menu2-item1', name: 'Scrap Form 报废单', icon: 'account_box', routerLink: 'mtk/scrap' }
       ]
     },
-    {
-      id: 'menu21',
-      name: 'Demo-Feature',
-      icon: 'dashboard',
-      items: [
-        { id: 'menu21-item1', name: 'Dashboard', icon: 'widgets', routerLink: 'default' },
-        { id: 'menu21-item2', name: 'Regular Table', icon: 'widgets', routerLink: 'demo-feature/regularTable' },
-        { id: 'menu21-item3', name: '客户管理', icon: 'view_list', routerLink: 'customer' },
-        { id: 'menu21-item4', name: '数据表', icon: 'view_list', routerLink: 'product' },
-        { id: 'menu21-item5', name: '大数据分页', icon: 'reorder', routerLink: 'largedatatable' },
-        { id: 'menu21-item6', name: 'Item 4', icon: 'drafts', routerLink: 'test' }
-
-      ]
-    },
 
   
     {
@@ -70,6 +56,21 @@ const MENUS: { [key: string]: Menu[] } = {
         { id: 'menu3-item2', name: 'Group 组管理', icon: 'account_box', routerLink: 'admin/group' },
         { id: 'menu3-item3', name: 'Role 角色管理', icon: 'account_box', routerLink: 'admin/users' },
         { id: 'menu3-item4', name: 'Permission 授权管理', icon: 'account_box', routerLink: 'admin/users' }
+      ]
+    },
+    {
+      id: 'menu100',
+      name: 'Demo',
+      icon: 'dashboard',
+      items: [
+        { id: 'menu100-item1', name: 'Component', icon: 'widgets', routerLink: 'demo/component' },
+        { id: 'menu100-item2', name: 'Dashboard', icon: 'widgets', routerLink: 'default' },
+        { id: 'menu100-item3', name: 'Regular Table', icon: 'widgets', routerLink: 'demo-feature/regularTable' },
+        { id: 'menu100-item4', name: '客户管理', icon: 'view_list', routerLink: 'customer' },
+        { id: 'menu100-item5', name: '数据表', icon: 'view_list', routerLink: 'product' },
+        { id: 'menu100-item6', name: '大数据分页', icon: 'reorder', routerLink: 'largedatatable' },
+        { id: 'menu100-item7', name: 'Item 4', icon: 'drafts', routerLink: 'test' }
+
       ]
     },
   ]

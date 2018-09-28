@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title></title>
@@ -7,10 +8,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon_MTK.ico">
 </head>
+
 <body>
-  <app-root></app-root>
-  <div class="page-loading">
-    <img src="assets/img/page-loading.svg" class="loading-icon" />
+
+  <div class='loading-container'>
+    <div class="loading-clock"></div>
+    <!-- <div class="loading-gear"></div> -->
+    <div class='text'>Loading ...</div> 
   </div>
+
+  <script type="text/javascript">
+
+    (function listenForAppReadyEvent() {
+
+      // Listen for our "appReady" message event.
+      window.addEventListener("message", handleMessage, false);
+
+      // I handle "message" events on the current window.
+      function handleMessage(event) {
+        if (event.data === "appReady") {
+          console.log("AppReady event received!");
+          window.removeEventListener("message", handleMessage, false);
+          removeLoadingContainer();
+        }
+
+      }
+
+      function removeLoadingContainer() {
+
+        var loadingContainer = document.querySelector('.loading-container');
+
+        loadingContainer.classList.add('loaded');
+
+        /*
+        setTimeout(
+          function removeDomElements() {
+
+            var dom = document.querySelectorAll('.loading-container')
+
+            for ( var i = 0 ; i < dom.length ; i++ ) {
+              var item = dom[ i ];
+              item.parentNode.removeChild( item );
+            }
+
+          },
+          500
+        );
+        */
+      }
+    })();
+  </script>
+  <app-root></app-root>
 </body>
+
 </html>

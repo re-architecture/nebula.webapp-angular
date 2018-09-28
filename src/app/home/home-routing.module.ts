@@ -33,6 +33,10 @@ const routes: Routes = [
         loadChildren: '../mtk/mtk.module#MTKModule',
        
       },
+      {
+        path:'demo',
+        loadChildren: '../demo/demo.module#DemoModule',
+      },
       ...errorRoutes
     ]
   }
