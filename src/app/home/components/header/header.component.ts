@@ -60,15 +60,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.themeSubscription.unsubscribe();
   }
 
-  openLoginModal() {
-
-    const dialogRef = this.dialog.open(LoginModalComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-
-    });
-  }
-
+ 
   logout() {
 
     this.loginService.logout();
@@ -78,4 +70,5 @@ export class HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated() {
     return this.principal.isAuthenticated();
 }
+
 }

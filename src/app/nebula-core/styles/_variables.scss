@@ -1,0 +1,8 @@
+//默认字体14px 行高20px 字重400
+$custom-typography: mat-typography-config(
+  
+    $font-family: '-apple-system,BlinkMacSystemFont, "Segoe UI", 
+                    Roboto, "Helvetica Neue", Arial, sans-serif, 
+                    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+
+);

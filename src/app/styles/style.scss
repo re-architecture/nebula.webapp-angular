@@ -1,28 +1,16 @@
 @import '~@angular/material/theming';
-@import 'material-design-icons/iconfont/material-icons.css';
+//@import 'material-design-icons/iconfont/material-icons.css';
 
+@import 'src/app/nebula-core/styles/nebula.scss';
+
+//各模块的 Component 主题
 @import './themes/app-theme.scss';
+
+//样式主题
 @import './themes/default-theme.scss';
 @import './themes/custom-theme.scss';
 @import './themes/light-theme.scss';
 @import './themes/black-theme.scss';
-
-@import 'src/app/nebula-core/styles/nebula.scss';
-
-//默认字体14px 行高20px 字重400
-$custom-typography: mat-typography-config(
-  
-    $font-family:'"Segoe UI", SegoeUI, Roboto,
-    "Microsoft YaHei", 微软雅黑,
-    "PingFang SC", "Hiragino Sans GB", 
-    "Helvetica Neue", Helvetica, Arial, sans-serif'
-
-);
-
-//https://github.com/angular/material2/blob/master/src/lib/core/typography/_typography.scss
-@include mat-core($custom-typography);
-
-/* @include angular-material-typography($custom-typography); */
 
 /* default-theme  */
 .default-theme{
@@ -44,30 +32,4 @@ $custom-typography: mat-typography-config(
 .black-theme{
     @include angular-material-theme($black-theme);
     @include app-theme($black-theme);
-}
-
-body {
-    margin: 0; 
-}
-
-.loading-container {
-    
-    display: flex;
-    flex-flow:column nowrap;
-    justify-content: center;
-    align-items:center;
-    width:100vw;
-    height:100vh;
-    background-color:#E0E0E0;
-
-    .text {
-        font-size:16px;
-        line-height: 20px;
-        font-family:"Arial", "sans-serif";
-    }
-    
-}
-
-.loading-container.loaded {
-    display: none;
 }

@@ -120,17 +120,24 @@
     </button> -->
     &nbsp;
     <button mat-stroked-button #btnSearch color="warn" style="background-color:#FAE6E6;">
-      <mat-icon>search</mat-icon>Search 查询
+      <!-- <mat-icon>search</mat-icon> -->
+      <fa-icon class='fa-lg' style="margin-right:4px;" [icon]="['fas','search']"></fa-icon>
+      <span>Search 查询</span>
     </button>
   </div>
 
   <div>
     <!-- mat-flat-button -->
     <button mat-stroked-button color="primary" style="background-color:#EDE7F6;">
-      <mat-icon>gavel</mat-icon>Approve 审批</button>
+        <fa-icon class='fa-lg' style="margin-right:4px;" [icon]="['fas','edit']"></fa-icon>
+        <span>Approve 审批</span>
+      </button>
     &nbsp;
     <button mat-stroked-button color="primary" style="background-color:#EDE7F6;">
-      <mat-icon>timer_off</mat-icon>Reject 拒绝</button>
+      <!-- <mat-icon>timer_off</mat-icon> -->
+      <fa-icon class='fa-lg' style="margin-right:4px;" [icon]="['fas','ban']"></fa-icon>
+      <span>Reject 拒绝</span>
+    </button>
 
   </div>
 
@@ -230,7 +237,9 @@
 
       <td style="text-align: center;" mat-cell *matCellDef="let row; let i=index;">
         <button mat-icon-button color="accent" (click)="onEdit(row.formID)">
-          <mat-icon>launch</mat-icon>
+          <!-- <mat-icon>launch</mat-icon> -->
+          <fa-icon class='fa-lg' [icon]="['fas','file-alt']"></fa-icon>
+          
         </button>
 
 

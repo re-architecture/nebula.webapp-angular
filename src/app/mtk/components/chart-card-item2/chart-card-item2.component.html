@@ -4,13 +4,14 @@
     <div style="padding-left: 15px;">
       <div style="font-weight:400;color:#9E9E9E;">OUTPUT (CU Daily)</div>
       <div style="padding-top:20px;font-weight:400;font-size:2.5em;color: #212121;">
-        4900 <mat-icon>arrow_downward</mat-icon>
+        4900 <!-- <mat-icon>arrow_downward</mat-icon> --><fa-icon style="font-size:0.929rem;" icon='arrow-down'></fa-icon>
         </div>
     </div>
     
     <div style="padding-right: 15px;">
       <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon style="font-size:2em;color:#9E9E9E;">filter_tilt_shift</mat-icon>
+       <!--  <mat-icon style="font-size:2em;color:#9E9E9E;">filter_tilt_shift</mat-icon> -->
+       <fa-icon class='fa-lg' style="color:#9E9E9E;" icon='cogs'></fa-icon>
       </button>
     </div>
 
@@ -23,14 +24,14 @@
   
   <div class="chart-card-footer">
     <button mat-button disabled>
-      <mat-icon>cached</mat-icon>
+      <!-- <mat-icon>cached</mat-icon> --> <fa-icon class='fa-sm' style="margin: 0 6px 0 6px" icon='sync-alt'></fa-icon>
       Just Updated
     </button>
   </div>
 </div>
 <mat-menu #menu="matMenu">
   <button mat-menu-item>
-    <mat-icon>autorenew</mat-icon>
+    <!-- <mat-icon>autorenew</mat-icon> --> <fa-icon class='fa-sm' style="margin: 0 6px 0 6px" icon='sync-alt'></fa-icon>
     <span>Refresh</span>
   </button>
 </mat-menu>

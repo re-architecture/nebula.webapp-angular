@@ -1,0 +1,17 @@
+<button mat-flat-button [disabled]="currentTheme === 'default-theme'" (click)="setTheme('default-theme')">
+  Default 默认主题
+</button>
+&nbsp;
+<button mat-flat-button [disabled]="currentTheme === 'custom-theme'" (click)="setTheme('custom-theme')">
+  Custom 自定义主题
+</button>
+
+<br><br>
+<div class='button-row'>
+  <button mat-flat-button>Basic</button>
+  <button mat-flat-button color="primary">Primary</button>
+  <button mat-flat-button color="accent">Accent</button>
+  <button mat-flat-button color="warn">Warn</button>
+  <button mat-flat-button disabled>Disabled</button>
+  <a mat-flat-button routerLink=".">Link</a>
+</div>

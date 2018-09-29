@@ -32,17 +32,17 @@ const MENUS: { [key: string]: Menu[] } = {
     {
       id: 'menu1',
       name: 'Analysis 数据分析',
-      icon: 'lock',
+      icon: 'folder',
       items: [
-        { id: 'menu1-item1', name: 'Home', icon: 'account_box', routerLink: 'mtk/home' }
+        { id: 'menu1-item1', name: 'Home', icon: 'folder-open', routerLink: 'mtk/home' }
       ]
     },
     {
       id: 'menu2',
       name: 'Scrap 生产报废',
-      icon: 'lock',
+      icon: 'folder',
       items: [
-        { id: 'menu2-item1', name: 'Scrap Form 报废单', icon: 'account_box', routerLink: 'mtk/scrap' }
+        { id: 'menu2-item1', name: 'Scrap Form 报废单', icon: 'folder-open', routerLink: 'mtk/scrap' }
       ]
     },
 
@@ -50,26 +50,28 @@ const MENUS: { [key: string]: Menu[] } = {
     {
       id: 'menu3',
       name: 'Management 系统管理',
-      icon: 'lock',
+      icon: 'folder',
       items: [
-        { id: 'menu3-item1', name: 'User 用户管理', icon: 'account_box', routerLink: 'admin/users' },
-        { id: 'menu3-item2', name: 'Group 组管理', icon: 'account_box', routerLink: 'admin/group' },
-        { id: 'menu3-item3', name: 'Role 角色管理', icon: 'account_box', routerLink: 'admin/users' },
-        { id: 'menu3-item4', name: 'Permission 授权管理', icon: 'account_box', routerLink: 'admin/users' }
+        { id: 'menu3-item1', name: 'User 用户管理', icon: 'folder-open', routerLink: 'admin/users' },
+        { id: 'menu3-item2', name: 'Group 组管理', icon: 'folder-open', routerLink: 'admin/group' },
+        { id: 'menu3-item3', name: 'Role 角色管理', icon: 'folder-open', routerLink: 'admin/users' },
+        { id: 'menu3-item4', name: 'Permission 授权管理', icon: 'folder-open', routerLink: 'admin/users' }
       ]
     },
     {
       id: 'menu100',
       name: 'Demo',
-      icon: 'dashboard',
+      icon: 'folder',
       items: [
-        { id: 'menu100-item1', name: 'Component', icon: 'widgets', routerLink: 'demo/component' },
-        { id: 'menu100-item2', name: 'Dashboard', icon: 'widgets', routerLink: 'default' },
-        { id: 'menu100-item3', name: 'Regular Table', icon: 'widgets', routerLink: 'demo-feature/regularTable' },
-        { id: 'menu100-item4', name: '客户管理', icon: 'view_list', routerLink: 'customer' },
-        { id: 'menu100-item5', name: '数据表', icon: 'view_list', routerLink: 'product' },
-        { id: 'menu100-item6', name: '大数据分页', icon: 'reorder', routerLink: 'largedatatable' },
-        { id: 'menu100-item7', name: 'Item 4', icon: 'drafts', routerLink: 'test' }
+        { id: 'menu100-item1', name: 'Component', icon: 'folder-open', routerLink: 'demo/component' },
+        { id: 'menu100-item2', name: 'theme', icon: 'folder-open', routerLink: 'demo/theme' },
+        { id: 'menu100-item3', name: 'Auth', icon: 'folder-open', routerLink: 'demo/auth' },
+        { id: 'menu100-item4', name: 'Dashboard', icon: 'folder-open', routerLink: 'default' },
+        { id: 'menu100-item5', name: 'Regular Table', icon: 'folder-open', routerLink: 'demo-feature/regularTable' },
+        { id: 'menu100-item6', name: '客户管理', icon: 'folder-open', routerLink: 'customer' },
+        { id: 'menu100-item7', name: '数据表', icon: 'folder-open', routerLink: 'product' },
+        { id: 'menu100-item8', name: '大数据分页', icon: 'folder-open', routerLink: 'largedatatable' },
+        { id: 'menu100-item9', name: 'Item 4', icon: 'folder-open', routerLink: 'test' }
 
       ]
     },

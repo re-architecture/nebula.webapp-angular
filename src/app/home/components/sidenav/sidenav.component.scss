@@ -109,23 +109,32 @@
     text-decoration: none;
     border-radius:3px;
 
-    .menu-mat-icon{
+    /* .menu-mat-icon{
       display: inline-flex;
       align-items: center;
       justify-content:center;
       margin:0 6px 0 6px;
-    }
+    } */
+
+    .menu-icon{
+      margin:0 6px 0 6px;
+    } 
 
     .menu-text{
       flex:auto;
     }
 
-    .menu-mat-icon-arrow{
+    /* .menu-mat-icon-arrow{
       font-size: 18px;
       display: inline-flex;
       align-items: center;
       justify-content:center;
       margin:0 4px 0 0px;
+    } */
+
+    .menu-icon-arrow{
+      //font-size: 18px;
+      margin:0 6px 0 6px;
     }
   }
 
@@ -139,13 +148,18 @@
     text-decoration: none;
     border-radius:3px;
 
-     .menu-item-mat-icon{
+    /*  .menu-item-mat-icon{
       font-size: 18px;
       display: inline-flex;
       align-items: center;
       justify-content:center;
       margin:0
+     } */
+
+     .menu-item-icon{
+        margin:0 4px 0 4px;
      }
+
 
   }
   

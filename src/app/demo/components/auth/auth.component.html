@@ -1,0 +1,13 @@
+<p>
+  用户登录测试
+</p>
+<button (click)="logout()" mat-flat-button [disabled]='!isAuthenticated()'>
+ 
+  <span>Sign out 注销</span>
+</button>
+&nbsp;
+<button (click)="openLoginModal()" mat-flat-button [disabled]='isAuthenticated()'>
+  <span>Sing in 登录(Modal)</span>
+</button>
+<div *ngIf='!isAuthenticated()'>未登录</div>
+<div *ngIf='isAuthenticated()'>登录成功</div>
