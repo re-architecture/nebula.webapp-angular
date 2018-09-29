@@ -6,13 +6,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { MaterialModule } from 'src/app/material/material.module';
+
 import { DefaultPageComponent } from './pages/default-page/default-page.component';
 import { CommonModule } from '@angular/common';
 import { NebulaCoreModule } from 'src/app/nebula-core';
 import { MessageComponent } from './components/demo/message/message.component';
 
-
+import { MaterialModule, FontAwesomeModule } from 'src/app/shared';
 
 @NgModule({
   imports: [
@@ -20,7 +20,10 @@ import { MessageComponent } from './components/demo/message/message.component';
     HomeRoutingModule,
     SharedModule,
     MaterialModule,
+    FontAwesomeModule,
     NebulaCoreModule
+
+    
   ],
   declarations: [
     HomeLayoutComponent,

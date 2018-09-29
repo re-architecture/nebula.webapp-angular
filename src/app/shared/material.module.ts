@@ -1,3 +1,4 @@
+//此文件应只引用项目使用的组件。
 import { NgModule } from '@angular/core';
 
 import { CdkTableModule } from '@angular/cdk/table';

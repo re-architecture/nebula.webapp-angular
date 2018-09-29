@@ -7,9 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 //import { CoreModule } from './core';
 //import { appConfig } from './config/app.config';
-import { SharedModule } from './shared';
+import { SharedModule, MaterialModule } from './shared';
 import { NebulaCoreModule, httpInterceptorProviders } from 'src/app/nebula-core';
-import { MaterialModule } from './material/material.module';
+
 import { HttpClientModule } from '@angular/common/http';
 import { NgProgressModule } from './nebula-core/components/ng-progress/ng-progress.module';
 import { NgProgressHttpModule } from './nebula-core/components/ng-progress/http/ng-progress-http.module';

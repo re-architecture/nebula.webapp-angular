@@ -17,7 +17,7 @@ import { ChartCardComponent } from './components/chart-card/chart-card.component
 import { ChartCardItemTableComponent } from './components/chart-card-item-table/chart-card-item-table.component';
 import { ChartCardItemComponent } from './components/chart-card-item/chart-card-item.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { MaterialModule } from 'src/app/material/material.module';
+
 import { ScrapPageComponent } from './pages/scrap-page/scrap-page.component';
 import { ScrapListComponent } from './components/scrap/scrap-list.component';
 import { MTKService } from './services/mtk.service';
@@ -33,6 +33,7 @@ import { ChartCardData1Service } from './services/chart-card-data1.service';
 import { ChartCardData3Service } from './services/chart-card-data3.service';
 import { ChartCardItemTable3Component } from './components/chart-chard-item-table3/chart-card-item-table3.component';
 import { ChartCardItem3Component } from './components/chart-card-item3/chart-card-item3.component';
+import { MaterialModule } from 'src/app/shared';
 
 @NgModule({
   imports: [

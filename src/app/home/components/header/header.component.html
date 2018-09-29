@@ -1,12 +1,17 @@
 <mat-toolbar [ngClass]="isSmallScreen() ? 'isSmallScreen-header' : 'desktop-header'">
 
   <button mat-icon-button (click)="sidenavToggle()">
-    <mat-icon>menu</mat-icon>
+    <!-- <mat-icon>menu</mat-icon> -->
+
+    <fa-icon class='fa-lg' [icon]="['fas','bars']"></fa-icon>
+
+
   </button>
-  
+
   <span style="flex:auto"></span>
   <button mat-icon-button [matMenuTriggerFor]="headerSettingsMenu">
-    <mat-icon>settings</mat-icon>
+    <!-- <mat-icon>settings</mat-icon> -->
+    <fa-icon class='fa-lg' [icon]="['fas','cog']"></fa-icon>
   </button>
   <mat-menu #headerSettingsMenu="matMenu" [overlapTrigger]="false">
     <button routerLink="/auth/signin" mat-menu-item [disabled]='isAuthenticated()'>
@@ -29,9 +34,10 @@
 
   <mat-menu #themes="matMenu">
 
-    <button mat-menu-item [disabled]= "currentTheme === 'default-theme'" (click)="setTheme('default-theme')">Default 默认主题</button>
-    <button mat-menu-item [disabled]= "currentTheme === 'custom-theme'" (click)="setTheme('custom-theme')">Custom 自定义主题</button>
-   <!--  
+    <button mat-menu-item [disabled]="currentTheme === 'default-theme'" (click)="setTheme('default-theme')">Default
+      默认主题</button>
+    <button mat-menu-item [disabled]="currentTheme === 'custom-theme'" (click)="setTheme('custom-theme')">Custom 自定义主题</button>
+    <!--  
     <button mat-menu-item (click)="setTheme('light-theme')">Light Theme</button>
     <button mat-menu-item (click)="setTheme('black-theme')">Black Theme</button> 
    -->
