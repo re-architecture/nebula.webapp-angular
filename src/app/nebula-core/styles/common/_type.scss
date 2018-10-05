@@ -1,0 +1,95 @@
+
+//ref:
+// bootstrap
+//https://github.com/twbs/bootstrap/blob/v4-dev/scss/_type.scss
+//http://getbootstrap.com/docs/4.1/content/reboot/
+
+//sap
+//https://experience.sap.com/fiori-design-web/typography/
+//https://experience.sap.com/72/#section1
+
+//microsoft
+//https://developer.microsoft.com/en-us/fabric#/styles/typography
+//https://docs.microsoft.com/en-us/windows/uwp/design/style/typography
+
+//material
+//https://github.com/angular/material2/blob/master/src/lib/core/typography/_typography.scss
+//https://material.io/design/typography/the-type-system.html#
+
+//VMWare
+//https://vmware.github.io/clarity/documentation/v0.13/typography
+
+// IBM
+//http://www.carbondesignsystem.com/guidelines/typography/overview
+//https://www.ibm.com/design/language/experience/visual/typography/
+
+//salesforce
+//https://www.lightningdesignsystem.com/guidelines/typography/
+
+.ne-typography {
+
+ /* from material typography   
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 14px;
+    line-height: 20px; */
+
+    font-family: $ne-font-family-base;
+    font-size: $ne-font-size-14;
+    font-weight: $ne-font-weight-normal;
+    line-height: $ne-font-size-14 * 1.5;
+    
+    .ne-header-md {
+        font-size: $ne-header-md-font-size;
+        font-weight: $ne-header-md-font-weight;
+        line-height: $ne-header-md-line-height;
+    }
+
+    .ne-header-sm {
+        font-size: $ne-header-sm-font-size;
+        font-weight: $ne-header-sm-font-weight;
+        line-height: $ne-header-sm-line-height;
+    }
+
+    .ne-header-lg {
+        font-size: $ne-header-lg-font-size;
+        font-weight: $ne-header-lg-font-weight;
+        line-height: $ne-header-lg-line-height;
+    }
+
+    .ne-caption {
+        font-size: $ne-caption-font-size;
+        font-weight: $ne-caption-font-weight;
+        line-height: $ne-caption-line-height;
+    }
+
+    .ne-legal {
+        font-size: $ne-legal-font-size;
+        font-weight: $ne-legal-font-weight;
+        line-height: $ne-legal-line-height;
+    }
+
+    .ne-body-md {
+        font-size: $ne-body-md-font-size;
+        font-weight: $ne-body-md-font-weight;
+        line-height: $ne-body-md-line-height;
+    }
+
+    .ne-body-sm {
+        font-size: $ne-body-sm-font-size;
+        font-weight: $ne-body-sm-font-weight;
+        line-height: $ne-body-sm-line-height;
+    }
+
+    .ne-body-lg {
+        font-size: $ne-body-lg-font-size;
+        font-weight: $ne-body-lg-font-weight;
+        line-height: $ne-body-lg-line-height;
+    }
+
+}

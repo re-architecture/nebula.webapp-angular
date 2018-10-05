@@ -78,6 +78,7 @@ export class AppComponent implements OnInit, OnDestroy {
     //this.appReadyEvent.trigger();
     console.log('ngAfterViewInit');
     //this.appReadyEvent.trigger();
+    //this.initAppLoading();
     
   }
     
@@ -245,8 +246,11 @@ export class AppComponent implements OnInit, OnDestroy {
     document.body.className = "";
     this.overlay.getContainerElement().className = "";
 
-    document.body.classList.add(theme, "mat-app-background", "mat-typography");
+    //document.body.classList.add(theme, "mat-app-background", "mat-typography");
+    //这里使用自定义的 typography
+    document.body.classList.add(theme, "mat-app-background",'ne-typography');
     this.overlay.getContainerElement().classList.add(theme);
+  
   }
 
   ngOnDestroy() {

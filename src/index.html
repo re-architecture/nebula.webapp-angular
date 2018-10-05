@@ -8,6 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon_MTK.ico">
   <style>
+
+    body {
+      margin: 0; 
+    }
+
     .loading-container {
     
         display: flex;
@@ -28,6 +33,12 @@
 
     .loading-container.loaded {
         display: none;
+    }
+
+    .appRoot {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
     }
     
   </style>
@@ -64,6 +75,9 @@
 
         loadingContainer.classList.add('loaded');
 
+        var appRoot = document.querySelector('.appRoot');
+        appRoot.classList.remove('appRoot');
+
         /*
         setTimeout(
           function removeDomElements() {
@@ -82,7 +96,11 @@
       }
     })();
   </script>
-  <app-root></app-root>
+
+  <div class='appRoot'>
+    <app-root></app-root>
+  </div>
+
 </body>
 
 </html>

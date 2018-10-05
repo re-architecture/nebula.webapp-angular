@@ -84,3 +84,8 @@ https://codepen.io/igor0ser/pen/amJkvp
 
 
 https://www.bennadel.com/blog/3482-creating-a-pre-bootstrap-loading-screen-with-window-postmessage-in-angular-6-1-2.htm
+
+
+
+
+https://medium.com/@motcowley/angular-loading-screen-for-module-navigation-ac96c056b410

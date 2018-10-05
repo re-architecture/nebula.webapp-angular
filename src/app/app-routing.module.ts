@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: './home/home.module#HomeModule',
   },
+  {
+    path: 'main',
+    loadChildren: './main/main.module#MainModule',
+  },
    ...errorRoutes
 ];
 
@@ -25,7 +29,7 @@ const routes: Routes = [
         //true value debugging purposes only
         enableTracing: false,
         //为所有惰性加载模块启用预加载功能
-        //preloadingStrategy: PreloadAllModules
+        preloadingStrategy: PreloadAllModules
       }
 
     )

@@ -21,7 +21,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
 // $default: 500, $lighter: 100, $darker: 700)
-$default-theme-primary: mat-palette($mat-grey);
+$default-theme-primary: mat-palette($mat-grey); //grey
 $default-theme-accent:  mat-palette($mat-deep-orange, 900);
 
 

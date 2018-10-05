@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+
+@import './variables';
+
+//ref:
+//https://material.angular.io/guide/typography
+//https://github.com/angular/material2/blob/master/src/lib/core/typography/_typography.scss
+
+@include mat-core($custom-typography);

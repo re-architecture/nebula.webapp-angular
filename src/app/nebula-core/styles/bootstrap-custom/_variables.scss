@@ -1,0 +1,120 @@
+//
+// Color system
+//
+
+// $white:    #fff !default;
+// $gray-100: #f8f9fa !default;
+// $gray-200: #e9ecef !default;
+// $gray-300: #dee2e6 !default;
+// $gray-400: #ced4da !default;
+// $gray-500: #adb5bd !default;
+// $gray-600: #6c757d !default;
+// $gray-700: #495057 !default;
+// $gray-800: #343a40 !default;
+// $gray-900: #212529 !default;
+// $black:    #000 !default;
+
+// $blue:    #007bff !default;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #e83e8c !default;
+// $red:     #dc3545 !default;
+// $orange:  #fd7e14 !default;
+// $yellow:  #ffc107 !default;
+// $green:   #28a745 !default;
+// $teal:    #20c997 !default;
+// $cyan:    #17a2b8 !default;
+
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
+
+$indigo:  #3f51b5;
+$primary:       $indigo;
+
+$theme-colors: (
+    "primary":    $primary,
+    // "secondary":  $secondary,
+    // "success":    $success,
+    // "info":       $info,
+    // "warning":    $warning,
+    // "danger":     $danger,
+    // "light":      $light,
+    // "dark":       $dark
+);
+
+
+// Links
+//
+// Style anchor elements.
+$link-hover-decoration: none; // underline
+$input-btn-focus-width:       0rem; // .2rem
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded:            false; // true;
+
+/*
+下面是三个 bootstrap 中可以使用的四个函数
+@function color($key: "blue") {
+    @return map-get($colors, $key);
+}
+
+@function theme-color($key: "primary") {
+    @return map-get($theme-colors, $key);
+}
+
+@function gray($key: "100") {
+    @return map-get($grays, $key);
+}
+
+@function theme-color-level($color-name: "primary", $level: 0) {
+  $color: theme-color($color-name);
+  $color-base: if($level > 0, #000, #fff);
+  $level: abs($level);
+
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+  内置 color 
+    Blue
+    Indigo
+    Purple
+    Pink
+    Red
+    Orange
+    Yellow
+    Green
+    Teal
+    Cyan
+
+使用方法
+.custom-element {
+    
+    color: gray("100");  
+    color: theme-color-level(primary, -10);
+    background-color: theme-color("dark");
+
+    // With variable
+  
+    color: $purple;
+
+    //From the Sass map with our `color()` function
+    color: color("purple");
+
+
+    对比度颜色
+    color: color-yiq(#000); // returns `color: #fff`
+    color: color-yiq(theme-color("dark")); // returns `color: #fff`
+
+}
+
+*/
+
