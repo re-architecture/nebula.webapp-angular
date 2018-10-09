@@ -1,0 +1,19 @@
+// stylelint-disable declaration-no-important
+
+@each $color, $value in $ne-theme-colors {
+    @include bg-variant(".#{$prefix}bg-#{$color}", $value);
+  }
+  
+  @if $ne-enable-gradients {
+    @each $color, $value in $ne-theme-colors {
+      @include bg-gradient-variant(".#{$prefix}bg-gradient-#{$color}", $value);
+    }
+  }
+  
+  .#{$prefix}bg-white {
+    background-color: $ne-white !important;
+  }
+  
+  .#{$prefix}bg-transparent {
+    background-color: transparent !important;
+  }

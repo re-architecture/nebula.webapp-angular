@@ -1,0 +1,12 @@
+//https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_text-emphasis.scss
+
+//文件自己定义，选取 bootstrap 中的 _text.scss 部分内容。
+.#{$prefix}color-white { color: $ne-white !important; }
+.#{$prefix}color-black { color: $ne-black !important; }
+
+@each $color, $value in $ne-grays {
+  @include text-emphasis-variant(".#{$prefix}color-gray-#{$color}", $value);
+}
+
+
+

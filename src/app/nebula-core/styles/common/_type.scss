@@ -26,7 +26,10 @@
 //salesforce
 //https://www.lightningdesignsystem.com/guidelines/typography/
 
-.ne-typography {
+
+
+
+.#{$prefix}typography {
 
  /* from material typography   
     font-style: normal;
@@ -44,52 +47,79 @@
     font-weight: $ne-font-weight-normal;
     line-height: $ne-font-size-14 * 1.5;
     
-    .ne-header-md {
+    .#{$prefix}header-md {
         font-size: $ne-header-md-font-size;
         font-weight: $ne-header-md-font-weight;
         line-height: $ne-header-md-line-height;
     }
 
-    .ne-header-sm {
+    .#{$prefix}header-sm {
         font-size: $ne-header-sm-font-size;
         font-weight: $ne-header-sm-font-weight;
         line-height: $ne-header-sm-line-height;
     }
 
-    .ne-header-lg {
+    .#{$prefix}header-sm-plus {
+        font-size: $ne-header-sm-plus-font-size;
+        font-weight: $ne-header-sm-plus-font-weight;
+        line-height: $ne-header-sm-plus-line-height;
+    }
+
+    .#{$prefix}header-lg {
         font-size: $ne-header-lg-font-size;
         font-weight: $ne-header-lg-font-weight;
         line-height: $ne-header-lg-line-height;
     }
 
-    .ne-caption {
+    .#{$prefix}header-2x {
+        font-size: $ne-header-2x-font-size;
+        font-weight: $ne-header-2x-font-weight;
+        line-height: $ne-header-2x-line-height;
+    }
+
+    .#{$prefix}caption {
         font-size: $ne-caption-font-size;
         font-weight: $ne-caption-font-weight;
         line-height: $ne-caption-line-height;
     }
 
-    .ne-legal {
+    .#{$prefix}legal {
         font-size: $ne-legal-font-size;
         font-weight: $ne-legal-font-weight;
         line-height: $ne-legal-line-height;
     }
 
-    .ne-body-md {
-        font-size: $ne-body-md-font-size;
-        font-weight: $ne-body-md-font-weight;
-        line-height: $ne-body-md-line-height;
+    .#{$prefix}font-md {
+        font-size: $ne-font-md-font-size;
+        font-weight: $ne-font-md-font-weight;
+        line-height: $ne-font-md-line-height;
     }
 
-    .ne-body-sm {
-        font-size: $ne-body-sm-font-size;
-        font-weight: $ne-body-sm-font-weight;
-        line-height: $ne-body-sm-line-height;
+    .#{$prefix}font-sm {
+        font-size: $ne-font-sm-font-size;
+        font-weight: $ne-font-sm-font-weight;
+        line-height: $ne-font-sm-line-height;
     }
 
-    .ne-body-lg {
-        font-size: $ne-body-lg-font-size;
-        font-weight: $ne-body-lg-font-weight;
-        line-height: $ne-body-lg-line-height;
+    .#{$prefix}font-sm-plus {
+        font-size: $ne-font-sm-plus-font-size;
+        font-weight: $ne-font-sm-plus-font-weight;
+        line-height: $ne-font-sm-plus-line-height;
     }
 
+    .#{$prefix}font-lg {
+        font-size: $ne-font-lg-font-size;
+        font-weight: $ne-font-lg-font-weight;
+        line-height: $ne-font-lg-line-height;
+    }
+
+    // Weight and italics
+
+    .#{$prefix}font-weight-light       { font-weight: $ne-font-weight-light !important; }
+    .#{$prefix}font-weight-lighter     { font-weight: $ne-font-weight-lighter !important; }
+    .#{$prefix}font-weight-normal      { font-weight: $ne-font-weight-normal !important; }
+    .#{$prefix}font-weight-semibold    { font-weight: $ne-font-weight-semibold !important; }
+    .#{$prefix}font-weight-bold        { font-weight: $ne-font-weight-bold !important; }
+    .#{$prefix}font-weight-bolder      { font-weight: $ne-font-weight-bolder !important; }
+    .#{$prefix}font-italic             {font-style: italic !important; }
 }

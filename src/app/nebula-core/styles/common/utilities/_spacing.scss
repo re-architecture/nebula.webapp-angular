@@ -1,0 +1,52 @@
+// stylelint-disable declaration-no-important
+
+// Margin and Padding
+
+@each $breakpoint in map-keys($ne-grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $ne-grid-breakpoints);
+  
+      @each $prop, $abbrev in (margin: m, padding: p) {
+        @each $size, $length in $spacers {
+  
+          .#{$prefix}#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+          .#{$prefix}#{$abbrev}t#{$infix}-#{$size},
+          .#{$prefix}#{$abbrev}y#{$infix}-#{$size} {
+            #{$prop}-top: $length !important;
+          }
+          .#{$prefix}#{$abbrev}r#{$infix}-#{$size},
+          .#{$prefix}#{$abbrev}x#{$infix}-#{$size} {
+            #{$prop}-right: $length !important;
+          }
+          .#{$prefix}#{$abbrev}b#{$infix}-#{$size},
+          .#{$prefix}#{$abbrev}y#{$infix}-#{$size} {
+            #{$prop}-bottom: $length !important;
+          }
+          .#{$prefix}#{$abbrev}l#{$infix}-#{$size},
+          .#{$prefix}#{$abbrev}x#{$infix}-#{$size} {
+            #{$prop}-left: $length !important;
+          }
+        }
+      }
+  
+      // Some special margin utils
+      .#{$prefix}m#{$infix}-auto { margin: auto !important; }
+      .#{$prefix}mt#{$infix}-auto,
+      .#{$prefix}my#{$infix}-auto {
+        margin-top: auto !important;
+      }
+      .#{$prefix}mr#{$infix}-auto,
+      .#{$prefix}mx#{$infix}-auto {
+        margin-right: auto !important;
+      }
+      .#{$prefix}mb#{$infix}-auto,
+      .#{$prefix}my#{$infix}-auto {
+        margin-bottom: auto !important;
+      }
+      .#{$prefix}ml#{$infix}-auto,
+      .#{$prefix}mx#{$infix}-auto {
+        margin-left: auto !important;
+      }
+    }
+  }
+  

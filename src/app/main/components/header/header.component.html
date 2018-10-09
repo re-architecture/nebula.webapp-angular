@@ -1,15 +1,37 @@
-<mat-toolbar style="min-height:54px;height: 54px">
-  <mat-toolbar-row>
-    <img src="../../../../assets/img/logo/logo-main.svg" width="29" height="29">
-    <span style='margin:0 6px 0 6px;color:#666666;'>Nebula</span>
-    <div class='xxx'></div>
-    <button mat-button [matMenuTriggerFor]="menu" disableRipple='true'>Menu</button>
-    <mat-menu #menu="matMenu" overlapTrigger='false'>
-      <button mat-menu-item disableRipple='true'>Item 1ee</button>
-      <button mat-menu-item disableRipple='true'>Item 2</button>
-    </mat-menu>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div class="ne-bg-white ne-color-black top-header" style="height:54px;display:flex;">
+  <div style="flex:auto;margin: 0 6% 0 6%;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;">
+    <div style="width:130px;">
+      <a href="#">
+        <img src="../../../../assets/img/logo/logo_1.svg" width="24" height="24">
+        <span class='ne-header-2x ne-ml-2 ne-align-middle ne-color-gray-700 ne-font-weight-bolder'>SONY</span>
+      </a>
+    </div>
+    <div class='divider'></div>
+    <div class='ne-header-2x ne-mr-2'>主页</div>
+   
+    <main-top-menu></main-top-menu>
+
+    <div style="flex:auto"></div>
+    <button mat-icon-button [matMenuTriggerFor]="headerSettingsMenu">
+      <fa-icon class='fa-sm' [icon]="['fas','ellipsis-v']"></fa-icon>
+    </button>
+  </div>
+</div>
+
+<mat-menu #headerSettingsMenu="matMenu" [overlapTrigger]="false">
+  <button routerLink="/auth/signin" mat-menu-item [disabled]='isAuthenticated()'>
+
+    <fa-icon class='fa-lg' style="margin-right:10px;" [icon]="['fas','fingerprint']"></fa-icon>
+    <span>Sing in 登录</span>
+  </button>
+  <button (click)="logout()" mat-menu-item [disabled]='!isAuthenticated()'>
+    <fa-icon class='fa-lg' style="margin-right:10px;" [icon]="['fas','lock']"></fa-icon>
+    <span>Sign out 注销</span>
+  </button>
+
+
+</mat-menu>
+
 <div class="yyy">
 
 
