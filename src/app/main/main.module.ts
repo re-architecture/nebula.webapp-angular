@@ -6,19 +6,20 @@ import { MainRoutingModule } from './main-routing.module';
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
 import { MaterialModule, FontAwesomeModule } from 'src/app/shared';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
+import { SettingsMenuComponent } from './components/settings-menu/settings-menu.component';
 
 @NgModule({
   imports: [
     CommonModule,
     MainRoutingModule,
-    MaterialModule,
-    FontAwesomeModule,
+    MaterialModule
   ],
   declarations: [
     HeaderComponent, 
     DefaultPageComponent,
     DefaultLayoutComponent,
-    TopMenuComponent
+    TopMenuComponent,
+    SettingsMenuComponent
   ]
 })
 export class MainModule { }

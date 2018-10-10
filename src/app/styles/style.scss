@@ -1,5 +1,4 @@
 @import '~@angular/material/theming';
-//@import 'material-design-icons/iconfont/material-icons.css';
 
 @import 'src/app/nebula-core/styles/nebula.scss';
 
@@ -74,8 +73,3 @@
     @include angular-material-theme-custom($black-theme);
     @include app-theme($black-theme);
 }
-
-//https://material.io/design/typography/#type-scale
-/* html {
-    font-size: 14px;
-  } */

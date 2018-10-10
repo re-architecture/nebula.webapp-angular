@@ -77,6 +77,12 @@
         line-height: $ne-header-2x-line-height;
     }
 
+    .#{$prefix}header-3x {
+        font-size: $ne-header-3x-font-size;
+        font-weight: $ne-header-3x-font-weight;
+        line-height: $ne-header-3x-line-height;
+    }
+
     .#{$prefix}caption {
         font-size: $ne-caption-font-size;
         font-weight: $ne-caption-font-weight;

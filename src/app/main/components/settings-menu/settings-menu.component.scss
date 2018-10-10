@@ -1,35 +1,8 @@
-//Ref:
-//https://freefrontend.com/css-arrows/
-//https://www.adam-bray.com/2017/02/17/easy-html-5-css-3-navigation-menu/ 
-// Simple Pure CSS Drop Down Menu
-// https://codepen.io/philhoyt/pen/ujHzd
+.settings-menu {
 
-/* arrow common style */
-/* 
-.arrow {
-    margin:0 0 3px 8px;	
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    border-top: 1px solid #000;
-    border-right: 1px solid #000;
-}
-  
-.arrow-top {
-    transform: rotate(-45deg);
-}
-.arrow-right {
-    transform: rotate(45deg);
-}
-.arrow-bottom {
-    transform: rotate(135deg);
-}
-.arrow-left {
-    transform: rotate(-135deg);
-} */
-
-
-.top-menu {
+    .mat-icon {
+        font-size:22px;
+    }
 
     nav {
         //background-color: #fff;
@@ -64,11 +37,13 @@
         -o-transition: all 0.2s;
         transition: all 0.2s; 
     }
+
+   
     
     nav > ul > li {
         border-bottom: 2px solid white;
     }
-         
+        
     nav > ul > li:hover {
         //background-color: rgb( 40, 44, 47 );
         border-bottom: 2px solid black;
@@ -86,6 +61,7 @@
 
     }
 
+    
     nav > ul > li > a:hover {
 
         //border-bottom: 2px solid black;
@@ -123,7 +99,7 @@
         border-right: 1px solid #000;
         transform: rotate(135deg);
     }
-               
+              
     nav > ul > li > div {
         //background-color: rgb( 40, 44, 47 );
         background-color:#f2f2f2;
@@ -134,7 +110,10 @@
         margin: 2px 0 0 0;
         padding:0 0 2px 0;
         opacity: 0;
+       
         position: absolute;
+        transform: translate(-113px);
+       
         width: 165px;
         visibility: hidden;
         
@@ -148,6 +127,9 @@
     }
 
     nav > ul > li:hover > div {
+        //position:relative;
+        //top:160px;
+        //left:-40px;
         display: block;
         opacity: 1;
         visibility: visible;
@@ -167,9 +149,15 @@
         text-decoration: none;
     }
 
+   
     nav > ul > li > div ul > li:hover > a {
         //background-color: rgba( 255, 255, 255, 0.1);
         background-color:#E6E6E6;
+    }
+
+    nav > ul > li > div ul > li > a.disabled{
+        color:#BDBDBD;
+        background-color: transparent;
     }
       
   }

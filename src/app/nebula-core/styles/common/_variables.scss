@@ -79,12 +79,14 @@ $ne-header-sm-plus-font-size: $ne-font-size-13 !default;
 $ne-header-md-font-size: $ne-font-size-14 !default;
 $ne-header-lg-font-size: $ne-font-size-base !default;
 $ne-header-2x-font-size: $ne-font-size-18 !default;
+$ne-header-3x-font-size: $ne-font-size-20 !default;
 
 $ne-header-sm-line-height:   ($ne-header-sm-font-size * 1.25) !default;
 $ne-header-sm-plus-line-height:   ($ne-header-sm-plus-font-size * 1.25) !default;
 $ne-header-md-line-height:     ($ne-header-md-font-size * 1.25) !default;
 $ne-header-lg-line-height:   ($ne-header-lg-font-size * 1.25) !default;
 $ne-header-2x-line-height:   ($ne-header-2x-font-size * 1.25) !default;
+$ne-header-3x-line-height:   ($ne-header-3x-font-size * 1.25) !default;
 
 // 大于 18px 用 $ne-font-weight-light
 $ne-header-sm-font-weight:      $ne-font-weight-semibold !default;
@@ -92,6 +94,7 @@ $ne-header-sm-plus-font-weight: $ne-font-weight-semibold !default;
 $ne-header-md-font-weight:      $ne-font-weight-semibold !default;
 $ne-header-lg-font-weight:      $ne-font-weight-semibold !default;
 $ne-header-2x-font-weight:      $ne-font-weight-semibold !default;
+$ne-header-3x-font-weight:      $ne-font-weight-light !default;
 
 // caption
 $ne-caption-font-size:    $ne-font-size-12 !default;

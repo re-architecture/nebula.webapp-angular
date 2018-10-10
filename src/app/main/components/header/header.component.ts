@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { LoginService, Principal } from 'src/app/nebula-core';
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'main-header',
@@ -9,21 +11,10 @@ import { LoginService, Principal } from 'src/app/nebula-core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(
-    private loginService: LoginService,
-    private principal: Principal
-  ) { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  logout() {
-
-    this.loginService.logout();
-
-  }
-
-  isAuthenticated() {
-    return this.principal.isAuthenticated();
-}
 }

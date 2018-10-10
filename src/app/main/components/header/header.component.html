@@ -2,8 +2,8 @@
   <div style="flex:auto;margin: 0 6% 0 6%;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;">
     <div style="width:130px;">
       <a href="#">
-        <img src="../../../../assets/img/logo/logo_1.svg" width="24" height="24">
-        <span class='ne-header-2x ne-ml-2 ne-align-middle ne-color-gray-700 ne-font-weight-bolder'>SONY</span>
+        <img src="../../../../assets/img/logo/logo_1.svg" width="22" height="22">
+        <span class='ne-header-3x ne-ml-2 ne-align-middle ne-color-gray-700 ne-font-weight-bolder'>SONY</span>
       </a>
     </div>
     <div class='divider'></div>
@@ -12,25 +12,38 @@
     <main-top-menu></main-top-menu>
 
     <div style="flex:auto"></div>
-    <button mat-icon-button [matMenuTriggerFor]="headerSettingsMenu">
-      <fa-icon class='fa-sm' [icon]="['fas','ellipsis-v']"></fa-icon>
-    </button>
+    <main-settings-menu></main-settings-menu>
   </div>
 </div>
 
-<mat-menu #headerSettingsMenu="matMenu" [overlapTrigger]="false">
-  <button routerLink="/auth/signin" mat-menu-item [disabled]='isAuthenticated()'>
-
-    <fa-icon class='fa-lg' style="margin-right:10px;" [icon]="['fas','fingerprint']"></fa-icon>
-    <span>Sing in 登录</span>
-  </button>
-  <button (click)="logout()" mat-menu-item [disabled]='!isAuthenticated()'>
-    <fa-icon class='fa-lg' style="margin-right:10px;" [icon]="['fas','lock']"></fa-icon>
-    <span>Sign out 注销</span>
-  </button>
+<!-- <mat-icon svgIcon="thumbs-up"></mat-icon> -->
 
 
-</mat-menu>
+ <i class="ms-Icon ms-Icon--More" aria-hidden="true"></i>
+
+<i class="ms-Icon ms-Icon--Mail" aria-hidden="true"></i>
+<i class="ms-Icon ms-Icon--AccessLogo" aria-hidden="true"></i>
+
+<!-- <mat-icon>account_balance</mat-icon>
+<mat-icon>account_balance_outline</mat-icon> -->
+<!-- <i class="material-icons">lock</i>
+<i class="material-icons">lock_outline</i>
+<i class="material-icons">lock_twotone</i>
+<i class="material-icons">account_balance</i>
+<i class="material-icons">account_balance_outline</i>
+ -->
+
+<!-- 
+<i class="material-icons material-icons--outline">account_balance</i>
+<mat-icon fontSet="material-icons--outline" fontIcon="xx_account_balance"></mat-icon>
+<i class="material-icons">
+  account_balance
+  </i> -->
+<!-- <br>
+<i class="material-icons">dashboard_outline</i>
+
+<i class="material-icons material-icons--outline">dashboard</i> -->
+
 
 <div class="yyy">
 
