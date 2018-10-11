@@ -1,0 +1,67 @@
+
+//https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+
+$ne-enable-gradients:  false !default;
+
+$ne-white :     #ffffff !default;
+$ne-gray-50:    #FAFAFA !default;
+$ne-gray-100:   #F5F5F5!default;
+$ne-gray-200:   #EEEEEE!default;
+$ne-gray-300:   #E0E0E0!default;
+$ne-gray-400:   #BDBDBD!default;
+$ne-gray-500:   #9E9E9E!default;
+$ne-gray-600:   #757575!default;
+$ne-gray-700:   #616161!default;
+$ne-gray-800:   #424242!default;
+$ne-gray-900:   #212121!default;
+$ne-black:      #000000 !default;
+
+$ne-grays: (
+    "50" : $ne-gray-50,
+    "100": $ne-gray-100,
+    "200": $ne-gray-200,
+    "300": $ne-gray-300,
+    "400": $ne-gray-400,
+    "500": $ne-gray-500,
+    "600": $ne-gray-600,
+    "700": $ne-gray-700,
+    "800": $ne-gray-800,
+    "900": $ne-gray-900
+  ) !default;
+
+$ne-blue:    #007bff !default;
+$ne-indigo:  #3f51b5 !default;
+$ne-purple:  #6f42c1 !default;
+$ne-pink:    #e83e8c !default;
+$ne-red:     #dc3545 !default;
+$ne-orange:  #fd7e14 !default;
+$ne-yellow:  #ffc107 !default;
+$ne-green:   #28a745 !default;
+$ne-teal:    #20c997 !default;
+$ne-cyan:    #17a2b8 !default;
+
+
+$ne-primary:    $ne-indigo;
+$ne-secondary:  $ne-gray-600 !default;
+$ne-success:    $ne-green !default;
+$ne-info:       $ne-cyan !default;
+$ne-warning:    $ne-yellow !default;
+$ne-danger:     $ne-red !default;
+$ne-light:      $ne-gray-100 !default;
+$ne-dark:       $ne-gray-800 !default;
+
+$ne-theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$ne-theme-colors: map-merge(
+  (
+    "primary":    $ne-primary,
+    "secondary":  $ne-secondary,
+    "success":    $ne-success,
+    "info":       $ne-info,
+    "warning":    $ne-warning,
+    "danger":     $ne-danger,
+    "light":      $ne-light,
+    "dark":       $ne-dark
+  ),
+  $ne-theme-colors
+);

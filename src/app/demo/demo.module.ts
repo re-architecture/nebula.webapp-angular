@@ -13,6 +13,7 @@ import { ThemePageComponent } from './pages/theme-page/theme-page.component';
 import { TypographyComponent } from './components/typography/typography.component';
 import { StylePageComponent } from './pages/style-page/style-page.component';
 import { SpacingComponent } from './components/spacing/spacing.component';
+import { ColorComponent } from './components/color/color.component';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { SpacingComponent } from './components/spacing/spacing.component';
     ThemeComponent, 
     ThemePageComponent, 
     TypographyComponent, 
-    StylePageComponent, SpacingComponent
+    StylePageComponent, SpacingComponent, ColorComponent
   ]
 })
 export class DemoModule { }

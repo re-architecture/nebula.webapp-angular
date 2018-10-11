@@ -8,5 +8,7 @@
   @include text-emphasis-variant(".#{$prefix}color-gray-#{$color}", $value);
 }
 
-
+@each $color, $value in $ne-theme-colors {
+  @include text-emphasis-variant(".#{$prefix}color-#{$color}", $value);
+}
 
