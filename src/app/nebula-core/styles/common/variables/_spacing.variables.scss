@@ -1,0 +1,63 @@
+//Ref:
+//https://github.com/IBM/carbon-components/blob/master/src/globals/scss/_spacing.scss
+//http://www.carbondesignsystem.com/guidelines/spacing
+//http://getbootstrap.com/docs/4.1/utilities/spacing/
+//
+//   Size in px based on 16px base
+//
+//   Spacing Scale
+//   ==========================================
+//   3xs  ||  2px
+//   2xs  ||  4px
+//   xs   ||  8px
+//   sm   ||  12px
+//   md   ||  16px
+//   lg   ||  24px
+//   xl   ||  32px
+//   2xl  ||  40px
+//   3xl  ||  48px
+//   ==========================================
+//
+//   Layout Scale
+//   ==========================================
+//   2xs  ||  16px
+//   xs   ||  24px
+//   sm   ||  32px
+//   md   ||  48px
+//   lg   ||  64px
+//   xl   ||  96px
+//   2xl  ||  160px
+//   ==========================================
+
+$ne-spacing-baseline: 1rem !default;
+
+$ne-spacing-3xs: $ne-spacing-baseline * 0.125 !default;
+$ne-spacing-2xs: $ne-spacing-baseline * 0.25 !default;
+$ne-spacing-xs: $ne-spacing-baseline * 0.5 !default;
+$ne-spacing-sm: $ne-spacing-baseline * 0.75 !default;
+$ne-spacing-md: $ne-spacing-baseline !default;
+$ne-spacing-lg: $ne-spacing-baseline * 1.5 !default;
+$ne-spacing-xl: $ne-spacing-baseline * 2 !default;
+$ne-spacing-2xl: $ne-spacing-baseline * 2.5 !default;
+$ne-spacing-3xl: $ne-spacing-baseline * 3 !default;
+
+
+$ne-spacings:(
+    "3xs":  $ne-spacing-3xs,
+    "2xs":  $ne-spacing-2xs,
+    "xs":   $ne-spacing-xs,
+    "sm":   $ne-spacing-sm,
+    "md":   $ne-spacing-md,
+    "lg":   $ne-spacing-lg,
+    "xl":   $ne-spacing-xl,
+    "2xl":  $ne-spacing-2xl,
+    "3xl":  $ne-spacing-3xl
+) !default;
+
+/* $layout-2xs: $spacing-baseline !default;
+$layout-xs: $spacing-baseline * 1.5 !default;
+$layout-sm: $spacing-baseline * 2 !default;
+$layout-md: $spacing-baseline * 3 !default;
+$layout-lg: $spacing-baseline * 4 !default;
+$layout-xl: $spacing-baseline * 6 !default;
+$layout-2xl: $spacing-baseline * 10 !default; */

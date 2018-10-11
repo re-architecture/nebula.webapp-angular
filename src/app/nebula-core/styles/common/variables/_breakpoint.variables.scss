@@ -1,0 +1,17 @@
+//Ref:
+//https://material.io/design/layout/responsive-layout-grid.html#breakpoints
+//http://getbootstrap.com/docs/4.1/layout/overview/
+//http://www.carbondesignsystem.com/guidelines/grid/design
+
+//xs, extra-small: 0px or larger
+// sm, small: 600px or larger
+// md, medium: 960px or larger
+// lg, large: 1280px or larger
+// xl, extra-large: 1920px or larger
+$ne-breakpoints: (
+  xs: 0,
+  sm: 599px,
+  md: 959px,
+  lg: 1279px,
+  xl: 1920px
+) !default;

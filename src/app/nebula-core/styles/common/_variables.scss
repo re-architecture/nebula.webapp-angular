@@ -1,126 +1,12 @@
 
-// // Weights
-// $ms-font-weight-light:     100 !default;
-// $ms-font-weight-semilight: 300 !default;
-// $ms-font-weight-regular:   400 !default;
-// $ms-font-weight-semibold:  600 !default;
-// $ms-font-weight-bold:      700 !default;
+@import './variables/general.variables';
+@import './variables/font.variables';
+@import './variables/spacing.variables';
 
-// // Sizes
-// $ms-font-size-su:       42px !default;
-// $ms-font-size-xxl:      28px !default;
-// $ms-font-size-xl-plus:  24px !default;
-// $ms-font-size-xl:       21px !default;
-// $ms-font-size-l:        17px !default;
-// $ms-font-size-m-plus:   15px !default;
-// $ms-font-size-m:        14px !default;
-// $ms-font-size-s-plus:   13px !default;
-// $ms-font-size-s:        12px !default;
-// $ms-font-size-xs:       11px !default;
-// $ms-font-size-mi:       10px !default;
-
-// $ne-header1-font-size:  $ne-font-size-76 !default; 
-// $ne-header2-font-size:  $ne-font-size-54 !default; 
-// $ne-header3-font-size:  $ne-font-size-36 !default;
-// $ne-header4-font-size:  $ne-font-size-28 !default;
-// $ne-header5-font-size:  $ne-font-size-20 !default;
-// $ne-header6-font-size:  $ne-font-size-18 !default; 
-// $ne-header7-font-size:  $ne-font-size-base !default;            
-// $ne-header8-font-size:  $ne-font-size-14 !default; 
-// $ne-header9-font-size:  $ne-font-size-12 !default; 
-
-
-// css style prefix
-$prefix : 'ne-';
 
 $ne-enable-gradients:          false !default;
 
-// base
-$ne-font-family-sans-serif:    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$ne-font-family-base:          $ne-font-family-sans-serif !default;
 
-//https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
-
-$ne-font-weight-lighter:         lighter !default;
-$ne-font-weight-light:           300 !default;
-$ne-font-weight-normal:          400 !default;
-$ne-font-weight-semibold:        600 !default;
-$ne-font-weight-bold:            700 !default;
-$ne-font-weight-bolder:          bolder !default;
-
-$ne-font-size-base:     1rem !default;  // Assumes the browser default, typically `16px`
-$ne-font-weight-base:   $ne-font-weight-normal !default;
-$ne-line-height-base:   1.5 !default;
-
-$ne-font-size-11:  ($ne-font-size-base * 0.6875) !default;
-$ne-font-size-12:  ($ne-font-size-base * 0.75) !default;
-$ne-font-size-13:  ($ne-font-size-base * 0.813) !default;
-$ne-font-size-14:  ($ne-font-size-base * 0.875) !default;
-$ne-font-size-16:  $ne-font-size-base !default;
-$ne-font-size-18:  ($ne-font-size-base * 1.125) !default;
-$ne-font-size-20:  ($ne-font-size-base * 1.25) !default;
-$ne-font-size-24:  ($ne-font-size-base * 1.5) !default;
-$ne-font-size-28:  ($ne-font-size-base * 1.75) !default;
-$ne-font-size-32:  ($ne-font-size-base * 2) !default;
-$ne-font-size-36:  ($ne-font-size-base * 2.25) !default;
-$ne-font-size-42:  ($ne-font-size-base * 2.625) !default;
-$ne-font-size-48:  ($ne-font-size-base * 3) !default;
-$ne-font-size-54:  ($ne-font-size-base * 3.375) !default;
-$ne-font-size-60:  ($ne-font-size-base * 3.75) !default;
-$ne-font-size-68:  ($ne-font-size-base * 4.25) !default;
-$ne-font-size-76:  ($ne-font-size-base * 4.75) !default;
-$ne-font-size-84:  ($ne-font-size-base * 5.25) !default;
-$ne-font-size-92:  ($ne-font-size-base * 5.75) !default;
-
-
-// header  
-$ne-header-sm-font-size: $ne-font-size-12 !default;
-$ne-header-sm-plus-font-size: $ne-font-size-13 !default;
-$ne-header-md-font-size: $ne-font-size-14 !default;
-$ne-header-lg-font-size: $ne-font-size-base !default;
-$ne-header-2x-font-size: $ne-font-size-18 !default;
-$ne-header-3x-font-size: $ne-font-size-20 !default;
-
-$ne-header-sm-line-height:   ($ne-header-sm-font-size * 1.25) !default;
-$ne-header-sm-plus-line-height:   ($ne-header-sm-plus-font-size * 1.25) !default;
-$ne-header-md-line-height:     ($ne-header-md-font-size * 1.25) !default;
-$ne-header-lg-line-height:   ($ne-header-lg-font-size * 1.25) !default;
-$ne-header-2x-line-height:   ($ne-header-2x-font-size * 1.25) !default;
-$ne-header-3x-line-height:   ($ne-header-3x-font-size * 1.25) !default;
-
-// 大于 18px 用 $ne-font-weight-light
-$ne-header-sm-font-weight:      $ne-font-weight-semibold !default;
-$ne-header-sm-plus-font-weight: $ne-font-weight-semibold !default;
-$ne-header-md-font-weight:      $ne-font-weight-semibold !default;
-$ne-header-lg-font-weight:      $ne-font-weight-semibold !default;
-$ne-header-2x-font-weight:      $ne-font-weight-semibold !default;
-$ne-header-3x-font-weight:      $ne-font-weight-light !default;
-
-// caption
-$ne-caption-font-size:    $ne-font-size-12 !default;
-$ne-caption-line-height:  ($ne-caption-font-size * 1.5) !default;
-$ne-caption-font-weight:  $ne-font-weight-normal !default;
-
-// Legal 
-$ne-legal-font-size:    $ne-font-size-11 !default;
-$ne-legal-line-height:  ($ne-legal-font-size * 1.5) !default;
-$ne-legal-font-weight:  $ne-font-weight-normal !default;
-
-// body
-$ne-font-sm-font-size:      $ne-font-size-12 !default;
-$ne-font-sm-plus-font-size: $ne-font-size-13 !default;
-$ne-font-md-font-size:      $ne-font-size-14 !default;
-$ne-font-lg-font-size:      $ne-font-size-16 !default;
-
-$ne-font-sm-line-height :       ($ne-font-sm-font-size * 1.5) !default;
-$ne-font-sm-plus-line-height :  ($ne-font-sm-plus-font-size * 1.5) !default;
-$ne-font-md-line-height :       ($ne-font-md-font-size * 1.5) !default;
-$ne-font-lg-line-height :       ($ne-font-lg-font-size * 1.5) !default;
-
-$ne-font-sm-font-weight :       $ne-font-weight-normal; 
-$ne-font-sm-plus-font-weight :  $ne-font-weight-normal; 
-$ne-font-md-font-weight :       $ne-font-weight-normal;
-$ne-font-lg-font-weight :       $ne-font-weight-normal;
 
 //https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 

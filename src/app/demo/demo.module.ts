@@ -10,6 +10,9 @@ import { FontAwesomeModule, MaterialModule } from 'src/app/shared';
 import { AuthComponent } from './components/auth/auth.component';
 import { ThemeComponent } from './components/theme/theme.component';
 import { ThemePageComponent } from './pages/theme-page/theme-page.component';
+import { TypographyComponent } from './components/typography/typography.component';
+import { StylePageComponent } from './pages/style-page/style-page.component';
+import { SpacingComponent } from './components/spacing/spacing.component';
 
 
 @NgModule({
@@ -22,7 +25,14 @@ import { ThemePageComponent } from './pages/theme-page/theme-page.component';
    ],
   declarations: [
     ProgressBarComponent, 
-    ComponentPageComponent, ProgressSpinnerComponent, AuthPageComponent, AuthComponent, ThemeComponent, ThemePageComponent
+    ComponentPageComponent, 
+    ProgressSpinnerComponent, 
+    AuthPageComponent, 
+    AuthComponent, 
+    ThemeComponent, 
+    ThemePageComponent, 
+    TypographyComponent, 
+    StylePageComponent, SpacingComponent
   ]
 })
 export class DemoModule { }

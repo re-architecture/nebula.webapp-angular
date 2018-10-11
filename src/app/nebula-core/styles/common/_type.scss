@@ -1,34 +1,3 @@
-
-//ref:
-// bootstrap
-//https://github.com/twbs/bootstrap/blob/v4-dev/scss/_type.scss
-//http://getbootstrap.com/docs/4.1/content/reboot/
-
-//sap
-//https://experience.sap.com/fiori-design-web/typography/
-//https://experience.sap.com/72/#section1
-
-//microsoft
-//https://developer.microsoft.com/en-us/fabric#/styles/typography
-//https://docs.microsoft.com/en-us/windows/uwp/design/style/typography
-
-//material
-//https://github.com/angular/material2/blob/master/src/lib/core/typography/_typography.scss
-//https://material.io/design/typography/the-type-system.html#
-
-//VMWare
-//https://vmware.github.io/clarity/documentation/v0.13/typography
-
-// IBM
-//http://www.carbondesignsystem.com/guidelines/typography/overview
-//https://www.ibm.com/design/language/experience/visual/typography/
-
-//salesforce
-//https://www.lightningdesignsystem.com/guidelines/typography/
-
-
-
-
 .#{$prefix}typography {
 
  /* from material typography   
@@ -46,53 +15,54 @@
     font-size: $ne-font-size-14;
     font-weight: $ne-font-weight-normal;
     line-height: $ne-font-size-14 * 1.5;
-    
-    .#{$prefix}header-md {
-        font-size: $ne-header-md-font-size;
-        font-weight: $ne-header-md-font-weight;
-        line-height: $ne-header-md-line-height;
+ 
+    .#{$prefix}heading-sm {
+        font-size: $ne-heading-sm-font-size;
+        font-weight: $ne-heading-sm-font-weight;
+        line-height: $ne-heading-sm-line-height;
     }
 
-    .#{$prefix}header-sm {
-        font-size: $ne-header-sm-font-size;
-        font-weight: $ne-header-sm-font-weight;
-        line-height: $ne-header-sm-line-height;
+    .#{$prefix}heading-sm-plus {
+        font-size: $ne-heading-sm-plus-font-size;
+        font-weight: $ne-heading-sm-plus-font-weight;
+        line-height: $ne-heading-sm-plus-line-height;
     }
 
-    .#{$prefix}header-sm-plus {
-        font-size: $ne-header-sm-plus-font-size;
-        font-weight: $ne-header-sm-plus-font-weight;
-        line-height: $ne-header-sm-plus-line-height;
+    .#{$prefix}heading-md {
+        font-size: $ne-heading-md-font-size;
+        font-weight: $ne-heading-md-font-weight;
+        line-height: $ne-heading-md-line-height;
     }
 
-    .#{$prefix}header-lg {
-        font-size: $ne-header-lg-font-size;
-        font-weight: $ne-header-lg-font-weight;
-        line-height: $ne-header-lg-line-height;
+ 
+    .#{$prefix}heading-lg {
+        font-size: $ne-heading-lg-font-size;
+        font-weight: $ne-heading-lg-font-weight;
+        line-height: $ne-heading-lg-line-height;
     }
 
-    .#{$prefix}header-2x {
-        font-size: $ne-header-2x-font-size;
-        font-weight: $ne-header-2x-font-weight;
-        line-height: $ne-header-2x-line-height;
+    .#{$prefix}heading-xl {
+        font-size: $ne-heading-xl-font-size;
+        font-weight: $ne-heading-xl-font-weight;
+        line-height: $ne-heading-xl-line-height;
     }
 
-    .#{$prefix}header-3x {
-        font-size: $ne-header-3x-font-size;
-        font-weight: $ne-header-3x-font-weight;
-        line-height: $ne-header-3x-line-height;
+    .#{$prefix}heading-2xl {
+        font-size: $ne-heading-2xl-font-size;
+        font-weight: $ne-heading-2xl-font-weight;
+        line-height: $ne-heading-2xl-line-height;
     }
 
-    .#{$prefix}caption {
-        font-size: $ne-caption-font-size;
-        font-weight: $ne-caption-font-weight;
-        line-height: $ne-caption-line-height;
+    .#{$prefix}heading-3xl {
+        font-size: $ne-heading-3xl-font-size;
+        font-weight: $ne-heading-3xl-font-weight;
+        line-height: $ne-heading-3xl-line-height;
     }
 
-    .#{$prefix}legal {
-        font-size: $ne-legal-font-size;
-        font-weight: $ne-legal-font-weight;
-        line-height: $ne-legal-line-height;
+    .#{$prefix}font-xs {
+        font-size: $ne-font-xs-font-size;
+        font-weight: $ne-font-xs-font-weight;
+        line-height: $ne-font-xs-line-height;
     }
 
     .#{$prefix}font-md {
@@ -120,12 +90,14 @@
     }
 
     // Weight and italics
+    .#{$prefix}font-weight-lighter     { font-weight: $ne-font-weight-lighter !important; }
+    .#{$prefix}font-weight-bolder      { font-weight: $ne-font-weight-bolder !important; }
 
     .#{$prefix}font-weight-light       { font-weight: $ne-font-weight-light !important; }
-    .#{$prefix}font-weight-lighter     { font-weight: $ne-font-weight-lighter !important; }
     .#{$prefix}font-weight-normal      { font-weight: $ne-font-weight-normal !important; }
+    .#{$prefix}font-weight-medium      { font-weight: $ne-font-weight-medium !important; }
     .#{$prefix}font-weight-semibold    { font-weight: $ne-font-weight-semibold !important; }
     .#{$prefix}font-weight-bold        { font-weight: $ne-font-weight-bold !important; }
-    .#{$prefix}font-weight-bolder      { font-weight: $ne-font-weight-bolder !important; }
     .#{$prefix}font-italic             {font-style: italic !important; }
+
 }
