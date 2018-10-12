@@ -64,15 +64,16 @@ const MENUS: { [key: string]: Menu[] } = {
       icon: 'folder',
       items: [
         { id: 'menu100-item1', name: 'Style', icon: 'folder-open', routerLink: 'demo/style' },
-        { id: 'menu100-item2', name: 'Component', icon: 'folder-open', routerLink: 'demo/component' },
-        { id: 'menu100-item3', name: 'theme', icon: 'folder-open', routerLink: 'demo/theme' },
-        { id: 'menu100-item4', name: 'Auth', icon: 'folder-open', routerLink: 'demo/auth' },
-        { id: 'menu100-item5', name: 'Dashboard', icon: 'folder-open', routerLink: 'default' },
-        { id: 'menu100-item6', name: 'Regular Table', icon: 'folder-open', routerLink: 'demo-feature/regularTable' },
-        { id: 'menu100-item7', name: '客户管理', icon: 'folder-open', routerLink: 'customer' },
-        { id: 'menu100-item8', name: '数据表', icon: 'folder-open', routerLink: 'product' },
-        { id: 'menu100-item9', name: '大数据分页', icon: 'folder-open', routerLink: 'largedatatable' },
-        { id: 'menu100-item10', name: 'Item 4', icon: 'folder-open', routerLink: 'test' }
+        { id: 'menu100-item2', name: 'Icon', icon: 'folder-open', routerLink: 'demo/icon' },
+        { id: 'menu100-item3', name: 'Component', icon: 'folder-open', routerLink: 'demo/component' },
+        { id: 'menu100-item4', name: 'theme', icon: 'folder-open', routerLink: 'demo/theme' },
+        { id: 'menu100-item5', name: 'Auth', icon: 'folder-open', routerLink: 'demo/auth' },
+        { id: 'menu100-item6', name: 'Dashboard', icon: 'folder-open', routerLink: 'default' },
+        { id: 'menu100-item7', name: 'Regular Table', icon: 'folder-open', routerLink: 'demo-feature/regularTable' },
+        { id: 'menu100-item8', name: '客户管理', icon: 'folder-open', routerLink: 'customer' },
+        { id: 'menu100-item9', name: '数据表', icon: 'folder-open', routerLink: 'product' },
+        { id: 'menu100-item10', name: '大数据分页', icon: 'folder-open', routerLink: 'largedatatable' },
+        { id: 'menu100-item11', name: 'Item 4', icon: 'folder-open', routerLink: 'test' }
 
       ]
     },

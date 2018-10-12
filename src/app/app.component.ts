@@ -4,11 +4,12 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 
 import { Subscription } from 'rxjs';
 
-import { Title } from '@angular/platform-browser';
+import { Title, DomSanitizer } from '@angular/platform-browser';
 
 import { ThemeService, Principal, Account, EventManagerService, MessageService, Message, ConfigService, Config, AppReadyEventService } from 'src/app/nebula-core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 import { NgProgressComponent } from './nebula-core/components/ng-progress/ng-progress.component';
+import { MatIconRegistry } from '@angular/material';
 
 
 @Component({
@@ -41,10 +42,14 @@ export class AppComponent implements OnInit, OnDestroy {
     private eventManager: EventManagerService,
     private msg: MessageService,
     private router: Router,
-    private appReadyEvent: AppReadyEventService
+    private appReadyEvent: AppReadyEventService,
+    private iconRegistry: MatIconRegistry, 
+    private sanitizer: DomSanitizer
   ) {
 
-
+    this.iconRegistry
+    .addSvgIconSetInNamespace('core',
+        sanitizer.bypassSecurityTrustResourceUrl('/assets/img/icon/icon-svg-sprite.svg'))
   }
 
   ngOnInit() {

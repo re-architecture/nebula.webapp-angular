@@ -4,6 +4,7 @@ import { ComponentPageComponent } from './pages/component-page/component-page.co
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { ThemePageComponent } from './pages/theme-page/theme-page.component';
 import { StylePageComponent } from './pages/style-page/style-page.component';
+import { IconPageComponent } from './pages/icon-page/icon-page.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'style',
     component: StylePageComponent
+  },
+  {
+    path: 'icon',
+    component: IconPageComponent
   },
   {
     path: 'component',

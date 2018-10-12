@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "startWithProxy": "ng serve --proxy-config ./src/app/config/proxy.config.js"
+    "startWithProxy": "ng serve --proxy-config ./src/app/config/proxy.config.js",
+    "iconSprites": "svg-sprite --config ./src/app/config/icon-svg-sprite.config.json src/app/icon/*.svg"
   },
   "private": true,
   "dependencies": {
@@ -53,6 +54,7 @@
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.3.0",
+    "svg-sprite": "^1.5.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"

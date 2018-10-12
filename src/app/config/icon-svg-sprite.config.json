@@ -1,0 +1,13 @@
+{
+    "dest": "src/assets/img",
+    "log": "info",
+    "mode": {
+        "defs": {
+            "dest": "icon",
+            "sprite": "icon-svg-sprite.svg",
+            "example": {
+                "dest": "../../../app/icon/icon-svg-sprite.html"
+            }
+        }
+    }
+}
