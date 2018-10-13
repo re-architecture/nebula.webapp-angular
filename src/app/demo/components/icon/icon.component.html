@@ -1,67 +1,64 @@
 <div class="demo-icon">
-
+  <div class='ne-heading-3xl ne-my-lg'>Icon</div>
   <p>
-    These are some icons.
-  </p>
 
-  <p>
-    By name registered with MatIconProvider:
-    <mat-icon svgIcon="thumb-up" class="demo-icon-green"></mat-icon>
-    <mat-icon svgIcon="thumb-up"></mat-icon>
-  </p>
+    <mat-icon svgIcon="core:baseline-fingerprint" class="icon-green"></mat-icon>
+    <mat-icon svgIcon="core:outline-lock"></mat-icon>
+    <mat-icon svgIcon="core:baseline-more_horiz"></mat-icon>
 
-<!--   <p>
-    From inline template with MatIconProvider:
-    <mat-icon svgIcon="bike" class="green"></mat-icon>
-    <mat-icon svgIcon="bike"></mat-icon>
-  </p> -->
-
-<!--   <p>
-    Mirrored in RTL:
-    <mat-icon class="mat-icon-rtl-mirror green" svgIcon="thumb-up"></mat-icon>
-    <mat-icon class="mat-icon-rtl-mirror" svgIcon="thumb-up"></mat-icon>
-    <mat-icon class="mat-icon-rtl-mirror green" svgIcon="bike"></mat-icon>
-    <mat-icon class="mat-icon-rtl-mirror" svgIcon="bike"></mat-icon>
-  </p> -->
-
-  <p>
-    From icon set:
-    <mat-icon svgIcon="core:account_balance-outline"></mat-icon>
-    <mat-icon svgIcon="core:account_balance"></mat-icon>
-    <mat-icon svgIcon="core:account_balance-twotone"></mat-icon>
-    
-  </p>
-
-<!--   <p>
-    From inline icon set:
-    <mat-icon svgIcon="core-inline:account-balance"></mat-icon>
-    <mat-icon svgIcon="core-inline:account-balance-wallet"></mat-icon>
-    <mat-icon svgIcon="core-inline:account-box"></mat-icon>
-  </p> -->
-
-  <p>
-    Ligature from Material Icons font:
-    <mat-icon>home</mat-icon>
-  </p>
-
-  <p>
-    Using a theme:
-    <mat-icon color="primary">home</mat-icon>
-    <mat-icon color="accent">home</mat-icon>
-    <mat-icon color="warn">home</mat-icon>
-  </p>
-
-<!--   <p>
-    Custom icon font and CSS:
-    <mat-icon fontSet="fontawesome" fontIcon="fa-birthday-cake"></mat-icon>
-  </p> -->
-
-<!--   <span>Inline styling allows icons to appear as the same size as text around them.</span>
-  <p>
-    My <span class="cdk-visually-hidden">dog</span><mat-icon inline="true">pets</mat-icon> is my
-    <span class="cdk-visually-hidden">favorite</span><mat-icon inline="true">favorite</mat-icon>,
-    he loves to go on <span class="cdk-visually-hidden">walks</span>
-    <mat-icon inline="true">directions_walk</mat-icon>
-  </p> -->
+    <mat-icon svgIcon="core:baseline-apps" color="primary"></mat-icon>
+    <mat-icon svgIcon="core:baseline-home" color="accent"></mat-icon>
+    <mat-icon svgIcon="core:baseline-search" color="warn"></mat-icon>
   
+    <mat-icon svgIcon="core:baseline-home" style="color:orange;background-color:red;line-height:60px;width:60px;height:60px;"></mat-icon>
+
+    <button mat-raised-button color="primary">
+        <mat-icon style="background-color:red;line-height:10px;width:10px;height:10px;vertical-align:baseline;" svgIcon="core:baseline-home"></mat-icon>
+        按钮设置小图标
+    </button>
+  </p>
+  
+  <p>app/icon/目录保存在项目中使用的小图标</p>
+
+  <p>使用 svg-sprite 工具将这个目录下的 *.svg 合成到 app/assets/icon/icon-svg-sprite.svg 文件中。</p>
+
+  <p>参见 package.json 中的命令</p>
+  <p>"iconSprite": "svg-sprite --config ./src/app/config/icon-svg-sprite.config.json src/app/icon/*.svg"</p>
+
+  <p>命令参数见 src/app/config/icon-svg-sprite.config.json 文件</p>
+
+  <p>src/app/icon/icon-svg.sprite.html 是命令生成的示例文件</p>
+
+  Ref：
+  <br>
+  <a href='https://github.com/google/material-design-icons/tree/master/sprites' target="_blank">https://github.com/google/material-design-icons/tree/master/sprites</a>
+  <br>
+  <a href='https://github.com/angular/material2/blob/master/src/demo-app/icon/icon-demo.ts' target="_blank">https://github.com/angular/material2/blob/master/src/demo-app/icon/icon-demo.ts</a>
+  <br>
+  svg-sprite
+  <br>
+  <a href='https://github.com/jkphl/svg-sprite' target="_blank">https://github.com/jkphl/svg-sprite</a>
+  <br>
+  <a href='https://github.com/jkphl/svg-sprite/blob/HEAD/docs/command-line.md' target="_blank">https://github.com/jkphl/svg-sprite/blob/HEAD/docs/command-line.md</a>
+  <br>
+  <a href='http://jkphl.github.io/svg-sprite/#json' target="_blank">http://jkphl.github.io/svg-sprite/#json</a>
+  <br>
+  <a href='https://github.com/google/material-design-icons/tree/master/sprites' target="_blank">https://github.com/google/material-design-icons/tree/master/sprites</a>
+
+  <br>
+  <a href='https://css-tricks.com/icon-fonts-vs-svg/' target="_blank">https://css-tricks.com/icon-fonts-vs-svg/</a>
+  <br>
+  <a href='https://blog.github.com/2016-02-22-delivering-octicons-with-svg/' target="_blank">https://blog.github.com/2016-02-22-delivering-octicons-with-svg/</a>
+  <br>
+  <a href='https://css-tricks.com/svg-sprites-use-better-icon-fonts/' target="_blank">https://css-tricks.com/svg-sprites-use-better-icon-fonts/</a>
+  <br>
+  <a href='https://css-tricks.com/svg-symbol-good-choice-icons/' target="_blank">https://css-tricks.com/svg-symbol-good-choice-icons/</a>
+  <br>
+  <a href='https://webdesign.tutsplus.com/tutorials/how-to-implement-cross-browser-svg-sprites--cms-22427' target="_blank">https://webdesign.tutsplus.com/tutorials/how-to-implement-cross-browser-svg-sprites--cms-22427</a>
+  <br>
+  <a href='https://css-tricks.com/svg-fragment-identifiers-work/' target="_blank">https://css-tricks.com/svg-fragment-identifiers-work/</a>
+  <br>
+  <a href='https://css-tricks.com/css-sprites/' target="_blank">https://css-tricks.com/css-sprites/</a>
+
+
 </div>

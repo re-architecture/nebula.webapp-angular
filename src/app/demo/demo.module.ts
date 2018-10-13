@@ -6,7 +6,7 @@ import { DemoRoutingModule } from './demo-routing.module';
 import { ProgressSpinnerComponent } from './components/progress-spinner/progress-spinner.component';
 import { NebulaCoreModule } from '../nebula-core';
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
-import { FontAwesomeModule, MaterialModule } from 'src/app/shared';
+import { MaterialModule } from 'src/app/shared';
 import { AuthComponent } from './components/auth/auth.component';
 import { ThemeComponent } from './components/theme/theme.component';
 import { ThemePageComponent } from './pages/theme-page/theme-page.component';
@@ -16,6 +16,7 @@ import { SpacingComponent } from './components/spacing/spacing.component';
 import { ColorComponent } from './components/color/color.component';
 import { IconComponent } from './components/icon/icon.component';
 import { IconPageComponent } from './pages/icon-page/icon-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -23,8 +24,8 @@ import { IconPageComponent } from './pages/icon-page/icon-page.component';
     CommonModule,
     DemoRoutingModule,
     NebulaCoreModule,
-    FontAwesomeModule,
-    MaterialModule
+    MaterialModule,
+    FontAwesomeModule
    ],
   declarations: [
     ProgressBarComponent, 

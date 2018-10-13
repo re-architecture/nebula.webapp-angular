@@ -48,7 +48,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {
 
     this.iconRegistry
-    .addSvgIconSetInNamespace('core',
+      .addSvgIconSetInNamespace('core',
         sanitizer.bypassSecurityTrustResourceUrl('/assets/img/icon/icon-svg-sprite.svg'))
   }
 

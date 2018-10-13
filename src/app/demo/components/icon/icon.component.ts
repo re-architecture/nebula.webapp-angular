@@ -1,6 +1,3 @@
-//Ref:
-//https://github.com/angular/material2/blob/master/src/demo-app/icon/icon-demo.ts
-
 import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';

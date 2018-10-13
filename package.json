@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "startWithProxy": "ng serve --proxy-config ./src/app/config/proxy.config.js",
-    "iconSprites": "svg-sprite --config ./src/app/config/icon-svg-sprite.config.json src/app/icon/*.svg"
+    "iconSprite": "svg-sprite --config ./src/app/config/icon-svg-sprite.config.json src/app/icon/*.svg"
   },
   "private": true,
   "dependencies": {

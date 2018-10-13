@@ -16,7 +16,7 @@ import { AuthService } from './services/auth.service';
 import { CommonModule } from '@angular/common';
 import { SigninComponent } from './components/signin/signin.component';
 import { NebulaCoreModule } from 'src/app/nebula-core';
-import { FontAwesomeModule, MaterialModule } from 'src/app/shared';
+import { MaterialModule, FontAwesomeModule } from 'src/app/shared';
 
 
 @NgModule({

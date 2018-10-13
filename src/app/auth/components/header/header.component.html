@@ -8,10 +8,11 @@
   </div>
   <div *ngIf="!isSmallScreen()">
 
-    <button mat-button routerLink="/home">
-      <!-- <mat-icon>dashboard</mat-icon> -->
-      <fa-icon class='fa-lg fa-fw' style="margin-right:6px;"  [icon]="['fas','home']"></fa-icon>
-      <span>DASHBOARD</span>
+    <button  style="background:red;" mat-button routerLink="/home">
+       <mat-icon style="background:blue;" svgIcon='core:baseline-home'></mat-icon>
+     <!--  <mat-icon>home</mat-icon> -->
+      <!-- <fa-icon class='fa-lg fa-fw' style="margin-right:6px;"  [icon]="['fas','home']"></fa-icon> -->
+     <!--  <span>DASHBOARD</span> -->
     </button>
     <button mat-button routerLink=".">
       <!-- <mat-icon>person_add</mat-icon> -->
