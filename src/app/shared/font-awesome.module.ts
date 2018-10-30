@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+/* import { NgModule } from '@angular/core';
 
 //https://github.com/FortAwesome/angular-fontawesome
 import { FontAwesomeModule as FontAwesome } from '@fortawesome/angular-fontawesome';
@@ -19,4 +19,4 @@ library.add(fas, far);
     FontAwesome
   ]
 })
-export class FontAwesomeModule { }
+export class FontAwesomeModule { } */

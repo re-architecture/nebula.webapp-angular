@@ -16,7 +16,7 @@ import { SpacingComponent } from './components/spacing/spacing.component';
 import { ColorComponent } from './components/color/color.component';
 import { IconComponent } from './components/icon/icon.component';
 import { IconPageComponent } from './pages/icon-page/icon-page.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+//import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     DemoRoutingModule,
     NebulaCoreModule,
     MaterialModule,
-    FontAwesomeModule
+    //FontAwesomeModule
    ],
   declarations: [
     ProgressBarComponent, 

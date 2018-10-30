@@ -3,13 +3,13 @@ import { MessageService } from '../../services/message/message.service';
 import { Subscription } from 'rxjs';
 import { Message } from '../../services/message/message';
 
-import {
+/* import {
   IconDefinition,
   faTimesCircle,
   faCheckCircle,
   faBell,
   faCommentAlt
-} from '@fortawesome/free-regular-svg-icons';
+} from '@fortawesome/free-regular-svg-icons'; */
 import { Alert } from '../../services/message/alert';
 
 @Component({
@@ -20,7 +20,7 @@ import { Alert } from '../../services/message/alert';
 export class AlertComponent implements OnInit, OnDestroy {
 
   messageSubscription: Subscription;
-  iconType: IconDefinition
+  //iconType: IconDefinition
   isSizeSmall: boolean;
   alert : Alert;
 
@@ -35,19 +35,19 @@ export class AlertComponent implements OnInit, OnDestroy {
 
           switch (this.alert.message.messageType) {
             case 'Info': {
-              this.iconType = faCommentAlt;
+              //this.iconType = faCommentAlt;
               break;
             }
             case 'Warning': {
-              this.iconType = faBell;
+              //this.iconType = faBell;
               break;
             }
             case 'Success': {
-              this.iconType = faCheckCircle;
+              //this.iconType = faCheckCircle;
               break;
             }
             case 'Error': {
-              this.iconType = faTimesCircle;
+             // this.iconType = faTimesCircle;
               break;
             }
           }

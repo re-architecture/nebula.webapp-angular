@@ -33,14 +33,16 @@
             <a class="menu" [ngStyle]="{'justify-content':sidenavIsExpanded ? 'flex-start' : 'center'}" (click)="toggleExpand(menu.id)"
                 [attr.aria-label]="menu.name + ', section toggle'" [attr.aria-controls]="'panel-' + menu.id" [attr.aria-expanded]="getExpanded(menu.id)">
                 <!-- <mat-icon class="menu-mat-icon">{{menu.icon}}</mat-icon> -->
-                <fa-icon class='fa-lg fa-fw menu-icon' [icon]="menu.icon"></fa-icon>
+               <!--  <fa-icon class='fa-lg fa-fw menu-icon' [icon]="menu.icon"></fa-icon> -->
+               <mat-icon class='menu-icon' [svgIcon]="menu.icon"></mat-icon> 
                 <span class="menu-text mat-body-1" *ngIf="sidenavIsExpanded">{{menu.name}}</span>
                 <ng-container *ngIf="sidenavIsExpanded">
                    <!--  <mat-icon class="menu-mat-icon-arrow" *ngIf="!getExpanded(menu.id)">keyboard_arrow_down</mat-icon>
                     <mat-icon class="menu-mat-icon-arrow" *ngIf="getExpanded(menu.id)">keyboard_arrow_up</mat-icon> -->
-                    <fa-icon class='fa-lg menu-icon-arrow' [icon]="['fas','angle-down']" *ngIf="!getExpanded(menu.id)"></fa-icon>
-                    <fa-icon class='fa-lg menu-icon-arrow' [icon]="['fas','angle-up']" *ngIf="getExpanded(menu.id)"></fa-icon>
-                                       
+                  <!--   <fa-icon class='fa-lg menu-icon-arrow' [icon]="['fas','angle-down']" *ngIf="!getExpanded(menu.id)"></fa-icon>
+                    <fa-icon class='fa-lg menu-icon-arrow' [icon]="['fas','angle-up']" *ngIf="getExpanded(menu.id)"></fa-icon> -->
+                    <mat-icon svgIcon="core:baseline-arrow_drop_down" *ngIf="!getExpanded(menu.id)"></mat-icon>
+                    <mat-icon svgIcon="core:baseline-arrow_drop_up" *ngIf="getExpanded(menu.id)"></mat-icon>                  
                 </ng-container>
             </a>
 
@@ -49,7 +51,8 @@
                     <!--   <a [routerLink]="'/' + (params | async)?.section+ '/' + component.id" -->
                     <a class="menu-item" [routerLink]="menuItem.routerLink" routerLinkActive="menu-item-selected" [ngStyle]="{'justify-content':sidenavIsExpanded ? 'flex-start' : 'center'}">
                       <!--   <mat-icon class="menu-item-mat-icon">{{menuItem.icon}}</mat-icon> -->
-                        <fa-icon class='fa-lg fa-fw menu-item-icon' [icon]="menuItem.icon"></fa-icon>
+                        <!-- <fa-icon class='fa-lg fa-fw menu-item-icon' [icon]="menuItem.icon"></fa-icon> -->
+                        <mat-icon class='menu-item-icon' svgIcon="core:baseline-apps"></mat-icon>  
                         <span *ngIf="sidenavIsExpanded">{{menuItem.name}}</span>
                     </a>
                 </li>

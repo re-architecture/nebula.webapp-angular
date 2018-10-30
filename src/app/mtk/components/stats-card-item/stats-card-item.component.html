@@ -1,9 +1,9 @@
-
 <div style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:center">
   <div>
-   <!--  <mat-icon style="flex:auto;display: inline-flex;align-items: center;justify-content:center;font-size:52px;padding-top: 10px;" [ngStyle]="{'color':iconColor}">{{icon}}</mat-icon> -->
-   <fa-icon class='fa-3x fa-fw' [ngStyle]="{'color':iconColor}"  [icon]='icon'></fa-icon>
-  </div> 
+
+    <mat-icon [svgIcon]="icon" style="line-height:52px;width:52px;height:52px;" [ngStyle]="{'color':iconColor}"></mat-icon>
+
+  </div>
   <div style="flex:auto;font-weight:700;font-size:2em;color: #2c2c2c;padding-top: 10px;">{{value}}</div>
   <div style="flex:auto;font-weight:400;color:#9a9a9a;padding-top: 10px;">{{title}}</div>
 </div>

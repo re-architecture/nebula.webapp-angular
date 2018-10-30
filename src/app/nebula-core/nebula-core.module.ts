@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 //https://github.com/FortAwesome/angular-fontawesome
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+//import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { DialogComponent } from './components/message/dialog.component';
 import { NotificationComponent } from './components/message/notification.component';
@@ -17,7 +17,7 @@ import { MaterialModule } from './vendor/material.module';
 @NgModule({
   imports: [
     CommonModule,
-    FontAwesomeModule,
+    //FontAwesomeModule,
     MaterialModule,
   ],
   declarations: [

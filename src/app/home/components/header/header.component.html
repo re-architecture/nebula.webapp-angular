@@ -1,27 +1,26 @@
 <mat-toolbar [ngClass]="isSmallScreen() ? 'isSmallScreen-header' : 'desktop-header'">
 
   <button mat-icon-button (click)="sidenavToggle()">
-    <!-- <mat-icon>menu</mat-icon> -->
-    <fa-icon class='fa-lg' [icon]="['fas','bars']"></fa-icon>
+    <mat-icon svgIcon='core:baseline-menu'></mat-icon>
   </button>
 
   <span style="flex:auto"></span>
   <button mat-icon-button [matMenuTriggerFor]="headerSettingsMenu">
-    <!-- <mat-icon>settings</mat-icon> -->
-    <fa-icon class='fa-lg' [icon]="['fas','cog']"></fa-icon>
+
+    <mat-icon svgIcon='core:baseline-settings'></mat-icon>
   </button>
   <mat-menu #headerSettingsMenu="matMenu" [overlapTrigger]="false">
     <button routerLink="/auth/signin" mat-menu-item [disabled]='isAuthenticated()'>
 
-      <fa-icon class='fa-lg' style="margin-right:10px;" [icon]="['fas','fingerprint']"></fa-icon>
+      <mat-icon svgIcon="core:baseline-fingerprint"></mat-icon>
       <span>Sing in 登录</span>
     </button>
     <button (click)="logout()" mat-menu-item [disabled]='!isAuthenticated()'>
-      <fa-icon class='fa-lg' style="margin-right:10px;" [icon]="['fas','lock']"></fa-icon>
+      <mat-icon svgIcon="core:baseline-directions_run"></mat-icon>
       <span>Sign out 注销</span>
     </button>
     <button mat-menu-item [matMenuTriggerFor]="themes">
-      <fa-icon class='fa-lg' style="margin-right:10px;" [icon]="['fas','palette']"></fa-icon>
+      <mat-icon svgIcon="core:baseline-format_color_fill"></mat-icon>
 
       <span>Theme 主题</span>
     </button>

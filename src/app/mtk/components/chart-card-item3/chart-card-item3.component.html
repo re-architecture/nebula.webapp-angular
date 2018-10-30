@@ -4,14 +4,13 @@
     <div style="padding-left: 15px;">
       <div style="font-weight:400;color:#9E9E9E;">DAILY PRODUCTION SCRAP (First Scrap)</div>
       <div style="padding-top:20px;font-weight:400;font-size:2.5em;color: #212121;">
-        ￥165,814 <!-- <mat-icon>arrow_upward</mat-icon> --><fa-icon style="font-size:0.929rem;" icon='arrow-up'></fa-icon>
+        ￥165,814 <mat-icon svgIcon="core:baseline-arrow_upward"></mat-icon>
         </div>
     </div>
     
     <div style="padding-right: 15px;">
       <button mat-icon-button [matMenuTriggerFor]="menu">
-        <!-- <mat-icon style="font-size:2em;color:#9E9E9E;">filter_tilt_shift</mat-icon> -->
-        <fa-icon class='fa-lg' style="color:#9E9E9E;" icon='cogs'></fa-icon>
+          <mat-icon class="ne-color-gray-400" svgIcon="core:outline-settings"></mat-icon>
       </button>
     </div>
 
@@ -24,14 +23,14 @@
   
   <div class="chart-card-footer">
     <button mat-button disabled>
-      <!-- <mat-icon>cached</mat-icon> --> <fa-icon class='fa-sm' style="margin: 0 6px 0 6px" icon='sync-alt'></fa-icon>
-      Just Updated
+        <mat-icon style="margin: 0 6px 0 6px;line-height:144x;width:14px;height:14px;vertical-align:baseline;" svgIcon="core:baseline-loop"></mat-icon>
+        Just Updated
     </button>
   </div>
 </div>
 <mat-menu #menu="matMenu">
   <button mat-menu-item>
-    <!-- <mat-icon>autorenew</mat-icon> --> <fa-icon class='fa-sm' style="margin: 0 6px 0 6px" icon='sync-alt'></fa-icon>
-    <span>Refresh</span>
+      <mat-icon svgIcon="core:baseline-loop"></mat-icon>
+      Refresh
   </button>
 </mat-menu>

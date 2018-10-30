@@ -32,17 +32,17 @@ const MENUS: { [key: string]: Menu[] } = {
     {
       id: 'menu1',
       name: 'Analysis 数据分析',
-      icon: 'folder',
+      icon: 'core:baseline-dashboard',
       items: [
-        { id: 'menu1-item1', name: 'Home', icon: 'folder-open', routerLink: 'mtk/home' }
+        { id: 'menu1-item1', name: 'Home', icon: 'core:baseline-apps', routerLink: 'mtk/home' }
       ]
     },
     {
       id: 'menu2',
       name: 'Scrap 生产报废',
-      icon: 'folder',
+      icon: 'core:baseline-dashboard',
       items: [
-        { id: 'menu2-item1', name: 'Scrap Form 报废单', icon: 'folder-open', routerLink: 'mtk/scrap' }
+        { id: 'menu2-item1', name: 'Scrap Form 报废单', icon: 'core:baseline-apps', routerLink: 'mtk/scrap' }
       ]
     },
 
@@ -50,30 +50,30 @@ const MENUS: { [key: string]: Menu[] } = {
     {
       id: 'menu3',
       name: 'Management 系统管理',
-      icon: 'folder',
+      icon: 'core:baseline-dashboard',
       items: [
-        { id: 'menu3-item1', name: 'User 用户管理', icon: 'folder-open', routerLink: 'admin/users' },
-        { id: 'menu3-item2', name: 'Group 组管理', icon: 'folder-open', routerLink: 'admin/group' },
-        { id: 'menu3-item3', name: 'Role 角色管理', icon: 'folder-open', routerLink: 'admin/users' },
-        { id: 'menu3-item4', name: 'Permission 授权管理', icon: 'folder-open', routerLink: 'admin/users' }
+        { id: 'menu3-item1', name: 'User 用户管理', icon: 'core:baseline-apps', routerLink: 'admin/users' },
+        { id: 'menu3-item2', name: 'Group 组管理', icon: 'core:baseline-apps', routerLink: 'admin/group' },
+        { id: 'menu3-item3', name: 'Role 角色管理', icon: 'core:baseline-apps', routerLink: 'admin/users' },
+        { id: 'menu3-item4', name: 'Permission 授权管理', icon: 'core:baseline-apps', routerLink: 'admin/users' }
       ]
     },
     {
       id: 'menu100',
       name: 'Demo',
-      icon: 'folder',
+      icon: 'core:baseline-dashboard',
       items: [
-        { id: 'menu100-item1', name: 'Style', icon: 'folder-open', routerLink: 'demo/style' },
-        { id: 'menu100-item2', name: 'Icon', icon: 'folder-open', routerLink: 'demo/icon' },
-        { id: 'menu100-item3', name: 'Component', icon: 'folder-open', routerLink: 'demo/component' },
-        { id: 'menu100-item4', name: 'theme', icon: 'folder-open', routerLink: 'demo/theme' },
-        { id: 'menu100-item5', name: 'Auth', icon: 'folder-open', routerLink: 'demo/auth' },
-        { id: 'menu100-item6', name: 'Dashboard', icon: 'folder-open', routerLink: 'default' },
-        { id: 'menu100-item7', name: 'Regular Table', icon: 'folder-open', routerLink: 'demo-feature/regularTable' },
-        { id: 'menu100-item8', name: '客户管理', icon: 'folder-open', routerLink: 'customer' },
-        { id: 'menu100-item9', name: '数据表', icon: 'folder-open', routerLink: 'product' },
-        { id: 'menu100-item10', name: '大数据分页', icon: 'folder-open', routerLink: 'largedatatable' },
-        { id: 'menu100-item11', name: 'Item 4', icon: 'folder-open', routerLink: 'test' }
+        { id: 'menu100-item1', name: 'Style', icon: 'core:baseline-apps', routerLink: 'demo/style' },
+        { id: 'menu100-item2', name: 'Icon', icon: 'core:baseline-apps', routerLink: 'demo/icon' },
+        { id: 'menu100-item3', name: 'Component', icon: 'core:baseline-apps', routerLink: 'demo/component' },
+        { id: 'menu100-item4', name: 'theme', icon: 'core:baseline-apps', routerLink: 'demo/theme' },
+        { id: 'menu100-item5', name: 'Auth', icon: 'core:baseline-apps', routerLink: 'demo/auth' },
+        { id: 'menu100-item6', name: 'Dashboard', icon: 'core:baseline-apps', routerLink: 'default' },
+        { id: 'menu100-item7', name: 'Regular Table', icon: 'core:baseline-apps', routerLink: 'demo-feature/regularTable' },
+        { id: 'menu100-item8', name: '客户管理', icon: 'core:baseline-apps', routerLink: 'customer' },
+        { id: 'menu100-item9', name: '数据表', icon: 'core:baseline-apps', routerLink: 'product' },
+        { id: 'menu100-item10', name: '大数据分页', icon: 'core:baseline-apps', routerLink: 'largedatatable' },
+        { id: 'menu100-item11', name: 'Item 4', icon: 'core:baseline-apps', routerLink: 'test' }
 
       ]
     },

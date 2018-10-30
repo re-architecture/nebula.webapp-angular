@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 import { NebulaCoreModule } from 'src/app/nebula-core';
 import { MessageComponent } from './components/demo/message/message.component';
 
-import { MaterialModule, FontAwesomeModule } from 'src/app/shared';
+import { MaterialModule } from 'src/app/shared';
 
 @NgModule({
   imports: [
@@ -20,7 +20,7 @@ import { MaterialModule, FontAwesomeModule } from 'src/app/shared';
     HomeRoutingModule,
     SharedModule,
     MaterialModule,
-    FontAwesomeModule,
+    //FontAwesomeModule,
     NebulaCoreModule
 
     

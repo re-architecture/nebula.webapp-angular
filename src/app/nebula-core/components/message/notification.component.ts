@@ -2,13 +2,13 @@ import { Component, OnInit, Inject, ViewEncapsulation } from '@angular/core';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
 import { Message } from '../../services/message/message';
 
-import {
+/* import {
   IconDefinition,
   faTimesCircle,
   faCheckCircle,
   faBell,
   faCommentAlt
-} from '@fortawesome/free-regular-svg-icons';
+} from '@fortawesome/free-regular-svg-icons'; */
 
 @Component({
   selector: 'nebula-message-notification',
@@ -18,7 +18,7 @@ import {
 })
 export class NotificationComponent implements OnInit {
 
-  iconType: IconDefinition
+  //iconType: IconDefinition
   msg: Message;
 
   constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) { }
@@ -29,19 +29,19 @@ export class NotificationComponent implements OnInit {
 
     switch (this.msg.messageType) {
       case 'Info': {
-        this.iconType = faCommentAlt;
+        //this.iconType = faCommentAlt;
         break;
       }
       case 'Warning': {
-        this.iconType = faBell;
+        //this.iconType = faBell;
         break;
       }
       case 'Success': {
-        this.iconType = faCheckCircle;
+        //this.iconType = faCheckCircle;
         break;
       }
       case 'Error': {
-        this.iconType = faTimesCircle;
+        //this.iconType = faTimesCircle;
         break;
       }
     }

@@ -1,39 +1,35 @@
 <mat-toolbar style="width: 85vw;display:flex;flex-flow:row nowrap;justify-content: space-between;background:transparent;color:white">
-  <!-- <div style="display: inline-flex;align-items :center;">
+  <!-- 
+    <div style="display: inline-flex;align-items :center;">
     <img style="height: 32px;margin:0 8px 0 0;" src="../../../../assets/img/logo/logo-angular.svg">
     <span>Company</span>
-  </div> -->
+  </div> 
+  -->
   <div>
     <img style="height:45px;padding-top:20px;" src="../../../../assets/img/logo/logo_MTK.png">
   </div>
   <div *ngIf="!isSmallScreen()">
 
-    <button  style="background:red;" mat-button routerLink="/home">
-       <mat-icon style="background:blue;" svgIcon='core:baseline-home'></mat-icon>
-     <!--  <mat-icon>home</mat-icon> -->
-      <!-- <fa-icon class='fa-lg fa-fw' style="margin-right:6px;"  [icon]="['fas','home']"></fa-icon> -->
-     <!--  <span>DASHBOARD</span> -->
+    <button mat-button routerLink="/home">
+      <mat-icon style="margin-right:6px;vertical-align:baseline;" svgIcon="core:baseline-home"></mat-icon>
+      <span>DASHBOARD</span>
     </button>
     <button mat-button routerLink=".">
-      <!-- <mat-icon>person_add</mat-icon> -->
-      <fa-icon class='fa-lg fa-fw' style="margin-right:6px;" [icon]="['fas','user-plus']"></fa-icon>
+      <mat-icon style="margin-right:6px;vertical-align:baseline;" svgIcon="core:baseline-person_add"></mat-icon>
       <span>REGISTER</span>
     </button>
     <button mat-button routerLink="signin">
-    <!--   <mat-icon>fingerprint</mat-icon> -->
-    <fa-icon class='fa-lg fa-fw' style="margin-right:6px;" [icon]="['fas','fingerprint']"></fa-icon>
+      <mat-icon style="margin-right:6px;vertical-align:baseline;" svgIcon="core:baseline-fingerprint"></mat-icon>
       <span>LOGIN</span>
     </button>
     <button mat-button routerLink=".">
-      <!-- <mat-icon>lock</mat-icon> -->
-      <fa-icon class='fa-lg fa-fw' style="margin-right:6px;" [icon]="['fas','lock']"></fa-icon>
+      <mat-icon style="margin-right:6px;vertical-align:baseline;" svgIcon="core:baseline-lock"></mat-icon>
       <span>LOCK</span>
     </button>
   </div>
   <div *ngIf="isSmallScreen()">
     <button mat-icon-button (click)="sidenavToggle()">
-      <!-- <mat-icon>menu</mat-icon> -->
-      <fa-icon class='fa-lg' [icon]="['fas','bars']"></fa-icon>
+      <mat-icon svgIcon="core:baseline-menu"></mat-icon>
     </button>
   </div>
 </mat-toolbar>

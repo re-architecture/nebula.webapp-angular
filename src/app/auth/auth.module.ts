@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 
 import { AuthRoutingModule } from './auth-routing.module';
 
-
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { SigninPageComponent } from './pages/signin-page/signin-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
@@ -16,8 +15,7 @@ import { AuthService } from './services/auth.service';
 import { CommonModule } from '@angular/common';
 import { SigninComponent } from './components/signin/signin.component';
 import { NebulaCoreModule } from 'src/app/nebula-core';
-import { MaterialModule, FontAwesomeModule } from 'src/app/shared';
-
+import { MaterialModule } from 'src/app/shared';
 
 @NgModule({
   imports: [
@@ -25,8 +23,7 @@ import { MaterialModule, FontAwesomeModule } from 'src/app/shared';
     AuthRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
-    NebulaCoreModule,
-    FontAwesomeModule
+    NebulaCoreModule
   ],
   declarations: [
     AuthLayoutComponent, 

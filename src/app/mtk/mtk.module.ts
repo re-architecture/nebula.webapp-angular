@@ -33,7 +33,7 @@ import { ChartCardData1Service } from './services/chart-card-data1.service';
 import { ChartCardData3Service } from './services/chart-card-data3.service';
 import { ChartCardItemTable3Component } from './components/chart-chard-item-table3/chart-card-item-table3.component';
 import { ChartCardItem3Component } from './components/chart-card-item3/chart-card-item3.component';
-import { MaterialModule, FontAwesomeModule } from 'src/app/shared';
+import { MaterialModule } from 'src/app/shared';
 
 @NgModule({
   imports: [
@@ -42,7 +42,7 @@ import { MaterialModule, FontAwesomeModule } from 'src/app/shared';
     ChartsModule,
     MaterialModule,
     NgxChartsModule,
-    FontAwesomeModule
+    //FontAwesomeModule
   ],
   declarations: [
     HomePageComponent,

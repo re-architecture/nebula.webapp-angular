@@ -1,13 +1,10 @@
 // $default: 500, $lighter: 100, $darker: 700)
-$custom-theme-primary: mat-palette($mat-deep-purple,500,50,900);
-$custom-theme-accent:  mat-palette($mat-purple,600, 200, 800);
-$custom-theme-warn: mat-palette($mat-red,700,300,900);
 
-$custom-theme: mat-light-theme(
-  $custom-theme-primary, 
-  $custom-theme-accent,
-  $custom-theme-warn
-);
+$custom-theme-primary: mat-palette($mat-grey); 
+$custom-theme-accent:  mat-palette($mat-deep-orange, 900); 
+$custom-theme-warn: mat-palette($mat-red);
+
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
 
 /* 
 @import 'my-theme-partial'
