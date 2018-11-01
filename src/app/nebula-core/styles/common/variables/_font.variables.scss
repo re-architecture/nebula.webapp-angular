@@ -26,7 +26,8 @@
 //https://www.lightningdesignsystem.com/guidelines/typography/
 
 // base
-$ne-font-family-sans-serif:    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$ne-font-family-sans-serif:    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 'Microsoft YaHei',微软雅黑,"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
 $ne-font-family-base:          $ne-font-family-sans-serif !default;
 
 //https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight

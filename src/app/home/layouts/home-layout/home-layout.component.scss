@@ -23,14 +23,21 @@
 
 .layout-home-sidenav-expanded
 {
+
+    
+    //@angular/material 7.0.2 的 mat-sidenav 组件多了一个右侧边框线。这里覆盖这个样式去掉线。
+    //.mat-drawer-side {border-right: solid 1px rgba(0, 0, 0, 0.12);}
+    border-right: 0;
     //width:260px;
     width: $layout-home-sidenav-expanded-width;
+    
    
 }
 
 
 .layout-home-sidenav-dock
 {
+    border-right: 0;
     //width:80px;
     width: $layout-home-sidenav-dock-width;
 }

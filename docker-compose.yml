@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  nebula.webapp-angular:
+    image: nebula.webapp-angular
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
