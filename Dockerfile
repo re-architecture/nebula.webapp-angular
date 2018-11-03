@@ -22,7 +22,34 @@ FROM nginx:1.15.5-alpine
 COPY --from=node /usr/src/app/dist/webapp-angular /usr/share/nginx/html
 COPY ./src/app/config/nginx.conf /etc/nginx/conf.d/default.conf
 
-#docker build -t nebula.webapp-angular .
-#docker run -p 80:80 --name nebula.webapp-angular.container -d nebula.webapp-angular
+# Show images (hides intermediate images)
+#docker image ls
+
+#Show all images (default hides intermediate images)
+#docker image ls -a
+
+#删除所有image
+#docker image rm $(docker image ls -aq)
+
+# List all running containers
+# docker container ls       
+
+# List all containers, even those not running                    
+# docker container ls -a     
+
 # 删除所有容器
-# docker rm $(docker ps -aq)
+# docker container rm $(docker container ls -aq)
+
+# Create image using this directory's Dockerfile
+# docker build -t nebula.webapp-angular .
+
+# docker run -d -p 4200:80 --name nebula.webapp-angular nebula.webapp-angular
+
+# docker login
+
+# docker tag nebula.webapp-angular rearchitecture/nebula.webapp-angular:latest
+
+# docker push rearchitecture/nebula.webapp-angular:latest
+
+# docker run -d -p 4200:80 --name nebula.webapp-angular rearchitecture/nebula.webapp-angular:latest
+
