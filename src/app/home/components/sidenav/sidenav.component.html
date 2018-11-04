@@ -52,7 +52,7 @@
                     <a class="menu-item" [routerLink]="menuItem.routerLink" routerLinkActive="menu-item-selected" [ngStyle]="{'justify-content':sidenavIsExpanded ? 'flex-start' : 'center'}">
                       <!--   <mat-icon class="menu-item-mat-icon">{{menuItem.icon}}</mat-icon> -->
                         <!-- <fa-icon class='fa-lg fa-fw menu-item-icon' [icon]="menuItem.icon"></fa-icon> -->
-                        <mat-icon class='menu-item-icon' svgIcon="core:baseline-apps"></mat-icon>  
+                        <mat-icon class='menu-item-icon' [svgIcon]="menuItem.icon"></mat-icon>  
                         <span *ngIf="sidenavIsExpanded">{{menuItem.name}}</span>
                     </a>
                 </li>
