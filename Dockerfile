@@ -43,7 +43,7 @@ COPY ./src/app/config/nginx.conf /etc/nginx/conf.d/default.conf
 # Create image using this directory's Dockerfile
 # docker build -t nebula.webapp-angular .
 
-# docker run -d -p 4200:80 --name nebula.webapp-angular nebula.webapp-angular
+# docker run -d -p 4201:80 --name nebula.webapp-angular nebula.webapp-angular
 
 # docker login
 
