@@ -27,7 +27,7 @@ export class NotificationComponent implements OnInit {
 
     this.msg = this.data.message;
 
-    switch (this.msg.messageType) {
+   /*  switch (this.msg.messageType) {
       case 'Info': {
         //this.iconType = faCommentAlt;
         break;
@@ -44,7 +44,7 @@ export class NotificationComponent implements OnInit {
         //this.iconType = faTimesCircle;
         break;
       }
-    }
+    } */
 
   }
 

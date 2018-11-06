@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 //未理解，应该没必要
 //import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
-import { SERVER_API_URL } from './app.constants';
+//import { SERVER_API_URL } from './app.constants';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 import { SessionStorageService } from '../session-storage/session-storage.service';
 
-
+import { environment } from 'src/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class AuthServerProvider {
@@ -25,7 +25,7 @@ export class AuthServerProvider {
             password: credentials.password,
             rememberMe: credentials.rememberMe
         };
-        return this.http.post(SERVER_API_URL + 'api/authenticate', data, { observe: 'response' }).pipe(map(authenticateSuccess.bind(this)));
+        return this.http.post(environment.serverApiUrl + 'api/authenticate', data, { observe: 'response' }).pipe(map(authenticateSuccess.bind(this)));
 
         function authenticateSuccess(resp) {
             const bearerToken = resp.headers.get('Authorization');

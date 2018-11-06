@@ -38,7 +38,8 @@ import {
 import { Observable } from 'rxjs';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 import { SessionStorageService } from '../session-storage/session-storage.service';
-import { SERVER_API_URL } from '../auth/app.constants';
+//import { SERVER_API_URL } from '../auth/app.constants';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -48,7 +49,7 @@ export class AuthInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler):
         Observable<HttpEvent<any>> {
 
-        if (!req || !req.url || (/^http/.test(req.url) && !(SERVER_API_URL && req.url.startsWith(SERVER_API_URL)))) {
+        if (!req || !req.url || (/^http/.test(req.url) && !(environment.serverApiUrl && req.url.startsWith(environment.serverApiUrl)))) {
             
             return next.handle(req);
         }

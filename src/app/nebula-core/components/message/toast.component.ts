@@ -27,24 +27,7 @@ export class ToastComponent implements OnInit {
   ngOnInit() {
 
     this.msg = this.data.message;
-    switch (this.msg.messageType) {
-      case 'Info': {
-        //this.iconType = faCommentAlt;
-        break;
-      }
-      case 'Warning': {
-        //this.iconType = faBell;
-        break;
-      }
-      case 'Success': {
-        //this.iconType = faCheckCircle;
-        break;
-      }
-      case 'Error': {
-        //this.iconType = faTimesCircle;
-        break;
-      }
-    }
+    
   }
 
 

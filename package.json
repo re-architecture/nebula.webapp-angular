@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "docker": "ng build --prod",
     "startWithProxy": "ng serve --proxy-config ./src/app/config/proxy.config.js",
     "iconSprite": "svg-sprite --config ./src/app/config/icon-svg-sprite.config.json src/app/icon/*.svg"
   },

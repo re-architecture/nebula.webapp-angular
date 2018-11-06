@@ -13,7 +13,7 @@
 
     .alert-icon-wrapper {
       padding:0 0.286rem 0 0.286rem; //4px
-    
+      line-height:18px;
       /*
       .alert-icon {
   
@@ -43,7 +43,8 @@
   border: 1px solid #49afd9;
 
   .alert-icon {
-    color: #0079b8; 
+    //color: #0079b8; 
+    fill:#0079b8;
   }
 
   /* .alert-text {
@@ -59,7 +60,8 @@
   border: 1px solid #60b515;
   
   .alert-icon {
-    color: #318700; 
+    //color: #318700;
+    fill:#318700;
   }
  /*  .alert-text {
       
@@ -73,7 +75,8 @@
   border: 1px solid #ffdc0b; 
   
   .alert-icon {
-    color: #856404; 
+    //color: #856404;
+    fill:#856404;
   }
 
  /*  .alert-text {
@@ -88,7 +91,8 @@
     border: 1px solid #ebafa6;
   
   .alert-icon {
-    color: #c92100; 
+    //color: #c92100;
+    fill:#c92100;
   }
  
  /*  .alert-text {

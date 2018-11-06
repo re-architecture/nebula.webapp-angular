@@ -23,6 +23,7 @@ export class AlertComponent implements OnInit, OnDestroy {
   //iconType: IconDefinition
   isSizeSmall: boolean;
   alert : Alert;
+  
 
   constructor(private messageService: MessageService) { }
 
@@ -33,26 +34,9 @@ export class AlertComponent implements OnInit, OnDestroy {
          this.alert = alert;
          this.isSizeSmall = alert.isSizeSmall;
 
-          switch (this.alert.message.messageType) {
-            case 'Info': {
-              //this.iconType = faCommentAlt;
-              break;
-            }
-            case 'Warning': {
-              //this.iconType = faBell;
-              break;
-            }
-            case 'Success': {
-              //this.iconType = faCheckCircle;
-              break;
-            }
-            case 'Error': {
-             // this.iconType = faTimesCircle;
-              break;
-            }
-          }
         } else {
           this.alert = null;
+       
         }
       });
   }

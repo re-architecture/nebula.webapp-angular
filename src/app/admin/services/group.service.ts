@@ -5,13 +5,16 @@ import { Group } from 'src/app/model';
 
 import {  RequestParams, ConfigService } from 'src/app/nebula-core';
 
+import { environment } from 'src/environments/environment';
+
 type EntityResponseType = HttpResponse<Group>;
 type EntityArrayResponseType = HttpResponse<Group[]>;
 
 @Injectable()
 export class GroupService {
 
-    private resourceUrl = this.config.appConfig.serverApiUrl + 'api/groups';
+    //private resourceUrl = this.config.appConfig.serverApiUrl + 'api/groups';
+    private resourceUrl = environment.serverApiUrl + 'api/groups';
 
     constructor(
         private http: HttpClient,

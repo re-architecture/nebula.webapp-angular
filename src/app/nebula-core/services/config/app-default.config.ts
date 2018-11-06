@@ -8,5 +8,5 @@ export const appDefaultConfig : Config = {
     //copyright
     copyright : 'Nebula',
 
-    serverApiUrl : ''
+    //serverApiUrl : ''
 };
