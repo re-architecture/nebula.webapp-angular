@@ -1,7 +1,7 @@
 <div class="signin-container">
   <div class="signin-form-content">
 
-    <form style="width: 290px" [formGroup]="form" (ngSubmit)="login2()" novalidate>
+    <form style="width: 290px" [formGroup]="form" (ngSubmit)="login()" novalidate>
       <div style="display: flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;">
         <h1>Sign in</h1>
         
@@ -21,7 +21,7 @@
           Enter your password. 请填写密码
         </mat-error>
          <mat-error *ngIf="form.controls['password'].hasError('minlength') && !form.controls['password'].hasError('required')">
-          Must be at least 4 characters long. 密码不能少于4个字符
+          Must be at least 3 characters long. 密码不能少于3个字符
         </mat-error> 
       </mat-form-field>
       <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>

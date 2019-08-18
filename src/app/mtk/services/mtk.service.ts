@@ -49,7 +49,7 @@ export class MTKService {
     , */
 
 
-    return this.http.get<ScrapForm[]>('/api/scrapform', { params: options, observe: 'response' });
+    return this.http.get<ScrapForm[]>('http://127.0.0.1:8080/api/scrapform', { params: options, observe: 'response' });
 
     /*  .pipe(
        map(res => res["payload"])
@@ -58,7 +58,7 @@ export class MTKService {
 
   getScrapFormByID(id: number): Observable<ScrapForm> {
 
-    const url = `/api/scrapform/${id}`;
+    const url = `http://127.0.0.1:8080/api/scrapform/${id}`;
 
     return this.http.get<ScrapForm>(url).pipe(
       //tap(_ => console.log(`fetched scrapform id=${id}`))
@@ -67,7 +67,7 @@ export class MTKService {
   }
 
   getMaterialByFormID(fomrID: number): Observable<Material[]> {
-    const url = `/api/material/${fomrID}`;
+    const url = `http://127.0.0.1:8080/api/material/${fomrID}`;
     return this.http.get<Material[]>(url);
   }
 

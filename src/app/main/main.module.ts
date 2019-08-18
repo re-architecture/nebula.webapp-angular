@@ -7,6 +7,7 @@ import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.
 import { MaterialModule } from 'src/app/shared';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { SettingsMenuComponent } from './components/settings-menu/settings-menu.component';
+import { ItemComponent } from './components/item/item.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { SettingsMenuComponent } from './components/settings-menu/settings-menu.
     DefaultPageComponent,
     DefaultLayoutComponent,
     TopMenuComponent,
-    SettingsMenuComponent
+    SettingsMenuComponent,
+    ItemComponent
   ]
 })
 export class MainModule { }

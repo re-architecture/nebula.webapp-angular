@@ -11,14 +11,14 @@
         <div>
           <ul>
             <li>
-              <a routerLink="." class="disabled">
+              <a routerLink="." (click)='openError()'>
                 <mat-icon class='menu-icon' svgIcon="core:baseline-fingerprint"></mat-icon>
                 登录
               </a>
             </li>
 
             <li>
-              <a routerLink=".">
+              <a routerLink="." class="disabled">
                <mat-icon class='menu-icon' svgIcon="core:outline-lock"></mat-icon> 
                注销
               </a>

@@ -19,8 +19,8 @@ export const errorRoutes: Routes = [
       },
       {
         path: '**', component: ErrorComponent, data: {
-          title: 'Page Not Found',
-          errorMessage: '404! Page Not Found!'
+          title: 'Application ServerError',
+          errorMessage: 'Application ServerError - 0 Unknown Error!'
         }
       }
 ];

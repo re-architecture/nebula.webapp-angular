@@ -5,7 +5,11 @@ import { errorRoutes } from './shared';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
+  {
+    path: 'main',
+    loadChildren: './main/main.module#MainModule',
+  },
   {
     path: 'auth',
     loadChildren: './auth/auth.module#AuthModule'
@@ -13,10 +17,6 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: './home/home.module#HomeModule',
-  },
-  {
-    path: 'main',
-    loadChildren: './main/main.module#MainModule',
   },
    ...errorRoutes
 ];

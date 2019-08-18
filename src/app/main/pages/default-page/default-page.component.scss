@@ -1,7 +1,18 @@
 
-.yyy{
+.page-bar{
 
-    height:255px;
-    background: linear-gradient(to bottom,#0078d7 0%,#09a2ce);
+    height:160px;
+    background: linear-gradient(to bottom,#005799 0,#0076d1);
     box-shadow: 0 12px 45px -8px rgba(0,120,215,.35);
 }
+
+.item-container a {
+    color: hsla(0,0%,0%,1);
+    
+}
+.item-container a:hover {
+    color: hsla(206,100%,35%,1);
+   
+   
+}
+

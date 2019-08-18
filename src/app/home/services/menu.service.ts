@@ -31,18 +31,23 @@ const MENUS: { [key: string]: Menu[] } = {
   [SIDENAV_MENU]: [
     {
       id: 'menu1',
-      name: 'Analysis 数据分析',
+      name: 'Online 在线',
       icon: 'core:baseline-apps',
       items: [
-        { id: 'menu1-item1', name: 'Online', icon: 'core:baseline-bar_chart', routerLink: 'mtk/home' }
+        { id: 'menu1-item1', name: 'Analysis 数据分析', icon: 'core:baseline-bar_chart', routerLink: 'mtk/home' },
+        { id: 'menu1-item2', name: 'Monitor 可视化', icon: 'core:baseline-personal_video', routerLink: 'mtk/monitor' }
       ]
     },
     {
       id: 'menu2',
-      name: 'Scrap 生产报废',
+      name: 'Production 生产',
       icon: 'core:baseline-list_alt',
       items: [
-        { id: 'menu2-item1', name: 'Scrap Form 报废单', icon: 'core:baseline-assignment', routerLink: 'mtk/scrap' }
+        { id: 'menu2-item1', name: 'Production Plan 生产计划', icon: 'core:baseline-update', routerLink: 'mtk/plan' },
+        { id: 'menu2-item2', name: 'Job Allocation 岗位分配', icon: 'core:baseline-device_hub', routerLink: 'mtk/job' },
+        { id: 'menu2-item3', name: 'Staffing Needs 人员需求', icon: 'core:baseline-group', routerLink: 'mtk/needs' },
+        { id: 'menu2-item4', name: 'Attendance Rate 工人到岗率', icon: 'core:outline-nature_people', routerLink: 'mtk/attendance' },
+        { id: 'menu2-item5', name: 'Scrap Form 报废单', icon: 'core:baseline-assignment', routerLink: 'mtk/scrap' }
       ]
     },
 
@@ -53,30 +58,34 @@ const MENUS: { [key: string]: Menu[] } = {
       icon: 'core:baseline-settings',
       items: [
         { id: 'menu3-item1', name: 'User 用户管理', icon: 'core:baseline-person', routerLink: 'admin/users' },
-        { id: 'menu3-item2', name: 'Group 组管理', icon: 'core:baseline-group', routerLink: 'admin/group' },
-        { id: 'menu3-item3', name: 'Role 角色管理', icon: 'core:baseline-assignment_ind', routerLink: 'admin/users' },
-        { id: 'menu3-item4', name: 'Permission 授权管理', icon: 'core:baseline-touch_app', routerLink: 'admin/users' }
+
+        //for MTK
+        //{ id: 'menu3-item2', name: 'Group 组管理', icon: 'core:baseline-group', routerLink: 'admin/group' },
+        { id: 'menu3-item2', name: 'Group 组管理', icon: 'core:baseline-group', routerLink: 'admin/groups' },
+        { id: 'menu3-item3', name: 'Role 角色管理', icon: 'core:baseline-assignment_ind', routerLink: 'admin/role' },
+        { id: 'menu3-item4', name: 'Permission 授权管理', icon: 'core:baseline-touch_app', routerLink: 'admin/permission' }
       ]
     } ,
-    {
-      id: 'menu100',
-      name: 'Demo',
-      icon: 'core:baseline-dashboard',
-      items: [
-        { id: 'menu100-item1', name: 'Style', icon: 'core:baseline-apps', routerLink: 'demo/style' },
-        { id: 'menu100-item2', name: 'Icon', icon: 'core:baseline-apps', routerLink: 'demo/icon' },
-        { id: 'menu100-item3', name: 'Component', icon: 'core:baseline-apps', routerLink: 'demo/component' },
-        { id: 'menu100-item4', name: 'theme', icon: 'core:baseline-apps', routerLink: 'demo/theme' },
-        { id: 'menu100-item5', name: 'Auth', icon: 'core:baseline-apps', routerLink: 'demo/auth' },
-        { id: 'menu100-item6', name: 'Dashboard', icon: 'core:baseline-apps', routerLink: 'default' },
-        { id: 'menu100-item7', name: 'Regular Table', icon: 'core:baseline-apps', routerLink: 'demo-feature/regularTable' },
-        { id: 'menu100-item8', name: '客户管理', icon: 'core:baseline-apps', routerLink: 'customer' },
-        { id: 'menu100-item9', name: '数据表', icon: 'core:baseline-apps', routerLink: 'product' },
-        { id: 'menu100-item10', name: '大数据分页', icon: 'core:baseline-apps', routerLink: 'largedatatable' },
-        { id: 'menu100-item11', name: 'Item 4', icon: 'core:baseline-apps', routerLink: 'test' }
+    //for MTK 注释
+    // {
+    //   id: 'menu100',
+    //   name: 'Demo',
+    //   icon: 'core:baseline-dashboard',
+    //   items: [
+    //     { id: 'menu100-item1', name: 'Style', icon: 'core:baseline-apps', routerLink: 'demo/style' },
+    //     { id: 'menu100-item2', name: 'Icon', icon: 'core:baseline-apps', routerLink: 'demo/icon' },
+    //     { id: 'menu100-item3', name: 'Component', icon: 'core:baseline-apps', routerLink: 'demo/component' },
+    //     { id: 'menu100-item4', name: 'theme', icon: 'core:baseline-apps', routerLink: 'demo/theme' },
+    //     { id: 'menu100-item5', name: 'Auth', icon: 'core:baseline-apps', routerLink: 'demo/auth' },
+    //     { id: 'menu100-item6', name: 'Dashboard', icon: 'core:baseline-apps', routerLink: 'default' },
+    //     { id: 'menu100-item7', name: 'Regular Table', icon: 'core:baseline-apps', routerLink: 'demo-feature/regularTable' },
+    //     { id: 'menu100-item8', name: '客户管理', icon: 'core:baseline-apps', routerLink: 'customer' },
+    //     { id: 'menu100-item9', name: '数据表', icon: 'core:baseline-apps', routerLink: 'product' },
+    //     { id: 'menu100-item10', name: '大数据分页', icon: 'core:baseline-apps', routerLink: 'largedatatable' },
+    //     { id: 'menu100-item11', name: 'Item 4', icon: 'core:baseline-apps', routerLink: 'test' }
 
-      ]
-    }, 
+    //   ]
+    // }, 
   ]
 };
 

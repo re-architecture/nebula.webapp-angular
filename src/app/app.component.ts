@@ -61,14 +61,15 @@ export class AppComponent implements OnInit, OnDestroy {
       
   
       console.log(a); */
-      console.log('ngOninit');
+      //console.log('ngOninit');
      
       
     this.initTheme();
     this.initAppTitle();
     this.initAppLoading();
     this.initHttpError();
-    this.initPrincipal();
+    //for MTK 注释掉
+    //this.initPrincipal();
     
   }
  
@@ -81,7 +82,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngAfterViewInit(){
     //this.appReadyEvent.trigger();
-    console.log('ngAfterViewInit');
+    //console.log('ngAfterViewInit');
     //this.appReadyEvent.trigger();
     //this.initAppLoading();
     
@@ -103,7 +104,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.router.events.subscribe((event: Event) => {
       switch (true) {
         case event instanceof NavigationStart: {
-          console.log('init App Loading - NavigationStart');
+          //console.log('init App Loading - NavigationStart');
           this.loading = true;
           break;
         }
@@ -112,7 +113,7 @@ export class AppComponent implements OnInit, OnDestroy {
         case event instanceof NavigationCancel:
         case event instanceof NavigationError: {
           this.loading = false;
-          console.log('init App Loading - NavigationEnd');
+          //console.log('init App Loading - NavigationEnd');
           //this.appReadyEvent.trigger();
           break;
         }
@@ -128,7 +129,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.configService.initConfig('assets/app.config.json').subscribe(
       (data: Config) => {
         this.appConfig = { ...data }
-        console.log('init app title');
+        //console.log('init app title');
         this.titleService.setTitle(this.appConfig.appName);
 
       }
@@ -139,7 +140,7 @@ export class AppComponent implements OnInit, OnDestroy {
   initTheme() {
     this.themeSubscription = this.themeService.theme$.subscribe(
       theme => {
-        console.log('init theme');
+        //console.log('init theme');
         this.installTheme(theme);
       });
 
@@ -157,7 +158,7 @@ export class AppComponent implements OnInit, OnDestroy {
   initPrincipal() {
 
     this.principal.identity().then(account => {
-      console.log('init principal');
+      //console.log('init principal');
       this.account = account;
     });
 
@@ -168,7 +169,7 @@ export class AppComponent implements OnInit, OnDestroy {
   initHttpError() {
     this.httpErrorListener = this.eventManager.subscribe('Application.HttpError', response => {
 
-      console.log('init Http Error');
+      //console.log('init Http Error');
       //let i;
       const error = response.content;
       //switch (httpErrorResponse.status) {
@@ -237,9 +238,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   registerAuthenticationSuccess() {
     this.eventManager.subscribe('authenticationSuccess', message => {
-      console.log('subscribe authentication Success event');
+      //console.log('subscribe authentication Success event');
       this.principal.identity().then(account => {
-        console.log('Authentication Success');
+       // console.log('Authentication Success');
         this.account = account;
       });
     });
