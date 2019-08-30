@@ -12,6 +12,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { ScrapForm } from '../../model/scrap-form';
 import { FormControl } from '@angular/forms';
 import { ScrapEditComponent } from './scrap-edit.component';
+import { MessageService, Message } from 'src/app/nebula-core';
 
 @Component({
     selector: 'app-mtk-scrap-list',
@@ -62,7 +63,7 @@ export class ScrapListComponent implements OnInit {
 
 
     constructor(private mtkService: MTKService,
-        public dialog: MatDialog) { }
+        public dialog: MatDialog,private msg: MessageService) { }
 
     ngOnInit() {
 
@@ -97,6 +98,10 @@ export class ScrapListComponent implements OnInit {
             .subscribe();
 
     }
+
+    openError() {
+        this.msg.toast(new Message("Application.ServerError - Connection to server is offline",null, 'Error'))
+      }
 
     loadData() {
         this.selection.clear();

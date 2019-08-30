@@ -6,6 +6,58 @@ export class ChartCardData2Service {
   chartLegend = false;
   chartType = 'line';
 
+  constructor() {
+
+    let currentDate: Date = new Date(); 
+
+    currentDate.setDate(currentDate.getDate() - 10)
+
+    let a1 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+    let a2 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a3 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+    let a4 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a5 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+    let a6 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a7 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+    let a8 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a9 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+    let a10 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a11 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+    let a12 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a13 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+    let a14 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+    this.chartLabels = [
+      a1,
+      a2,
+      a3,
+      a4,
+      a5,
+      a6,
+      a7,
+      a8,
+      a9,
+      a10,
+      a11,
+      a12,
+      a13,
+      a14
+  
+    ];
+  }
+
   //area chart
   chartData: Array<any> = [
 
@@ -34,23 +86,24 @@ export class ChartCardData2Service {
 
   ];
 
-  chartLabels: Array<any> = [
-    '6.13D',
-    '6.13N',
-    '6.14D',
-    '6.14N',
-    '6.15D',
-    '6.15N',
-    '6.16D',
-    '6.16N',
-    '6.17D',
-    '6.17N',
-    '6.18D',
-    '6.18N',
-    '6.19D',
-    '6.19N'
+  chartLabels: Array<any>;
+  // chartLabels: Array<any> = [
+  //   '6.13D',
+  //   '6.13N',
+  //   '6.14D',
+  //   '6.14N',
+  //   '6.15D',
+  //   '6.15N',
+  //   '6.16D',
+  //   '6.16N',
+  //   '6.17D',
+  //   '6.17N',
+  //   '6.18D',
+  //   '6.18N',
+  //   '6.19D',
+  //   '6.19N'
 
-  ];
+  // ];
 
   chartOptions: any = {
     animation: {

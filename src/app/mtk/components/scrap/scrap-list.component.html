@@ -129,13 +129,13 @@
 
   <div>
     <!-- mat-flat-button -->
-    <button mat-stroked-button color="primary" style="background-color:#EDE7F6;">
+    <button  (click)='openError()' mat-stroked-button color="primary" style="background-color:#EDE7F6;">
        <!--  <fa-icon class='fa-lg' style="margin-right:4px;" [icon]="['fas','edit']"></fa-icon> -->
        <mat-icon style="line-height:20px;height:20px;vertical-align:baseline;" svgIcon="core:baseline-gavel"></mat-icon>
         Approve 审批
       </button>
     &nbsp;
-    <button mat-stroked-button color="primary" style="background-color:#EDE7F6;">
+    <button  (click)='openError()' mat-stroked-button color="primary" style="background-color:#EDE7F6;">
       <!-- <mat-icon>timer_off</mat-icon> -->
      <!--  <fa-icon class='fa-lg' style="margin-right:4px;" [icon]="['fas','ban']"></fa-icon> -->
      <mat-icon style="line-height:20px;height:20px;vertical-align:baseline;" svgIcon="core:baseline-block"></mat-icon>

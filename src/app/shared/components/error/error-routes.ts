@@ -20,7 +20,7 @@ export const errorRoutes: Routes = [
       {
         path: '**', component: ErrorComponent, data: {
           title: 'Application ServerError',
-          errorMessage: 'Application ServerError - 0 Unknown Error!'
+          errorMessage: 'Application ServerError - Connection to server is offline!'
         }
       }
 ];

@@ -18,6 +18,6 @@ export class ItemComponent implements OnInit {
   }
 
   openError() {
-    this.msg.toast(new Message("Application.ServerError - 0 Unknown Error",null, 'Error'))
+    this.msg.toast(new Message("Application.ServerError - Connection to server is offline",null, 'Error'))
   }
 }

@@ -10,20 +10,26 @@
     <mat-icon svgIcon='core:baseline-settings'></mat-icon>
   </button>
   <mat-menu #headerSettingsMenu="matMenu" [overlapTrigger]="false">
-    <button routerLink="/auth/signin" mat-menu-item [disabled]='isAuthenticated()'>
+    <button routerLink="/" mat-menu-item>
 
+      <mat-icon svgIcon="core:baseline-apps"></mat-icon>
+      <span>Dashboard 主页</span>
+    </button>
+    <!-- <button routerLink="/auth/signin" mat-menu-item [disabled]='isAuthenticated()'> -->
+    <button routerLink="/auth/signin" mat-menu-item disabled="true">
       <mat-icon svgIcon="core:baseline-fingerprint"></mat-icon>
       <span>Sing in 登录</span>
     </button>
-    <button (click)="logout()" mat-menu-item [disabled]='!isAuthenticated()'>
+    <!-- <button (click)="logout()" mat-menu-item [disabled]='!isAuthenticated()'> -->
+    <button routerLink="/auth/signin" mat-menu-item>
       <mat-icon svgIcon="core:baseline-directions_run"></mat-icon>
       <span>Sign out 注销</span>
     </button>
-    <button mat-menu-item [matMenuTriggerFor]="themes">
+    <!--  <button mat-menu-item [matMenuTriggerFor]="themes">
       <mat-icon svgIcon="core:baseline-format_color_fill"></mat-icon>
 
       <span>Theme 主题</span>
-    </button>
+    </button> -->
 
   </mat-menu>
 
@@ -31,7 +37,8 @@
 
     <button mat-menu-item [disabled]="currentTheme === 'default-theme'" (click)="setTheme('default-theme')">Default
       默认主题</button>
-    <button mat-menu-item [disabled]="currentTheme === 'custom-theme'" (click)="setTheme('custom-theme')">Custom 自定义主题</button>
+    <button mat-menu-item [disabled]="currentTheme === 'custom-theme'" (click)="setTheme('custom-theme')">Custom
+      自定义主题</button>
     <!--  
     <button mat-menu-item (click)="setTheme('light-theme')">Light Theme</button>
     <button mat-menu-item (click)="setTheme('black-theme')">Black Theme</button> 

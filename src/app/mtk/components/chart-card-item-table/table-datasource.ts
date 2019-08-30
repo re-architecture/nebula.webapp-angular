@@ -9,22 +9,53 @@ export interface TableItem {
   col2: string;
 }
 
+let currentDate: Date = new Date(); 
+
+currentDate.setDate(currentDate.getDate() - 10)
+
+let a1 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+let a2 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a3 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+let a4 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a5 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+let a6 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a7 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+let a8 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a9 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+let a10 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a11 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+let a12 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a13 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'D';
+let a14 : string = (currentDate.getMonth() + 1).toString() + '.' + currentDate.getDate().toString() + 'N';
+
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TableItem[] = [
-  { col1: '6.13D', col2: '86.0%' },
-  { col1: '6.13N', col2: '100.3%' },
-  { col1: '6.14D', col2: '89.8%' },
-  { col1: '6.14N', col2: '101.6%' },
-  { col1: '6.15D', col2: '97.7%' },
-  { col1: '6.15N', col2: '108.6%' },
-  { col1: '6.16D', col2: '109.1%' },
-  { col1: '6.16N', col2: '89.2%' },
-  { col1: '6.17D', col2: '94.6%' },
-  { col1: '6.17N', col2: '102.1%' },
-  { col1: '6.18D', col2: '93.2%' },
-  { col1: '6.18N', col2: '99.8%' },
-  { col1: '6.19D', col2: '89.8%' },
-  { col1: '6.19N', col2: '104.2%' }
+  { col1: a1, col2: '86.0%' },
+  { col1: a2, col2: '100.3%' },
+  { col1: a3, col2: '89.8%' },
+  { col1: a4, col2: '101.6%' },
+  { col1: a5, col2: '97.7%' },
+  { col1: a6, col2: '108.6%' },
+  { col1: a7, col2: '109.1%' },
+  { col1: a8, col2: '89.2%' },
+  { col1: a9, col2: '94.6%' },
+  { col1: a10, col2: '102.1%' },
+  { col1: a11, col2: '93.2%' },
+  { col1: a12, col2: '99.8%' },
+  { col1: a13, col2: '89.8%' },
+  { col1: a14, col2: '104.2%' }
 
 ];
 

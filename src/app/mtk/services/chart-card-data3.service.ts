@@ -6,6 +6,44 @@ export class ChartCardData3Service {
   chartLegend = false;
   chartType = 'line';
 
+  constructor() {
+
+    let currentDate: Date = new Date();
+
+    currentDate.setDate(currentDate.getDate() - 10)
+
+    let a1: string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a2: string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a3: string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a4: string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a5: string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a6: string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+    currentDate.setDate(currentDate.getDate() + 1)
+    let a7: string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+    this.chartLabels = [
+      a1,
+      a2,
+      a3,
+      a4,
+      a5,
+      a6,
+      a7
+
+    ];
+
+  }
   //area chart
   chartData: Array<any> = [
 
@@ -18,25 +56,25 @@ export class ChartCardData3Service {
         78889,
         165814,
         142452,
-       
-       
+
+
       ]
     }
 
 
   ];
+  chartLabels: Array<any>;
+  // chartLabels: Array<any> = [
+  //   '2013-06-13',
+  //   '2013-06-14',
+  //   '2013-06-15',
+  //   '2013-06-16',
+  //   '2013-06-17',
+  //   '2013-06-18',
+  //   '2013-06-19'
 
-  chartLabels: Array<any> = [
-    '2013-06-13',
-    '2013-06-14',
-    '2013-06-15',
-    '2013-06-16',
-    '2013-06-17',
-    '2013-06-18',
-    '2013-06-19'
-   
 
-  ];
+  // ];
 
   chartOptions: any = {
     animation: {

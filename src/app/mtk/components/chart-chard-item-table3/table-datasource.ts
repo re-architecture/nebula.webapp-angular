@@ -9,15 +9,40 @@ export interface TableItem {
   col2: string;
 }
 
+let currentDate: Date = new Date(); 
+
+currentDate.setDate(currentDate.getDate() - 10)
+
+let a1 : string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a2 : string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a3 : string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a4 : string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a5 : string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a6 : string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+currentDate.setDate(currentDate.getDate() + 1)
+let a7 : string = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
+
+
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TableItem[] = [
-  { col1: '2013-06-13', col2: '95,693' },
-  { col1: '2013-06-14', col2: '131,349' },
-  { col1: '2013-06-15', col2: '127,936  ' },
-  { col1: '2013-06-16', col2: '62,671' },
-  { col1: '2013-06-17', col2: '78,889' },
-  { col1: '2013-06-18', col2: '165,814' },
-  { col1: '2013-06-19', col2: '142,452' }
+  { col1: a1, col2: '95,693' },
+  { col1: a2, col2: '131,349' },
+  { col1: a3, col2: '127,936  ' },
+  { col1: a4, col2: '62,671' },
+  { col1: a5, col2: '78,889' },
+  { col1: a6, col2: '165,814' },
+  { col1: a7, col2: '142,452' }
 
 
 ];
